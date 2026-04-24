@@ -1,19 +1,25 @@
 # Русификатор The Bazaar
 
-Патчер русской локализации для **The Bazaar**. Поддерживает Steam-версию и Tempo Launcher Beta.
+Неофициальный патчер русской локализации для **The Bazaar**.
 
-**Скачать последнюю версию:**  
+Проект поддерживает две отдельные сборки:
+
+- `TheBazaarRusPatcher.exe` - основная версия для Tempo Launcher и совместимых установок;
+- `TheBazaarRusSteamPatcher.exe` - отдельная версия для Steam.
+
+Скачать последнюю версию:
+
+```text
 https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/latest
+```
 
 ## Важно
 
-Это неофициальный фанатский перевод. Проект не связан с Tempo, Tempo Storm или разработчиками The Bazaar.
+Это неофициальный фанатский перевод. Проект не связан с Tempo, Tempo Storm, AVY Entertainment или разработчиками The Bazaar.
 
-Репозиторий и exe **не распространяют игровые файлы** (`cards.json`, `tooltips.json`, `ru-RU.bytes`, `manifest.json`). Внутри патчера хранится только таблица русских строк перевода. Патчер применяет эти строки к локальным файлам игры на компьютере пользователя и перед изменением делает бэкап.
+Репозиторий и релизы не распространяют игровые файлы вроде `cards.json`, `tooltips.json`, `ru-RU.bytes` и `manifest.json`. Патчер содержит только таблицы перевода и применяет их к локальным файлам игры на компьютере пользователя.
 
-Если правообладатель попросит удалить проект или релиз, они будут удалены.
-
-Перед установкой патчер показывает предупреждение и просит явно подтвердить продолжение. Для проверки без изменения файлов используйте `--check`.
+Перед изменением файлов патчер создает резервную копию в `.rus_patch_backups`.
 
 ## Что переведено
 
@@ -23,154 +29,137 @@ https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/latest
 - теги предметов;
 - часть NPC, магазинов и событий.
 
-Перевод пока дорабатывается. Если нашли кривую фразу, лучше прислать скриншот карточки или меню.
+Steam-ветка дополнительно использует отдельный слой quality fixes и глоссарий терминов, чтобы уменьшить кривые подстановки в карточках и тегах.
 
 ## Обратная связь
 
-Нашли ошибку в переводе или баг патчера? Пишите на почту:
+Почта для сообщений об ошибках перевода и проблемах патчера:
 
 ```text
 adeptas3@gmail.com
 ```
 
-По возможности приложите:
+Лучше прикладывать:
 
 - скриншот карточки, подсказки или меню;
-- описание, где встретилась ошибка;
+- краткое описание ошибки;
 - версию игры;
 - какой клиент используется: Steam или Tempo Launcher.
 
 ## Установка
 
-1. Полностью закройте игру и лаунчер.
-2. Скачайте `TheBazaarRusPatcher.exe` из раздела Releases.
-3. Сначала запустите проверку без установки:
+### Launcher / общая версия
+
+1. Закройте игру и лаунчер.
+2. Скачайте `TheBazaarRusPatcher.exe` из Releases.
+3. Для проверки без записи файлов запустите:
 
 ```powershell
 .\TheBazaarRusPatcher.exe --check
 ```
 
-4. Если проверка не показывает ошибок, запустите файл обычным способом.
-5. Выберите `Установить русификатор`.
-6. Прочитайте предупреждение и введите `YES`, если хотите продолжить.
-7. После завершения запустите игру заново.
-
-Патчер автоматически ищет:
-
-- общий кэш игры в `AppData\LocalLow`;
-- Steam-версию;
-- Tempo Launcher Beta.
-
-Перед изменением файлов патчер делает бэкап в папку `.rus_patch_backups`.
-
-Патчер пропускает файлы, если их структура не похожа на ожидаемую или версия данных не проверена.
-
-## Восстановление
-
-Если нужно откатить изменения, запустите патчер и выберите восстановление бэкапа. Бэкап создаётся перед каждой установкой.
-
-Также можно запустить через командную строку:
-
-```powershell
-.\TheBazaarRusPatcher.exe --restore
-```
-
-## Команды
-
-Интерактивный режим:
-
-```powershell
-.\TheBazaarRusPatcher.exe
-```
-
-Установить без меню:
+4. Для установки запустите:
 
 ```powershell
 .\TheBazaarRusPatcher.exe --install
 ```
 
-Установить без меню и без ручного подтверждения:
+### Steam-версия
 
-```powershell
-.\TheBazaarRusPatcher.exe --install --yes
+Для Steam рекомендуется использовать отдельный файл:
+
+```text
+TheBazaarRusSteamPatcher.exe
 ```
 
-Проверить, что будет изменено, без записи файлов:
+Проверка:
 
 ```powershell
-.\TheBazaarRusPatcher.exe --check
+.\TheBazaarRusSteamPatcher.exe --check
 ```
 
-Показать найденные пути:
+Установка:
 
 ```powershell
-.\TheBazaarRusPatcher.exe --paths
+.\TheBazaarRusSteamPatcher.exe --install --yes
 ```
 
-Проверить встроенную таблицу перевода:
+Steam-сборка патчит:
 
-```powershell
-.\TheBazaarRusPatcher.exe --verify-patch
-```
+- `steamapps\common\The Bazaar\TheBazaar_Data\StreamingAssets`
+- кэш игры в `AppData\LocalLow\Tempo Storm\The Bazaar\prod\cache`
 
-Восстановить последний бэкап:
+И не трогает папку Tempo Launcher.
+
+Подробности по Steam-сборке: [STEAM_PATCHER.md](STEAM_PATCHER.md)
+
+## Восстановление
+
+Откат последнего бэкапа:
 
 ```powershell
 .\TheBazaarRusPatcher.exe --restore
 ```
 
-## Для GitHub About
+или для Steam:
 
-Короткое описание:
+```powershell
+.\TheBazaarRusSteamPatcher.exe --restore
+```
+
+## Команды
+
+Основная версия:
+
+```powershell
+.\TheBazaarRusPatcher.exe
+.\TheBazaarRusPatcher.exe --install
+.\TheBazaarRusPatcher.exe --install --yes
+.\TheBazaarRusPatcher.exe --check
+.\TheBazaarRusPatcher.exe --paths
+.\TheBazaarRusPatcher.exe --verify-patch
+.\TheBazaarRusPatcher.exe --restore
+```
+
+Steam-версия:
+
+```powershell
+.\TheBazaarRusSteamPatcher.exe --check
+.\TheBazaarRusSteamPatcher.exe --install --yes
+.\TheBazaarRusSteamPatcher.exe --restore
+```
+
+## Релизы
+
+Рекомендуемая схема релизов:
+
+- `TheBazaarRusPatcher.exe` - общий релиз для лаунчера;
+- `TheBazaarRusSteamPatcher.exe` - отдельный релиз для Steam;
+- в одном GitHub Release можно выкладывать оба файла как отдельные артефакты.
+
+Готовые тексты:
+
+- [RELEASE_NOTES_LAUNCHER.md](RELEASE_NOTES_LAUNCHER.md)
+- [RELEASE_NOTES_STEAM.md](RELEASE_NOTES_STEAM.md)
+
+## GitHub About
+
+Описание:
 
 ```text
-Русификатор The Bazaar для Steam и Tempo Launcher
+Русификатор The Bazaar для Tempo Launcher и Steam
 ```
 
 Topics:
 
 ```text
-the-bazaar russian-translation localization patcher rusifikator
-```
-
-Ссылка для скачивания:
-
-```text
-https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/latest
-```
-
-## Текст для поста
-
-```text
-Сделал русификатор для The Bazaar.
-
-Переведены:
-- интерфейс;
-- карточки и описания эффектов;
-- подсказки;
-- теги предметов;
-- часть NPC, магазинов и событий.
-
-Поддерживает Steam и Tempo Launcher Beta.
-Патчер сам находит игру, применяет только таблицу перевода к локальным файлам и делает бэкап перед изменениями.
-Исходники открыты на GitHub, игровые файлы в репозитории и exe не распространяются.
-Перед установкой можно выполнить проверку без изменения файлов.
-
-Скачать:
-https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/latest
-
-Если найдёте кривой перевод, присылайте скриншот карточки или меню.
-
-Почта для обратной связи:
-adeptas3@gmail.com
+the-bazaar russian-translation localization patcher steam launcher rusifikator
 ```
 
 ## Безопасность проекта
 
-- проект не использует официальные логотипы, арты и игровые ассеты;
-- проект не монетизируется;
-- патчер не обходит авторизацию, сетевые проверки, защиту или платный контент;
-- патчер не распространяет игровые файлы;
+- проект не использует официальные игровые ассеты;
+- проект не распространяет игровые файлы;
 - есть dry-run режим `--check`;
 - есть восстановление бэкапа `--restore`;
 - есть отдельный дисклеймер: [DISCLAIMER.md](DISCLAIMER.md);
@@ -180,12 +169,14 @@ adeptas3@gmail.com
 
 Требуется .NET SDK 8 или новее.
 
+Сборка основной версии:
+
 ```powershell
 dotnet publish .\TheBazaarRusPatcher.csproj -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true /p:EnableCompressionInSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true -o .\publish
 ```
 
-Готовый файл появится здесь:
+Сборка Steam-версии:
 
-```text
-publish\TheBazaarRusPatcher.exe
+```powershell
+dotnet publish .\TheBazaarRusSteamPatcher.csproj -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true /p:EnableCompressionInSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true -o .\publish-steam
 ```

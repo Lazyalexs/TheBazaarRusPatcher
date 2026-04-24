@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>TheBazaarRusSteamPatcher</AssemblyName>
+    <RootNamespace>TheBazaarRusPatcher</RootNamespace>
+    <Version>0.3.0</Version>
+    <DefineConstants>$(DefineConstants);STEAM_ONLY</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Patch\steam-translation-patch.json">
+      <LogicalName>Patch/steam-translation-patch.json</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patch\steam-quality-overrides.json">
+      <LogicalName>Patch/steam-quality-overrides.json</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patch\steam-glossary.json">
+      <LogicalName>Patch/steam-glossary.json</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
