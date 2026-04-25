@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <AssemblyName>TheBazaarRusSteamPatcher</AssemblyName>
     <RootNamespace>TheBazaarRusPatcher</RootNamespace>
-    <Version>0.4.3</Version>
+    <Version>0.4.4</Version>
     <DefineConstants>$(DefineConstants);STEAM_ONLY</DefineConstants>
   </PropertyGroup>
 

@@ -15,6 +15,17 @@ const string AppName = "The Bazaar Russian Patcher";
 const string PatchResourceName = "Patch/translation-patch.json";
 #endif
 const string BackupDirName = ".rus_patch_backups";
+string[] dataJsonFileNames =
+[
+    "cards.json",
+    "tooltips.json",
+    "challenges.json",
+    "gamemodes.json",
+    "levelups.json",
+    "seasons.json",
+    "monsters.json",
+    "maintenance.json"
+];
 
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 Console.Title = AppName;
@@ -54,6 +65,7 @@ var strictExact = args.Any(a =>
 #else
 var strictExact = false;
 #endif
+var updateManifests = args.Any(a => a.Equals("--update-manifest", StringComparison.OrdinalIgnoreCase));
 
 if (args.Any(a => a.Equals("--restore", StringComparison.OrdinalIgnoreCase)))
 {
@@ -200,43 +212,82 @@ bool ConfirmDisclaimer()
 void PatchCache(string root, string stamp, bool dryRun)
 {
     PatchTranslationDatabases(root, stamp, dryRun);
+    PatchDataJsonFiles(root, stamp, dryRun);
 
-    var cards = Path.Combine(root, "cards.json");
-    if (File.Exists(cards))
+    if (updateManifests)
     {
-        PatchJsonFile(root, cards, stamp, dryRun);
+        UpdateManifestIfExists(Path.Combine(root, "manifest.json"), root, dryRun);
+        UpdateManifestIfExists(Path.Combine(root, "translations", "manifest.json"), Path.Combine(root, "translations"), dryRun);
     }
-
-    var tooltips = Path.Combine(root, "tooltips.json");
-    if (File.Exists(tooltips))
+    else
     {
-        PatchJsonFile(root, tooltips, stamp, dryRun);
+        ReportManifestPreservedIfExists(root, Path.Combine(root, "manifest.json"));
+        ReportManifestPreservedIfExists(root, Path.Combine(root, "translations", "manifest.json"));
     }
-
-    var challenges = Path.Combine(root, "challenges.json");
-    if (File.Exists(challenges))
-    {
-        PatchJsonFile(root, challenges, stamp, dryRun);
-    }
-
-    UpdateManifestIfExists(Path.Combine(root, "manifest.json"), root, dryRun);
-    UpdateManifestIfExists(Path.Combine(root, "translations", "manifest.json"), Path.Combine(root, "translations"), dryRun);
 }
+
 void PatchStreamingAssets(string root, string stamp, bool dryRun)
 {
-    foreach (var fileName in new[] { "cards.json", "tooltips.json", "challenges.json" })
+    PatchDataJsonFiles(root, stamp, dryRun);
+    UpdateManifestIfExists(Path.Combine(root, "manifest.json"), root, dryRun);
+}
+
+void PatchDataJsonFiles(string root, string stamp, bool dryRun)
+{
+    var paths = EnumerateDataJsonFiles(root).ToList();
+    if (paths.Count == 0)
+    {
+        Console.WriteLine("  *.json: не найден.");
+        return;
+    }
+
+    foreach (var path in paths)
+    {
+        PatchJsonFile(root, path, stamp, dryRun);
+    }
+}
+
+IEnumerable<string> EnumerateDataJsonFiles(string root)
+{
+    if (!Directory.Exists(root))
+    {
+        yield break;
+    }
+
+    var seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+    foreach (var fileName in dataJsonFileNames)
     {
         var path = Path.Combine(root, fileName);
-        if (!File.Exists(path))
+        if (File.Exists(path) && seen.Add(Path.GetFullPath(path)))
         {
-            Console.WriteLine($"  {fileName}: не найден.");
+            yield return path;
+        }
+    }
+
+    foreach (var path in Directory.EnumerateFiles(root, "*.json", SearchOption.TopDirectoryOnly)
+        .OrderBy(Path.GetFileName, StringComparer.OrdinalIgnoreCase))
+    {
+        if (string.Equals(Path.GetFileName(path), "manifest.json", StringComparison.OrdinalIgnoreCase))
+        {
             continue;
         }
 
-        PatchJsonFile(root, path, stamp, dryRun);
+        if (seen.Add(Path.GetFullPath(path)))
+        {
+            yield return path;
+        }
+    }
+}
+
+void ReportManifestPreservedIfExists(string root, string manifestPath)
+{
+    if (!File.Exists(manifestPath))
+    {
+        return;
     }
 
-    UpdateManifestIfExists(Path.Combine(root, "manifest.json"), root, dryRun);
+    var relative = Path.GetRelativePath(root, manifestPath).Replace('\\', '/');
+    Console.WriteLine($"  {relative}: оставлен без изменений (CDN ETag)");
 }
 
 void PatchTranslationDatabases(string root, string stamp, bool dryRun)
@@ -682,7 +733,7 @@ bool ValidatePatchableJson(string path, out string reason)
         CountTextNodes(root, ref textNodeCount);
         if (textNodeCount == 0)
         {
-            reason = "не найдены узлы Key/Text";
+            reason = "не найдены переводимые узлы Key/Text или Id/Tag";
             return false;
         }
 
@@ -887,7 +938,19 @@ void VerifyPatch()
 
 IEnumerable<InstallTarget> GetInstallTargets()
 {
-    yield return new InstallTarget("Общий кэш LocalLow", cacheRoot, TargetKind.Cache);
+    var cacheRoots = FindCacheRoots().ToList();
+    if (cacheRoots.Count == 0)
+    {
+        cacheRoots.Add(cacheRoot);
+    }
+
+    foreach (var cachePath in cacheRoots)
+    {
+        var name = string.Equals(cachePath, cacheRoot, StringComparison.OrdinalIgnoreCase)
+            ? "Общий кэш LocalLow"
+            : "Кэш LocalLow";
+        yield return new InstallTarget(name, cachePath, TargetKind.Cache);
+    }
 
     if (!steamOnly && Directory.Exists(launcherStreamingAssets))
     {
@@ -898,6 +961,62 @@ IEnumerable<InstallTarget> GetInstallTargets()
     {
         yield return new InstallTarget("Steam", steamPath, TargetKind.StreamingAssets);
     }
+}
+
+IEnumerable<string> FindCacheRoots()
+{
+    var seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+    if (Directory.Exists(cacheRoot) && seen.Add(Path.GetFullPath(cacheRoot)))
+    {
+        yield return cacheRoot;
+    }
+
+    var bazaarLocalLowRoot = Path.Combine(localLow, "Tempo Storm", "The Bazaar");
+    if (!Directory.Exists(bazaarLocalLowRoot))
+    {
+        yield break;
+    }
+
+    List<string> candidates;
+    try
+    {
+        candidates = Directory.EnumerateDirectories(bazaarLocalLowRoot, "cache", SearchOption.AllDirectories)
+            .ToList();
+    }
+    catch
+    {
+        yield break;
+    }
+
+    foreach (var candidate in candidates.OrderBy(path => path, StringComparer.OrdinalIgnoreCase))
+    {
+        if (IsIgnoredCachePath(candidate) || !LooksLikeGameCache(candidate))
+        {
+            continue;
+        }
+
+        var fullPath = Path.GetFullPath(candidate);
+        if (seen.Add(fullPath))
+        {
+            yield return fullPath;
+        }
+    }
+}
+
+bool LooksLikeGameCache(string path)
+{
+    return Directory.Exists(path)
+        && (File.Exists(Path.Combine(path, "manifest.json"))
+            || File.Exists(Path.Combine(path, "cards.json"))
+            || Directory.Exists(Path.Combine(path, "translations")));
+}
+
+bool IsIgnoredCachePath(string path)
+{
+    var normalized = path.Replace('/', Path.DirectorySeparatorChar);
+    return normalized.Contains($"{Path.DirectorySeparatorChar}{BackupDirName}{Path.DirectorySeparatorChar}", StringComparison.OrdinalIgnoreCase)
+        || normalized.Contains($"{Path.DirectorySeparatorChar}backup_before", StringComparison.OrdinalIgnoreCase)
+        || normalized.Contains($"{Path.DirectorySeparatorChar}ru_work{Path.DirectorySeparatorChar}", StringComparison.OrdinalIgnoreCase);
 }
 
 void BackupExistingFile(string root, string destination, string stamp)
