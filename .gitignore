@@ -1,6 +1,8 @@
 bin/
 obj/
 publish/
+publish-*/
+release-assets/
 
 *.user
 *.suo

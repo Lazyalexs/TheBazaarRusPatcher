@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Security.Cryptography;
 using System.Text.Json;
 using System.Text.Json.Nodes;
@@ -36,8 +36,9 @@ var launcherStreamingAssets = Path.Combine(
 
 var patch = LoadPatch();
 #if STEAM_ONLY
+var glossary = LoadGlossary();
 patch = LoadPatch(OverridePatchResourceName, patch);
-patch = PatchCatalog.Normalize(patch, LoadGlossary().Normalize);
+patch = PatchCatalog.Normalize(patch, glossary.Normalize);
 #endif
 var steamStreamingAssets = FindSteamStreamingAssets().ToList();
 #if STEAM_ONLY
@@ -82,14 +83,14 @@ while (true)
     Console.Clear();
     Console.WriteLine(AppName);
     Console.WriteLine();
-    Console.WriteLine("1. РЈСЃС‚Р°РЅРѕРІРёС‚СЊ СЂСѓСЃРёС„РёРєР°С‚РѕСЂ");
-    Console.WriteLine("2. Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ РїРѕСЃР»РµРґРЅРёР№ Р±СЌРєР°Рї");
-    Console.WriteLine("3. РџРѕРєР°Р·Р°С‚СЊ РЅР°Р№РґРµРЅРЅС‹Рµ РїСѓС‚Рё");
-    Console.WriteLine("4. РџСЂРѕРІРµСЂРёС‚СЊ РІСЃС‚СЂРѕРµРЅРЅС‹Р№ РїР°С‚С‡");
-    Console.WriteLine("5. РџСЂРѕРІРµСЂРёС‚СЊ РёР·РјРµРЅРµРЅРёСЏ Р±РµР· СѓСЃС‚Р°РЅРѕРІРєРё");
-    Console.WriteLine("0. Р’С‹С…РѕРґ");
+    Console.WriteLine("1. Установить русификатор");
+    Console.WriteLine("2. Восстановить последний бэкап");
+    Console.WriteLine("3. Показать найденные пути");
+    Console.WriteLine("4. Проверить встроенный патч");
+    Console.WriteLine("5. Проверить изменения без установки");
+    Console.WriteLine("0. Выход");
     Console.WriteLine();
-    Console.Write("Р’С‹Р±РѕСЂ: ");
+    Console.Write("Выбор: ");
 
     switch (Console.ReadLine()?.Trim())
     {
@@ -127,7 +128,7 @@ void InstallAll()
 {
     if (!ConfirmDisclaimer())
     {
-        Console.WriteLine("РЈСЃС‚Р°РЅРѕРІРєР° РѕС‚РјРµРЅРµРЅР°.");
+        Console.WriteLine("Установка отменена.");
         return;
     }
 
@@ -141,13 +142,13 @@ void InstallOrCheck(bool dryRun)
 
     if (targets.Count == 0)
     {
-        Console.WriteLine("РќРµ РЅР°Р№РґРµРЅРѕ РЅРё РѕРґРЅРѕРіРѕ РїСѓС‚Рё РґР»СЏ СѓСЃС‚Р°РЅРѕРІРєРё.");
+        Console.WriteLine("Не найдено ни одного пути для установки.");
         return;
     }
 
     Console.WriteLine();
-    Console.WriteLine(dryRun ? "РџСЂРѕРІРµСЂРєР° Р±РµР· СѓСЃС‚Р°РЅРѕРІРєРё..." : "РЈСЃС‚Р°РЅРѕРІРєР° СЂСѓСЃРёС„РёРєР°С‚РѕСЂР°...");
-    Console.WriteLine($"РЎС‚СЂРѕРє РїРµСЂРµРІРѕРґР° РІ РїР°С‚С‡Рµ: {patch.TranslationCount:N0}");
+    Console.WriteLine(dryRun ? "Проверка без установки..." : "Установка русификатора...");
+    Console.WriteLine($"Строк перевода в патче: {patch.TranslationCount:N0}");
 
     foreach (var target in targets)
     {
@@ -166,8 +167,8 @@ void InstallOrCheck(bool dryRun)
 
     Console.WriteLine();
     Console.WriteLine(dryRun
-        ? "РџСЂРѕРІРµСЂРєР° Р·Р°РІРµСЂС€РµРЅР°. Р¤Р°Р№Р»С‹ РЅРµ РёР·РјРµРЅСЏР»РёСЃСЊ."
-        : "Р“РѕС‚РѕРІРѕ. РџРѕР»РЅРѕСЃС‚СЊСЋ Р·Р°РєСЂРѕР№С‚Рµ РёРіСЂСѓ Рё Р»Р°СѓРЅС‡РµСЂ, Р·Р°С‚РµРј Р·Р°РїСѓСЃС‚РёС‚Рµ Р·Р°РЅРѕРІРѕ.");
+        ? "Проверка завершена. Файлы не изменялись."
+        : "Готово. Полностью закройте игру и лаунчер, затем запустите заново.");
 }
 
 bool ConfirmDisclaimer()
@@ -178,13 +179,13 @@ bool ConfirmDisclaimer()
     }
 
     Console.WriteLine();
-    Console.WriteLine("Р’РќРРњРђРќРР•");
-    Console.WriteLine("Р­С‚Рѕ РЅРµРѕС„РёС†РёР°Р»СЊРЅС‹Р№ С„Р°РЅР°С‚СЃРєРёР№ РїРµСЂРµРІРѕРґ.");
-    Console.WriteLine("РџСЂРѕРµРєС‚ РЅРµ СЃРІСЏР·Р°РЅ СЃ СЂР°Р·СЂР°Р±РѕС‚С‡РёРєР°РјРё The Bazaar.");
-    Console.WriteLine("РџР°С‚С‡РµСЂ РёР·РјРµРЅСЏРµС‚ Р»РѕРєР°Р»СЊРЅС‹Рµ С„Р°Р№Р»С‹ РёРіСЂС‹ РЅР° РІР°С€РµРј РєРѕРјРїСЊСЋС‚РµСЂРµ.");
-    Console.WriteLine("РСЃРїРѕР»СЊР·СѓР№С‚Рµ РЅР° СЃРІРѕР№ СЂРёСЃРє. РџРµСЂРµРґ РёР·РјРµРЅРµРЅРёСЏРјРё Р±СѓРґРµС‚ СЃРѕР·РґР°РЅ Р±СЌРєР°Рї.");
+    Console.WriteLine("ВНИМАНИЕ");
+    Console.WriteLine("Это неофициальный фанатский перевод.");
+    Console.WriteLine("Проект не связан с разработчиками The Bazaar.");
+    Console.WriteLine("Патчер изменяет локальные файлы игры на вашем компьютере.");
+    Console.WriteLine("Используйте на свой риск. Перед изменениями будет создан бэкап.");
     Console.WriteLine();
-    Console.Write("РџСЂРѕРґРѕР»Р¶РёС‚СЊ СѓСЃС‚Р°РЅРѕРІРєСѓ? Р’РІРµРґРёС‚Рµ YES: ");
+    Console.Write("Продолжить установку? Введите YES: ");
 
     return string.Equals(Console.ReadLine()?.Trim(), "YES", StringComparison.Ordinal);
 }
@@ -221,7 +222,7 @@ void PatchStreamingAssets(string root, string stamp, bool dryRun)
         var path = Path.Combine(root, fileName);
         if (!File.Exists(path))
         {
-            Console.WriteLine($"  {fileName}: РЅРµ РЅР°Р№РґРµРЅ.");
+            Console.WriteLine($"  {fileName}: не найден.");
             continue;
         }
 
@@ -240,13 +241,24 @@ void PatchTranslationDatabases(string root, string stamp, bool dryRun)
         return;
     }
 
+#if STEAM_ONLY
+    var ruDbPath = Path.Combine(translationsDir, "ru-RU.bytes");
+    var dbFiles = File.Exists(ruDbPath)
+        ? new List<string> { ruDbPath }
+        : new List<string>();
+#else
     var dbFiles = Directory.EnumerateFiles(translationsDir, "*.bytes", SearchOption.TopDirectoryOnly)
         .OrderBy(Path.GetFileName, StringComparer.OrdinalIgnoreCase)
         .ToList();
+#endif
 
     if (dbFiles.Count == 0)
     {
+#if STEAM_ONLY
+        Console.WriteLine("  translations/ru-RU.bytes not found.");
+#else
         Console.WriteLine("  translations/*.bytes not found.");
+#endif
         return;
     }
 
@@ -275,7 +287,7 @@ void PatchJsonFile(string root, string path, string stamp, bool dryRun)
     var fileName = Path.GetFileName(path);
     if (!ValidatePatchableJson(path, out var reason))
     {
-        Console.WriteLine($"  {fileName}: РїСЂРѕРїСѓС‰РµРЅРѕ ({reason})");
+        Console.WriteLine($"  {fileName}: пропущено ({reason})");
         return;
     }
 
@@ -286,18 +298,22 @@ void PatchJsonFile(string root, string path, string stamp, bool dryRun)
 
     var result = PatchJsonTextByKey(path, dryRun, skipAmbiguousKeys: steamOnly);
     Console.WriteLine(dryRun
-        ? $"  {fileName}: Р±СѓРґРµС‚ РѕР±РЅРѕРІР»РµРЅРѕ С‚РµРєСЃС‚РѕРІ {result.Changed:N0}"
-        : $"  {fileName}: РѕР±РЅРѕРІР»РµРЅРѕ С‚РµРєСЃС‚РѕРІ {result.Changed:N0}");
+        ? $"  {fileName}: будет обновлено текстов {result.Changed:N0}"
+        : $"  {fileName}: обновлено текстов {result.Changed:N0}");
 
     if (result.SkippedAmbiguous > 0)
     {
-        Console.WriteLine($"  {fileName}: РїСЂРѕРїСѓС‰РµРЅРѕ РЅРµРѕРґРЅРѕР·РЅР°С‡РЅС‹С… С‚РµРєСЃС‚РѕРІ {result.SkippedAmbiguous:N0}");
+        Console.WriteLine($"  {fileName}: пропущено неоднозначных текстов {result.SkippedAmbiguous:N0}");
     }
 }
 
 int PatchTranslationDatabase(string dbPath, bool dryRun)
 {
+#if STEAM_ONLY
+    if (patch.KeyTranslations.Count == 0 && glossary.IsEmpty)
+#else
     if (patch.KeyTranslations.Count == 0)
+#endif
     {
         return 0;
     }
@@ -328,6 +344,23 @@ int PatchTranslationDatabase(string dbPath, bool dryRun)
             }
         }
 
+#if STEAM_ONLY
+        {
+            using var glossaryScan = connection.CreateCommand();
+            glossaryScan.CommandText = "SELECT hash, text FROM translation";
+            using var glossaryReader = glossaryScan.ExecuteReader();
+            while (glossaryReader.Read())
+            {
+                var existing = glossaryReader.IsDBNull(1) ? "" : glossaryReader.GetString(1);
+                var normalized = glossary.Normalize(existing);
+                if (normalized != existing)
+                {
+                    changed++;
+                }
+            }
+        }
+#endif
+
         return changed;
     }
 
@@ -349,6 +382,40 @@ int PatchTranslationDatabase(string dbPath, bool dryRun)
         textParam.Value = text;
         changed += command.ExecuteNonQuery();
     }
+
+#if STEAM_ONLY
+    {
+        using var glossaryScan = connection.CreateCommand();
+        glossaryScan.Transaction = transaction;
+        glossaryScan.CommandText = "SELECT hash, text FROM translation";
+
+        using var update = connection.CreateCommand();
+        update.Transaction = transaction;
+        update.CommandText = """
+            UPDATE translation
+            SET text = $text
+            WHERE hash = $hash AND text <> $text
+            """;
+        var updateHash = update.Parameters.Add("$hash", SqliteType.Text);
+        var updateText = update.Parameters.Add("$text", SqliteType.Text);
+
+        using var glossaryReader = glossaryScan.ExecuteReader();
+        while (glossaryReader.Read())
+        {
+            var hash = glossaryReader.GetString(0);
+            var existing = glossaryReader.IsDBNull(1) ? "" : glossaryReader.GetString(1);
+            var normalized = glossary.Normalize(existing);
+            if (normalized == existing)
+            {
+                continue;
+            }
+
+            updateHash.Value = hash;
+            updateText.Value = normalized;
+            changed += update.ExecuteNonQuery();
+        }
+    }
+#endif
 
     transaction.Commit();
     return changed;
@@ -389,11 +456,10 @@ void PatchNode(JsonNode node, HashSet<string> ambiguousKeys, ref int changed, re
 {
     if (node is JsonObject obj)
     {
-        if (obj.TryGetPropertyValue("Key", out var keyNode)
-            && obj.TryGetPropertyValue("Text", out var textNode)
-            && keyNode?.GetValueKind() == JsonValueKind.String
-            && textNode?.GetValueKind() == JsonValueKind.String)
+        if (IsKeyTextNode(obj))
         {
+            var keyNode = obj["Key"]!;
+            var textNode = obj["Text"]!;
             var key = keyNode.GetValue<string>();
             var current = textNode.GetValue<string>();
 
@@ -414,6 +480,10 @@ void PatchNode(JsonNode node, HashSet<string> ambiguousKeys, ref int changed, re
                 }
             }
         }
+        else if (IsTooltipTextNode(obj))
+        {
+            PatchTooltipNode(obj, ref changed);
+        }
 
         foreach (var child in obj.ToList())
         {
@@ -433,6 +503,64 @@ void PatchNode(JsonNode node, HashSet<string> ambiguousKeys, ref int changed, re
             }
         }
     }
+}
+
+void PatchTooltipNode(JsonObject obj, ref int changed)
+{
+    var id = obj["Id"]!.GetValue<string>();
+    PatchTooltipProperty(obj, id, "Tag", ref changed);
+    PatchTooltipProperty(obj, id, "Keyword", ref changed);
+}
+
+void PatchTooltipProperty(JsonObject obj, string id, string propertyName, ref int changed)
+{
+    if (!obj.TryGetPropertyValue(propertyName, out var textNode)
+        || textNode?.GetValueKind() != JsonValueKind.String)
+    {
+        return;
+    }
+
+    var current = textNode.GetValue<string>();
+    if (string.IsNullOrEmpty(current))
+    {
+        return;
+    }
+
+    var hasTranslation = patch.TryTranslate(id, current, out var translated);
+#if STEAM_ONLY
+    if (!hasTranslation)
+    {
+        translated = glossary.Normalize(current);
+        hasTranslation = translated != current;
+    }
+#endif
+
+    if (hasTranslation && translated != current)
+    {
+        obj[propertyName] = translated;
+        changed++;
+    }
+}
+
+bool IsKeyTextNode(JsonObject obj)
+{
+    return obj.TryGetPropertyValue("Key", out var keyNode)
+        && obj.TryGetPropertyValue("Text", out var textNode)
+        && keyNode?.GetValueKind() == JsonValueKind.String
+        && textNode?.GetValueKind() == JsonValueKind.String;
+}
+
+bool IsTooltipTextNode(JsonObject obj)
+{
+    return obj.TryGetPropertyValue("Id", out var idNode)
+        && idNode?.GetValueKind() == JsonValueKind.String
+        && (IsStringProperty(obj, "Tag") || IsStringProperty(obj, "Keyword"));
+}
+
+bool IsStringProperty(JsonObject obj, string propertyName)
+{
+    return obj.TryGetPropertyValue(propertyName, out var valueNode)
+        && valueNode?.GetValueKind() == JsonValueKind.String;
 }
 
 HashSet<string> FindAmbiguousPatchKeys(JsonNode root)
@@ -497,7 +625,7 @@ bool ValidateTranslationDatabase(string dbPath, out string reason)
         table.CommandText = "SELECT COUNT(*) FROM sqlite_master WHERE type = 'table' AND name = 'translation'";
         if (Convert.ToInt32(table.ExecuteScalar()) != 1)
         {
-            reason = "РЅРµС‚ С‚Р°Р±Р»РёС†С‹ translation";
+            reason = "нет таблицы translation";
             return false;
         }
 
@@ -512,7 +640,7 @@ bool ValidateTranslationDatabase(string dbPath, out string reason)
 
         if (!names.Contains("hash") || !names.Contains("text"))
         {
-            reason = "РЅРµРѕР¶РёРґР°РЅРЅР°СЏ СЃС‚СЂСѓРєС‚СѓСЂР° С‚Р°Р±Р»РёС†С‹ translation";
+            reason = "неожиданная структура таблицы translation";
             return false;
         }
 
@@ -533,13 +661,13 @@ bool ValidatePatchableJson(string path, out string reason)
         var root = JsonNode.Parse(File.ReadAllText(path));
         if (root is not JsonObject obj)
         {
-            reason = "РѕР¶РёРґР°Р»СЃСЏ JSON-РѕР±СЉРµРєС‚ РІРµСЂС…РЅРµРіРѕ СѓСЂРѕРІРЅСЏ";
+            reason = "ожидался JSON-объект верхнего уровня";
             return false;
         }
 
-        if (!obj.ContainsKey("5.0.0"))
+        if (!obj.Any(kvp => System.Text.RegularExpressions.Regex.IsMatch(kvp.Key, @"^\d+\.\d+")))
         {
-            reason = "РІРµСЂСЃРёСЏ РґР°РЅРЅС‹С… РЅРµ РїСЂРѕРІРµСЂРµРЅР°";
+            reason = "версия данных не проверена";
             return false;
         }
 
@@ -547,7 +675,7 @@ bool ValidatePatchableJson(string path, out string reason)
         CountTextNodes(root, ref textNodeCount);
         if (textNodeCount == 0)
         {
-            reason = "РЅРµ РЅР°Р№РґРµРЅС‹ СѓР·Р»С‹ Key/Text";
+            reason = "не найдены узлы Key/Text";
             return false;
         }
 
@@ -565,10 +693,11 @@ void CountTextNodes(JsonNode? node, ref int count)
 {
     if (node is JsonObject obj)
     {
-        if (obj.TryGetPropertyValue("Key", out var keyNode)
-            && obj.TryGetPropertyValue("Text", out var textNode)
-            && keyNode?.GetValueKind() == JsonValueKind.String
-            && textNode?.GetValueKind() == JsonValueKind.String)
+        if (IsKeyTextNode(obj))
+        {
+            count++;
+        }
+        else if (IsTooltipTextNode(obj))
         {
             count++;
         }
@@ -601,7 +730,7 @@ void UpdateManifestIfExists(string manifestPath, string root, bool dryRun)
     }
     catch
     {
-        Console.WriteLine($"  {Path.GetFileName(manifestPath)}: РЅРµ СѓРґР°Р»РѕСЃСЊ РїСЂРѕС‡РёС‚Р°С‚СЊ.");
+        Console.WriteLine($"  {Path.GetFileName(manifestPath)}: не удалось прочитать.");
         return;
     }
 
@@ -616,6 +745,12 @@ void UpdateManifestIfExists(string manifestPath, string root, bool dryRun)
         var name = Path.GetFileName(file);
         var md5 = ComputeMd5(file);
         UpdateManifestNode(manifest, name, md5, ref changed);
+
+        var nameWithoutExtension = Path.GetFileNameWithoutExtension(name);
+        if (!string.Equals(name, nameWithoutExtension, StringComparison.Ordinal))
+        {
+            UpdateManifestNode(manifest, nameWithoutExtension, md5, ref changed);
+        }
     }
 
     if (changed)
@@ -630,8 +765,8 @@ void UpdateManifestIfExists(string manifestPath, string root, bool dryRun)
         }
 
         Console.WriteLine(dryRun
-            ? $"  {Path.GetFileName(manifestPath)}: Р±СѓРґСѓС‚ РѕР±РЅРѕРІР»РµРЅС‹ С…СЌС€Рё"
-            : $"  {Path.GetFileName(manifestPath)}: РѕР±РЅРѕРІР»РµРЅС‹ С…СЌС€Рё.");
+            ? $"  {Path.GetFileName(manifestPath)}: будут обновлены хэши"
+            : $"  {Path.GetFileName(manifestPath)}: обновлены хэши.");
     }
 }
 
@@ -679,19 +814,19 @@ void RestoreAll()
 
     if (targets.Count == 0)
     {
-        Console.WriteLine("РќРµ РЅР°Р№РґРµРЅРѕ РЅРё РѕРґРЅРѕРіРѕ РїСѓС‚Рё РґР»СЏ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ.");
+        Console.WriteLine("Не найдено ни одного пути для восстановления.");
         return;
     }
 
     Console.WriteLine();
-    Console.WriteLine("Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РїРѕСЃР»РµРґРЅРµРіРѕ Р±СЌРєР°РїР°...");
+    Console.WriteLine("Восстановление последнего бэкапа...");
 
     foreach (var target in targets)
     {
         var backupRoot = Path.Combine(target.Root, BackupDirName);
         if (!Directory.Exists(backupRoot))
         {
-            Console.WriteLine($"[{target.Name}] Р±СЌРєР°РїРѕРІ РЅРµС‚.");
+            Console.WriteLine($"[{target.Name}] бэкапов нет.");
             continue;
         }
 
@@ -701,7 +836,7 @@ void RestoreAll()
 
         if (latest is null)
         {
-            Console.WriteLine($"[{target.Name}] Р±СЌРєР°РїРѕРІ РЅРµС‚.");
+            Console.WriteLine($"[{target.Name}] бэкапов нет.");
             continue;
         }
 
@@ -718,7 +853,7 @@ void RestoreAll()
     }
 
     Console.WriteLine();
-    Console.WriteLine("Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ Р·Р°РІРµСЂС€РµРЅРѕ.");
+    Console.WriteLine("Восстановление завершено.");
 }
 
 void PrintTargets()
@@ -726,7 +861,7 @@ void PrintTargets()
     Console.WriteLine();
     foreach (var target in GetInstallTargets())
     {
-        var state = Directory.Exists(target.Root) ? "РЅР°Р№РґРµРЅРѕ" : "РЅРµ РЅР°Р№РґРµРЅРѕ";
+        var state = Directory.Exists(target.Root) ? "найдено" : "не найдено";
         Console.WriteLine($"{target.Name}: {state}");
         Console.WriteLine(target.Root);
         Console.WriteLine();
@@ -736,16 +871,16 @@ void PrintTargets()
 void VerifyPatch()
 {
     Console.WriteLine();
-    Console.WriteLine("РџСЂРѕРІРµСЂРєР° РІСЃС‚СЂРѕРµРЅРЅРѕРіРѕ РїР°С‚С‡Р°:");
-    Console.WriteLine($"РќР°Р·РІР°РЅРёРµ: {patch.Name}");
-    Console.WriteLine($"РЇР·С‹Рє: {patch.Language}");
-    Console.WriteLine($"Р¤РѕСЂРјР°С‚: {patch.Format}");
-    Console.WriteLine($"РЎС‚СЂРѕРє РїРµСЂРµРІРѕРґР°: {patch.TranslationCount:N0}");
+    Console.WriteLine("Проверка встроенного патча:");
+    Console.WriteLine($"Название: {patch.Name}");
+    Console.WriteLine($"Язык: {patch.Language}");
+    Console.WriteLine($"Формат: {patch.Format}");
+    Console.WriteLine($"Строк перевода: {patch.TranslationCount:N0}");
 }
 
 IEnumerable<InstallTarget> GetInstallTargets()
 {
-    yield return new InstallTarget("РћР±С‰РёР№ РєСЌС€ LocalLow", cacheRoot, TargetKind.Cache);
+    yield return new InstallTarget("Общий кэш LocalLow", cacheRoot, TargetKind.Cache);
 
     if (!steamOnly && Directory.Exists(launcherStreamingAssets))
     {
@@ -828,7 +963,7 @@ PatchCatalog LoadPatch(string resourceName = PatchResourceName, PatchCatalog? ba
             translations[(key, sourceText)] = translatedText;
         }
 
-        if (translations.Count == 0)
+        if (translations.Count == 0 && keyTranslations.Count == 0)
         {
             throw new InvalidOperationException("Translation patch is empty.");
         }
@@ -992,7 +1127,7 @@ IEnumerable<string> ParseSteamLibraryFolders(string vdfPath)
 void Pause()
 {
     Console.WriteLine();
-    Console.Write("РќР°Р¶РјРёС‚Рµ Enter...");
+    Console.Write("Нажмите Enter...");
     Console.ReadLine();
 }
 
@@ -1021,7 +1156,7 @@ sealed class PatchCatalog
     public int Format { get; }
     public string Name { get; }
     public string Language { get; }
-    public int TranslationCount => HasExactTranslations ? exactTranslations.Count : keyTranslations.Count;
+    public int TranslationCount => Math.Max(exactTranslations.Count, keyTranslations.Count);
     public bool HasExactTranslations => exactTranslations.Count > 0;
     public IReadOnlyDictionary<string, string> KeyTranslations => keyTranslations;
 
@@ -1125,6 +1260,8 @@ sealed class GlossaryCatalog
             .ToList();
     }
 
+    public bool IsEmpty => replacements.Count == 0;
+
     public string Normalize(string text)
     {
         var result = text;
@@ -1142,4 +1279,3 @@ enum TargetKind
     Cache,
     StreamingAssets
 }
-
