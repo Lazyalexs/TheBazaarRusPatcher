@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <AssemblyName>TheBazaarRusPatcher</AssemblyName>
     <RootNamespace>TheBazaarRusPatcher</RootNamespace>
-    <Version>0.4.4</Version>
+    <Version>0.4.5</Version>
   </PropertyGroup>
 
   <ItemGroup>

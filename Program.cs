@@ -295,15 +295,28 @@ void PatchTranslationDatabases(string root, string stamp, bool dryRun)
     var translationsDir = Path.Combine(root, "translations");
     if (!Directory.Exists(translationsDir))
     {
+#if STEAM_ONLY
+        if (dryRun)
+        {
+            Console.WriteLine("  translations: будет создана папка.");
+            Console.WriteLine($"  ru-RU.bytes: будет создана база перевода ({patch.KeyTranslations.Count:N0} строк)");
+            return;
+        }
+
+        Directory.CreateDirectory(translationsDir);
+#else
         Console.WriteLine("  translations not found.");
         return;
+#endif
     }
 
 #if STEAM_ONLY
     var ruDbPath = Path.Combine(translationsDir, "ru-RU.bytes");
-    var dbFiles = File.Exists(ruDbPath)
-        ? new List<string> { ruDbPath }
-        : new List<string>();
+    var willCreateRuDb = EnsureSteamTranslationDatabase(root, ruDbPath, stamp, dryRun);
+    var dbFiles = Directory.EnumerateFiles(translationsDir, "*.bytes", SearchOption.TopDirectoryOnly)
+        .OrderBy(path => string.Equals(Path.GetFileName(path), "ru-RU.bytes", StringComparison.OrdinalIgnoreCase) ? 0 : 1)
+        .ThenBy(Path.GetFileName, StringComparer.OrdinalIgnoreCase)
+        .ToList();
 #else
     var dbFiles = Directory.EnumerateFiles(translationsDir, "*.bytes", SearchOption.TopDirectoryOnly)
         .OrderBy(Path.GetFileName, StringComparer.OrdinalIgnoreCase)
@@ -313,7 +326,10 @@ void PatchTranslationDatabases(string root, string stamp, bool dryRun)
     if (dbFiles.Count == 0)
     {
 #if STEAM_ONLY
-        Console.WriteLine("  translations/ru-RU.bytes not found.");
+        if (!willCreateRuDb)
+        {
+            Console.WriteLine("  translations/*.bytes not found.");
+        }
 #else
         Console.WriteLine("  translations/*.bytes not found.");
 #endif
@@ -340,6 +356,52 @@ void PatchTranslationDatabases(string root, string stamp, bool dryRun)
             : $"  {fileName}: updated strings {changed:N0}");
     }
 }
+
+#if STEAM_ONLY
+bool EnsureSteamTranslationDatabase(string root, string ruDbPath, string stamp, bool dryRun)
+{
+    if (File.Exists(ruDbPath))
+    {
+        return false;
+    }
+
+    if (dryRun)
+    {
+        Console.WriteLine($"  ru-RU.bytes: будет создана база перевода ({patch.KeyTranslations.Count:N0} строк)");
+        return true;
+    }
+
+    BackupExistingFile(root, ruDbPath, stamp);
+    CreateTranslationDatabase(ruDbPath);
+    Console.WriteLine("  ru-RU.bytes: создана база перевода");
+    return true;
+}
+
+void CreateTranslationDatabase(string dbPath)
+{
+    Directory.CreateDirectory(Path.GetDirectoryName(dbPath)!);
+
+    var connectionString = new SqliteConnectionStringBuilder
+    {
+        DataSource = dbPath,
+        Mode = SqliteOpenMode.ReadWriteCreate
+    }.ToString();
+
+    using var connection = new SqliteConnection(connectionString);
+    connection.Open();
+
+    using var command = connection.CreateCommand();
+    command.CommandText = """
+        CREATE TABLE translation
+        (
+            hash TEXT PRIMARY KEY,
+            text TEXT NOT NULL
+        ) WITHOUT ROWID
+        """;
+    command.ExecuteNonQuery();
+}
+#endif
+
 void PatchJsonFile(string root, string path, string stamp, bool dryRun)
 {
     var fileName = Path.GetFileName(path);
