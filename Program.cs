@@ -47,6 +47,13 @@ var steamOnly = true;
 var steamOnly = args.Any(a => a.Equals("--steam-only", StringComparison.OrdinalIgnoreCase));
 #endif
 var assumeYes = args.Any(a => a.Equals("--yes", StringComparison.OrdinalIgnoreCase));
+#if STEAM_ONLY
+var strictExact = args.Any(a =>
+    a.Equals("--strict-exact", StringComparison.OrdinalIgnoreCase)
+    || a.Equals("--exact-only", StringComparison.OrdinalIgnoreCase));
+#else
+var strictExact = false;
+#endif
 
 if (args.Any(a => a.Equals("--restore", StringComparison.OrdinalIgnoreCase)))
 {
@@ -463,7 +470,7 @@ void PatchNode(JsonNode node, HashSet<string> ambiguousKeys, ref int changed, re
             var key = keyNode.GetValue<string>();
             var current = textNode.GetValue<string>();
 
-            var hasTranslation = patch.HasExactTranslations
+            var hasTranslation = strictExact && patch.HasExactTranslations
                 ? patch.TryTranslateExact(key, current, out var translated)
                 : patch.TryTranslate(key, current, out translated);
 
