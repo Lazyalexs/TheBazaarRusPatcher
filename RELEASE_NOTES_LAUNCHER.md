@@ -23,5 +23,5 @@
 Если игра установлена через Steam, используйте отдельный файл:
 
 ```text
-TheBazaarRusSteamPatcher.exe
+TheBazaarRusSteamPatcher.zip
 ```

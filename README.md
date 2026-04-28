@@ -2,10 +2,10 @@
 
 Неофициальный патчер русской локализации для **The Bazaar**.
 
-Проект поддерживает две отдельные сборки:
+Проект поддерживает два варианта установки:
 
 - `TheBazaarRusPatcher.exe` - основная версия для Tempo Launcher и совместимых установок;
-- `TheBazaarRusSteamPatcher.exe` - отдельная версия для Steam.
+- `TheBazaarRusSteamPatcher.zip` - отдельный готовый архив для Steam-версии игры.
 
 Скачать последнюю версию:
 
@@ -17,7 +17,7 @@ https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/latest
 
 Это неофициальный фанатский перевод. Проект не связан с Tempo, Tempo Storm, AVY Entertainment или разработчиками The Bazaar.
 
-Репозиторий и релизы не распространяют игровые файлы вроде `cards.json`, `tooltips.json`, `ru-RU.bytes` и `manifest.json`. Патчер содержит только таблицы перевода и применяет их к локальным файлам игры на компьютере пользователя.
+Исходники репозитория содержат код патчера и таблицы перевода. Steam-архив в Releases содержит готовый payload для установки русификации в Steam-клиент и локальный кэш игры.
 
 Перед изменением файлов патчер создает резервную копию в `.rus_patch_backups`.
 
@@ -29,7 +29,7 @@ https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/latest
 - теги предметов;
 - часть NPC, магазинов и событий.
 
-Steam-ветка дополнительно использует отдельный слой quality fixes и глоссарий терминов, чтобы уменьшить кривые подстановки в карточках и тегах.
+Steam-архив дополнительно включает исправления интерфейса, карточек, описаний, тегов, NPC и cached `translations/*.bytes`, чтобы убрать турецкие/английские остатки и кривые подстановки.
 
 ## Обратная связь
 
@@ -66,30 +66,33 @@ adeptas3@gmail.com
 
 ### Steam-версия
 
-Для Steam рекомендуется использовать отдельный файл:
+Для Steam рекомендуется использовать архив:
 
 ```text
-TheBazaarRusSteamPatcher.exe
-```
-
-Проверка:
-
-```powershell
-.\TheBazaarRusSteamPatcher.exe --check
+TheBazaarRusSteamPatcher.zip
 ```
 
 Установка:
 
+1. Закройте The Bazaar.
+2. Распакуйте `TheBazaarRusSteamPatcher.zip` в любую папку.
+3. Запустите `Install_Russian.bat`.
+4. Если игра установлена не в стандартную папку Steam, установщик попросит указать путь.
+
+Ручной запуск через PowerShell:
+
 ```powershell
-.\TheBazaarRusSteamPatcher.exe --install --yes
+powershell -ExecutionPolicy Bypass -File .\install-rus.ps1
 ```
 
-Steam-сборка патчит:
+Steam-архив устанавливает:
 
-- `steamapps\common\The Bazaar\TheBazaar_Data\StreamingAssets`
-- кэш игры в `AppData\LocalLow\Tempo Storm\The Bazaar\prod\cache`
+- `TheBazaar_Data\StreamingAssets\cards.json`
+- `TheBazaar_Data\StreamingAssets\challenges.json`
+- локальный кэш в `AppData\LocalLow\Tempo Storm\The Bazaar\prod\cache`
+- cached `translations/*.bytes`, включая `ru-RU.bytes`
 
-И не трогает папку Tempo Launcher.
+Перед заменой файлов создается резервная копия в `.rus_patch_backups`. Папка Tempo Launcher не трогается.
 
 Подробности по Steam-сборке: [STEAM_PATCHER.md](STEAM_PATCHER.md)
 
@@ -104,7 +107,7 @@ Steam-сборка патчит:
 или для Steam:
 
 ```powershell
-.\TheBazaarRusSteamPatcher.exe --restore
+.\Uninstall_Russian.bat
 ```
 
 ## Команды
@@ -124,9 +127,9 @@ Steam-сборка патчит:
 Steam-версия:
 
 ```powershell
-.\TheBazaarRusSteamPatcher.exe --check
-.\TheBazaarRusSteamPatcher.exe --install --yes
-.\TheBazaarRusSteamPatcher.exe --restore
+.\Install_Russian.bat
+.\Uninstall_Russian.bat
+powershell -ExecutionPolicy Bypass -File .\install-rus.ps1
 ```
 
 ## Релизы
@@ -134,8 +137,9 @@ Steam-версия:
 Рекомендуемая схема релизов:
 
 - `TheBazaarRusPatcher.exe` - общий релиз для лаунчера;
-- `TheBazaarRusSteamPatcher.exe` - отдельный релиз для Steam;
-- в одном GitHub Release можно выкладывать оба файла как отдельные артефакты.
+- `TheBazaarRusSteamPatcher.zip` - готовый архив для Steam;
+- `Patch.zip` - таблицы перевода для launcher-версии;
+- `SHA256SUMS.txt` - контрольные суммы файлов релиза.
 
 Готовые тексты:
 
@@ -180,3 +184,5 @@ dotnet publish .\TheBazaarRusPatcher.csproj -c Release -r win-x64 --self-contain
 ```powershell
 dotnet publish .\TheBazaarRusSteamPatcher.csproj -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true /p:EnableCompressionInSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true -o .\publish-steam
 ```
+
+Актуальная Steam-раздача собирается как zip-архив с `Install_Russian.bat`, `Uninstall_Russian.bat`, `install-rus.ps1` и папкой `payload`.
