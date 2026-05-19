@@ -3,6 +3,11 @@ obj/
 publish/
 publish-*/
 release-assets/
+dist/
+
+*.lscache
+tools/.translate-*
+tools/.bazaardb-*
 
 *.user
 *.suo

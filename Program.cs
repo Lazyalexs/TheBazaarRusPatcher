@@ -54,8 +54,15 @@ patch = PatchCatalog.Normalize(patch, glossary.Normalize);
 var steamStreamingAssets = FindSteamStreamingAssets().ToList();
 #if STEAM_ONLY
 var steamOnly = true;
+var tempoOnly = false;
 #else
 var steamOnly = args.Any(a => a.Equals("--steam-only", StringComparison.OrdinalIgnoreCase));
+var tempoOnly = args.Any(a => a.Equals("--tempo-only", StringComparison.OrdinalIgnoreCase));
+if (steamOnly && tempoOnly)
+{
+    Console.WriteLine("Cannot combine --steam-only and --tempo-only. Pick one or neither.");
+    return;
+}
 #endif
 var assumeYes = args.Any(a => a.Equals("--yes", StringComparison.OrdinalIgnoreCase));
 #if STEAM_ONLY
@@ -1019,9 +1026,12 @@ IEnumerable<InstallTarget> GetInstallTargets()
         yield return new InstallTarget("Tempo Launcher", launcherStreamingAssets, TargetKind.StreamingAssets);
     }
 
-    foreach (var steamPath in steamStreamingAssets)
+    if (!tempoOnly)
     {
-        yield return new InstallTarget("Steam", steamPath, TargetKind.StreamingAssets);
+        foreach (var steamPath in steamStreamingAssets)
+        {
+            yield return new InstallTarget("Steam", steamPath, TargetKind.StreamingAssets);
+        }
     }
 }
 
