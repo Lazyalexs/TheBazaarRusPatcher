@@ -74,6 +74,47 @@ var strictExact = false;
 #endif
 var updateManifests = args.Any(a => a.Equals("--update-manifest", StringComparison.OrdinalIgnoreCase));
 
+// Explicit game StreamingAssets path passed by the installer (or user). When
+// supplied, this overrides Steam auto-discovery so users with games in
+// non-default libraries can still patch. Accepts:
+//   --game-path "<path>"   or   --game-path=<path>
+//   --steam-path "<path>"  or   --steam-path=<path>   (alias)
+string? explicitGamePath = ExtractValueArg(args, new[] { "--game-path", "--steam-path" });
+if (!string.IsNullOrWhiteSpace(explicitGamePath))
+{
+    explicitGamePath = explicitGamePath.Trim().Trim('"');
+    if (!Directory.Exists(explicitGamePath))
+    {
+        Console.WriteLine($"--game-path: каталог не найден: {explicitGamePath}");
+        return;
+    }
+    if (!File.Exists(Path.Combine(explicitGamePath, "cards.json")))
+    {
+        Console.WriteLine($"--game-path: в каталоге нет cards.json (ожидалась папка StreamingAssets): {explicitGamePath}");
+        return;
+    }
+    var full = Path.GetFullPath(explicitGamePath);
+    // Prepend so the user-supplied path is patched first; do not duplicate.
+    steamStreamingAssets.RemoveAll(p => string.Equals(Path.GetFullPath(p), full, StringComparison.OrdinalIgnoreCase));
+    steamStreamingAssets.Insert(0, full);
+}
+
+static string? ExtractValueArg(string[] argv, string[] names)
+{
+    for (int i = 0; i < argv.Length; i++)
+    {
+        var a = argv[i];
+        foreach (var n in names)
+        {
+            if (a.Equals(n, StringComparison.OrdinalIgnoreCase) && i + 1 < argv.Length)
+                return argv[i + 1];
+            if (a.StartsWith(n + "=", StringComparison.OrdinalIgnoreCase))
+                return a.Substring(n.Length + 1);
+        }
+    }
+    return null;
+}
+
 if (args.Any(a => a.Equals("--restore", StringComparison.OrdinalIgnoreCase)))
 {
     RestoreAll();

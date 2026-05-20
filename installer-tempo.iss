@@ -30,6 +30,7 @@ SolidCompression=yes
 WizardStyle=modern
 MinVersion=10.0
 DisableProgramGroupPage=auto
+DisableDirPage=yes
 VersionInfoVersion=0.4.7.0
 VersionInfoCompany={#MyAppPublisher}
 VersionInfoDescription={#MyAppName}
