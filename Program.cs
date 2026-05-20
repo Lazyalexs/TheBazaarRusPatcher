@@ -262,6 +262,7 @@ void PatchCache(string root, string stamp, bool dryRun)
 {
     PatchTranslationDatabases(root, stamp, dryRun);
     PatchDataJsonFiles(root, stamp, dryRun);
+    PatchGameDataDatabaseIfPresent(root, stamp, dryRun);
 
     if (updateManifests)
     {
