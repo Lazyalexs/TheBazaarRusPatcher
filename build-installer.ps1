@@ -1,19 +1,26 @@
 # =============================================================================
-# Build script: TheBazaarRusPatcher installer (single .exe with both Tempo + Steam support)
+# Build script: TheBazaarRusPatcher installers
+# Produces two separate setup.exe files in dist\:
+#   - TheBazaarRusPatcher-Tempo-<version>-setup.exe  (Tempo Launcher only)
+#   - TheBazaarRusPatcher-Steam-<version>-setup.exe  (Steam only)
+# Both bundle the same TheBazaarRusPatcher.exe binary; the difference is
+# which patch files are included and which launcher flag the installer
+# passes to the patcher on auto-apply.
+#
 # Requires: .NET SDK 8+, Inno Setup 6 (winget install JRSoftware.InnoSetup)
 # =============================================================================
 
 $ErrorActionPreference = 'Stop'
 
-$project   = "TheBazaarRusPatcher.csproj"
-$outputDir = "publish-release"
-$issFile   = "installer.iss"
+$project    = "TheBazaarRusPatcher.csproj"
+$outputDir  = "publish-release"
+$tempoIss   = "installer-tempo.iss"
+$steamIss   = "installer-steam.iss"
 
 Write-Host ""
-Write-Host "=== The Bazaar Russian Patcher — Build Installer ===" -ForegroundColor Cyan
+Write-Host "=== The Bazaar Russian Patcher — Build Installers ===" -ForegroundColor Cyan
 Write-Host ""
 
-# 1. .NET SDK check
 if (-not (Get-Command dotnet -ErrorAction SilentlyContinue)) {
     Write-Host "ERROR: dotnet not found. Install .NET SDK 8+" -ForegroundColor Red
     Write-Host "https://dotnet.microsoft.com/download" -ForegroundColor Yellow
@@ -21,7 +28,6 @@ if (-not (Get-Command dotnet -ErrorAction SilentlyContinue)) {
 }
 Write-Host "dotnet SDK: $(dotnet --version)"
 
-# 2. Patch files present
 $requiredPatchFiles = @(
     "Patch\translation-patch.json"
 )
@@ -33,7 +39,6 @@ if ($missing.Count -gt 0) {
 }
 Write-Host "Patch files: OK" -ForegroundColor Green
 
-# 3. Clean and build
 if (Test-Path $outputDir) {
     Remove-Item -Recurse -Force $outputDir
 }
@@ -62,7 +67,6 @@ if (-not (Test-Path $exe)) {
 $sizeMb = [math]::Round((Get-Item $exe).Length / 1MB, 1)
 Write-Host "Built $exe ($sizeMb MB)" -ForegroundColor Green
 
-# 4. Locate Inno Setup
 $iscc = $null
 foreach ($candidate in @(
     'C:\Program Files (x86)\Inno Setup 6\ISCC.exe',
@@ -85,19 +89,20 @@ if (-not $iscc) {
     exit 0
 }
 
-Write-Host ""
-Write-Host "Building installer via $iscc ..." -ForegroundColor Cyan
-& $iscc $issFile
-
-if ($LASTEXITCODE -ne 0) {
-    Write-Host "ERROR: ISCC failed (exit $LASTEXITCODE)" -ForegroundColor Red
-    exit $LASTEXITCODE
+foreach ($iss in @($tempoIss, $steamIss)) {
+    Write-Host ""
+    Write-Host "Building installer: $iss" -ForegroundColor Cyan
+    & $iscc $iss
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "ERROR: ISCC failed on $iss (exit $LASTEXITCODE)" -ForegroundColor Red
+        exit $LASTEXITCODE
+    }
 }
 
 Write-Host ""
 Write-Host "=== Build complete ===" -ForegroundColor Green
-Write-Host "Installer in dist\ directory"
-Get-ChildItem dist\*.exe | ForEach-Object {
+Write-Host "Installers in dist\ directory:"
+Get-ChildItem dist\*.exe | Sort-Object Name | ForEach-Object {
     $mb = [math]::Round($_.Length / 1MB, 1)
     Write-Host "  $($_.Name) ($mb MB)"
 }
