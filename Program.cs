@@ -464,7 +464,11 @@ void PatchJsonFile(string root, string path, string stamp, bool dryRun)
         BackupExistingFile(root, path, stamp);
     }
 
-    var result = PatchJsonTextByKey(path, dryRun, skipAmbiguousKeys: steamOnly);
+    // Only skip ambiguous keys when we actually have exact (key, sourceText)
+    // translations to fall back on. With a plain format=1 patch (one Russian
+    // per Key) skipping leaves the Steam build mostly English — apply the
+    // single available translation to every occurrence instead.
+    var result = PatchJsonTextByKey(path, dryRun, skipAmbiguousKeys: steamOnly && patch.HasExactTranslations);
     Console.WriteLine(dryRun
         ? $"  {fileName}: будет обновлено текстов {result.Changed:N0}"
         : $"  {fileName}: обновлено текстов {result.Changed:N0}");
