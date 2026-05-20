@@ -14,8 +14,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <!-- SDK default already excludes obj/** for Compile, but the new
+         per-configuration intermediate directory layout (obj/<Name>/<Cfg>/...)
+         can slip Debug AssemblyInfo into a Release publish. Belt-and-braces: -->
+    <Compile Remove="obj\**\*.cs" />
+    <Compile Remove="bin\**\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Include="Patch\translation-patch.json">
       <LogicalName>Patch/translation-patch.json</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patch\gamedata-tooltips.json">
+      <LogicalName>Patch/gamedata-tooltips.json</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
 </Project>

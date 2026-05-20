@@ -313,6 +313,26 @@ void PatchGameDataDatabaseIfPresent(string root, string stamp, bool dryRun)
     }
 }
 
+// Glossary of {tooltip-Id -> {Tag, Keyword}} Russian translations used to
+// rewrite the `tooltips` table BLOB inside GameData.db. The table is a single
+// row whose Data is a JSON object keyed by the tooltip's textual Id (e.g.
+// "Burn", "Charge", "When Sold:"); each value has Tag and Keyword which the
+// game surfaces verbatim on every card.
+Dictionary<string, (string Tag, string Keyword)> GameDataTooltips()
+{
+    var result = new Dictionary<string, (string Tag, string Keyword)>(StringComparer.Ordinal);
+    using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Patch/gamedata-tooltips.json");
+    if (stream is null) return result;
+    using var doc = JsonDocument.Parse(stream);
+    foreach (var prop in doc.RootElement.EnumerateObject())
+    {
+        var tag = prop.Value.TryGetProperty("Tag", out var t) ? (t.GetString() ?? "") : "";
+        var kw = prop.Value.TryGetProperty("Keyword", out var k) ? (k.GetString() ?? "") : "";
+        result[prop.Name] = (tag, kw);
+    }
+    return result;
+}
+
 (int total, List<(string table, int n)> perTable, int skippedAmbiguous) PatchGameDataDatabase(string dbPath, bool dryRun)
 {
     // Tables in GameData.db whose Data BLOB is a JSON document containing
@@ -397,6 +417,95 @@ void PatchGameDataDatabaseIfPresent(string root, string stamp, bool dryRun)
         {
             perTable.Add((table, tableChanged));
             totalChanged += tableChanged;
+        }
+    }
+
+    // The `tooltips` table is a single row whose Data is a dict of
+    // {tooltip-Id -> {Tag, Keyword, ...}}. PatchNode's IsTooltipTextNode only
+    // matches via patch.TryTranslate(id, current), and our format=1 patch is
+    // keyed by 32-char hashes — not human strings like "Burn" — so PatchNode
+    // never resolves a translation here. Instead we overlay an explicit
+    // {Id -> {Tag, Keyword}} map shipped as gamedata-tooltips.json.
+    var tooltipTranslations = GameDataTooltips();
+    if (tooltipTranslations.Count > 0)
+    {
+        using (var existsCmd = connection.CreateCommand())
+        {
+            existsCmd.CommandText = "SELECT 1 FROM sqlite_master WHERE type='table' AND name='tooltips'";
+            if (existsCmd.ExecuteScalar() is not null)
+            {
+                var tooltipRows = new List<(object id, byte[] data)>();
+                using (var sel = connection.CreateCommand())
+                {
+                    sel.CommandText = "SELECT Id, Data FROM tooltips";
+                    using var r = sel.ExecuteReader();
+                    while (r.Read())
+                    {
+                        tooltipRows.Add((r.GetValue(0), (byte[])r["Data"]));
+                    }
+                }
+
+                var tooltipsChanged = 0;
+                foreach (var (id, data) in tooltipRows)
+                {
+                    var json = Encoding.UTF8.GetString(data);
+                    var node = JsonNode.Parse(json) as JsonObject;
+                    if (node is null) continue;
+
+                    var rowChanged = 0;
+                    foreach (var prop in node.ToList())
+                    {
+                        if (prop.Value is not JsonObject entry) continue;
+                        if (!tooltipTranslations.TryGetValue(prop.Key, out var ru)) continue;
+
+                        if (entry.TryGetPropertyValue("Tag", out var tagNode)
+                            && tagNode is not null
+                            && tagNode.GetValueKind() == JsonValueKind.String
+                            && ru.Tag.Length > 0
+                            && tagNode.GetValue<string>() != ru.Tag)
+                        {
+                            entry["Tag"] = ru.Tag;
+                            rowChanged++;
+                        }
+
+                        if (entry.TryGetPropertyValue("Keyword", out var kwNode)
+                            && kwNode is not null
+                            && kwNode.GetValueKind() == JsonValueKind.String
+                            && ru.Keyword.Length > 0
+                            && kwNode.GetValue<string>() != ru.Keyword)
+                        {
+                            entry["Keyword"] = ru.Keyword;
+                            rowChanged++;
+                        }
+                    }
+
+                    if (rowChanged == 0) continue;
+                    tooltipsChanged += rowChanged;
+
+                    if (!dryRun)
+                    {
+                        var updatedJson = node.ToJsonString(new JsonSerializerOptions
+                        {
+                            WriteIndented = false,
+                            Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+                        });
+                        var updatedBytes = Encoding.UTF8.GetBytes(updatedJson);
+
+                        using var upd = connection.CreateCommand();
+                        upd.Transaction = transaction;
+                        upd.CommandText = "UPDATE tooltips SET Data = $d WHERE Id = $i";
+                        upd.Parameters.AddWithValue("$d", updatedBytes);
+                        upd.Parameters.AddWithValue("$i", id);
+                        upd.ExecuteNonQuery();
+                    }
+                }
+
+                if (tooltipsChanged > 0)
+                {
+                    perTable.Add(("tooltips", tooltipsChanged));
+                    totalChanged += tooltipsChanged;
+                }
+            }
         }
     }
 
