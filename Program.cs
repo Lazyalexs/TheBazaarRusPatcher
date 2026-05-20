@@ -264,16 +264,14 @@ void PatchCache(string root, string stamp, bool dryRun)
     PatchDataJsonFiles(root, stamp, dryRun);
     PatchGameDataDatabaseIfPresent(root, stamp, dryRun);
 
-    if (updateManifests)
-    {
-        UpdateManifestIfExists(Path.Combine(root, "manifest.json"), root, dryRun);
-        UpdateManifestIfExists(Path.Combine(root, "translations", "manifest.json"), Path.Combine(root, "translations"), dryRun);
-    }
-    else
-    {
-        ReportManifestPreservedIfExists(root, Path.Combine(root, "manifest.json"));
-        ReportManifestPreservedIfExists(root, Path.Combine(root, "translations", "manifest.json"));
-    }
+    // Always recompute manifest hashes so the game's cache-integrity check
+    // accepts our patched files. Leaving the original CDN ETags in the
+    // manifest meant the game saw "local MD5 != manifest ETag" on launch
+    // and silently re-downloaded the fresh English file from CDN, wiping
+    // the translation. The legacy --update-manifest flag is no longer
+    // needed but is still honored as a no-op for backward compatibility.
+    UpdateManifestIfExists(Path.Combine(root, "manifest.json"), root, dryRun);
+    UpdateManifestIfExists(Path.Combine(root, "translations", "manifest.json"), Path.Combine(root, "translations"), dryRun);
 }
 
 void PatchStreamingAssets(string root, string stamp, bool dryRun)
@@ -562,17 +560,6 @@ IEnumerable<string> EnumerateDataJsonFiles(string root)
             yield return path;
         }
     }
-}
-
-void ReportManifestPreservedIfExists(string root, string manifestPath)
-{
-    if (!File.Exists(manifestPath))
-    {
-        return;
-    }
-
-    var relative = Path.GetRelativePath(root, manifestPath).Replace('\\', '/');
-    Console.WriteLine($"  {relative}: оставлен без изменений (CDN ETag)");
 }
 
 void PatchTranslationDatabases(string root, string stamp, bool dryRun)
