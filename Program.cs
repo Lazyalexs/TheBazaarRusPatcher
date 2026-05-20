@@ -1,5 +1,6 @@
 using System.Reflection;
 using System.Security.Cryptography;
+using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using Microsoft.Data.Sqlite;
@@ -277,7 +278,133 @@ void PatchCache(string root, string stamp, bool dryRun)
 void PatchStreamingAssets(string root, string stamp, bool dryRun)
 {
     PatchDataJsonFiles(root, stamp, dryRun);
+    PatchGameDataDatabaseIfPresent(root, stamp, dryRun);
     UpdateManifestIfExists(Path.Combine(root, "manifest.json"), root, dryRun);
+}
+
+void PatchGameDataDatabaseIfPresent(string root, string stamp, bool dryRun)
+{
+    var dbPath = Path.Combine(root, "GameData.db");
+    if (!File.Exists(dbPath))
+    {
+        return;
+    }
+
+    if (!dryRun)
+    {
+        BackupExistingFile(root, dbPath, stamp);
+    }
+
+    var (totalChanged, perTable, skippedAmbiguous) = PatchGameDataDatabase(dbPath, dryRun);
+    foreach (var (table, n) in perTable)
+    {
+        Console.WriteLine(dryRun
+            ? $"  GameData.db/{table}: будет обновлено текстов {n:N0}"
+            : $"  GameData.db/{table}: обновлено текстов {n:N0}");
+    }
+    if (skippedAmbiguous > 0)
+    {
+        Console.WriteLine($"  GameData.db: пропущено неоднозначных текстов {skippedAmbiguous:N0}");
+    }
+    if (perTable.Count == 0)
+    {
+        Console.WriteLine($"  GameData.db: переводимых строк не найдено");
+    }
+}
+
+(int total, List<(string table, int n)> perTable, int skippedAmbiguous) PatchGameDataDatabase(string dbPath, bool dryRun)
+{
+    // Tables in GameData.db whose Data BLOB is a JSON document containing
+    // the same {Key, Text} translatable nodes as the loose *.json files.
+    // Schema: (Id [TEXT|INT] PRIMARY KEY, Data BLOB) STRICT, WITHOUT ROWID
+    string[] blobTables = { "cards", "challenges", "collectibles", "game_modes", "level_ups", "monsters", "seasons" };
+
+    var perTable = new List<(string, int)>();
+    var totalChanged = 0;
+    var totalSkipped = 0;
+
+    var connectionString = new SqliteConnectionStringBuilder
+    {
+        DataSource = dbPath,
+        Mode = dryRun ? SqliteOpenMode.ReadOnly : SqliteOpenMode.ReadWrite
+    }.ToString();
+
+    using var connection = new SqliteConnection(connectionString);
+    connection.Open();
+
+    using var transaction = dryRun ? null : connection.BeginTransaction();
+
+    foreach (var table in blobTables)
+    {
+        // Skip tables that don't exist (older or newer GameData.db schemas)
+        using (var existsCmd = connection.CreateCommand())
+        {
+            existsCmd.CommandText = "SELECT 1 FROM sqlite_master WHERE type='table' AND name=$t";
+            existsCmd.Parameters.AddWithValue("$t", table);
+            if (existsCmd.ExecuteScalar() is null) continue;
+        }
+
+        var rows = new List<(object id, byte[] data)>();
+        using (var sel = connection.CreateCommand())
+        {
+            sel.CommandText = $"SELECT Id, Data FROM {table}";
+            using var r = sel.ExecuteReader();
+            while (r.Read())
+            {
+                var id = r.GetValue(0);
+                var blob = (byte[])r["Data"];
+                rows.Add((id, blob));
+            }
+        }
+
+        var skipAmbig = steamOnly && patch.HasExactTranslations;
+        var tableChanged = 0;
+        foreach (var (id, data) in rows)
+        {
+            var json = Encoding.UTF8.GetString(data);
+            var node = JsonNode.Parse(json);
+            if (node is null) continue;
+
+            var ambiguousKeys = skipAmbig
+                ? FindAmbiguousPatchKeys(node)
+                : new HashSet<string>();
+            int changed = 0, skipped = 0;
+            PatchNode(node, ambiguousKeys, ref changed, ref skipped);
+            totalSkipped += skipped;
+            if (changed == 0) continue;
+            tableChanged += changed;
+
+            if (!dryRun)
+            {
+                var updatedJson = node.ToJsonString(new JsonSerializerOptions
+                {
+                    WriteIndented = false,
+                    Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+                });
+                var updatedBytes = Encoding.UTF8.GetBytes(updatedJson);
+
+                using var upd = connection.CreateCommand();
+                upd.Transaction = transaction;
+                upd.CommandText = $"UPDATE {table} SET Data = $d WHERE Id = $i";
+                upd.Parameters.AddWithValue("$d", updatedBytes);
+                upd.Parameters.AddWithValue("$i", id);
+                upd.ExecuteNonQuery();
+            }
+        }
+
+        if (tableChanged > 0)
+        {
+            perTable.Add((table, tableChanged));
+            totalChanged += tableChanged;
+        }
+    }
+
+    if (!dryRun && transaction is not null)
+    {
+        transaction.Commit();
+    }
+
+    return (totalChanged, perTable, totalSkipped);
 }
 
 void PatchDataJsonFiles(string root, string stamp, bool dryRun)
