@@ -1,0 +1,42 @@
+Coverage report - 2026-05-20 12:05:29Z
+
+Game on-disk unique hashes:                  10 289
+ru-RU.bytes non-empty translations:          11 887
+English source from GameData.db.zip:         6 917
+
+Hashes in game-data but missing from ru-RU:  3 121
+  with confirmed English source:             3 108
+  fallback to on-disk (may be RU already):   13
+
+Sample missing entries (first 30):
+  faae1df98a4af405d1da | This has double value
+  69167b2e979172724fc9 | When you sell this, your leftmost Slow item gains {ability.e1} Slow duration
+  4c1e4c1d008495e9d976 | When you sell this, your leftmost Freeze item gains {ability.e1} Freeze duration
+  0c3a8cb0313bcae3cf6a | When you sell this, your leftmost Haste item gains {ability.e1} Haste duration
+  a9514dc9fcb526b0a3fd | When you sell this, your leftmost Shield item gains {ability.e1}
+  6b3b9c323312c6e73e4a | When you sell this, your leftmost Heal item gains {ability.e1}
+  9fb8b093ecb5d53025e6 | When you sell this, your leftmost Poison item gains {ability.e1}
+  e5954b3e999dd67776a2 | When you sell this, your leftmost Burn item gains {ability.e1}
+  a638d79983f2bddfe79f | This has double Crit Chance bonus
+  8b1ab073a93953171bfe | When you sell this, your leftmost Weapon gains {ability.e1}
+  b6c305d015f8f0a9d6c2 | When you sell this, your leftmost Regen item gains {ability.e1}
+  5e1fc5cabaa7f7d5e204 | When you sell this, your leftmost item permanently gains {ability.0}% Crit Chance
+  583c11b4cb8c4becab69 | This has double Damage and Shield bonus
+  8422881274366a3ab73a | When your items stop Flying, your items gain +{ability.e1} Crit Chance
+  128752298544554061d3 | This is immune to Freeze, Slow and Destroy
+  15aa4febcd7c77ac9b70 | When one of your items stops Flying, it gains {ability.1} and {ability.2}
+  da1192f8f221551aa522 | You are Enraged for {aura.8} second shorter [Total Duration: {aura.9}]
+  dc1a96bffac3ce0cba3e | This has +{aura.e1} Multicast
+  fb0d333c350d41af9d9d | This has +{aura.e1}% Crit Chance
+  635387b1a38679bb5797 | This has double Damage
+  a0f5fad9a6133f73fdb9 | This Freezes for twice as long
+  a26e44fb7061f40a7b78 | Your Non-Weapon items have +{aura.e1}% Crit Chance
+  d4a7dfea99500b997025 | When you use another item, Charge this {ability.1} second
+  42dd7c97a2b8d99b7372 | When you sell this, your leftmost Poison item permanently gains {ability.1}
+  81edcc7ea76e9769d37f | Get a Silver-tier Weapon
+  0c7e1b907024c2452441 | Get a Diamond-tier Flying item
+  7c0ee82c4719c7595b15 | The owners may have a reward..
+  d63c558200c62f94dff0 | (if you have Space Laser)
+Increase the Space Laser's Crit Chance by {ability.0}%
+  b2fefb2c8098cff530d9 | This has double Regen
+  6cb9f46c61764e5db77e | When this is transformed, Enchant it with Restorative if able

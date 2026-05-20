@@ -19,6 +19,14 @@
          can slip Debug AssemblyInfo into a Release publish. Belt-and-braces: -->
     <Compile Remove="obj\**\*.cs" />
     <Compile Remove="bin\**\*.cs" />
+    <!-- Sibling helper projects (probe/extract/etc.) live in tools-*/ folders
+         with their own csproj — their .cs files must NOT be compiled into the
+         main patcher. Without this, every additional Main() leaks into the
+         single-file build and the publish step rejects it. -->
+    <Compile Remove="tools-extract\**\*.cs" />
+    <Compile Remove="tools-probe\**\*.cs" />
+    <Compile Remove="tools-gamedb\**\*.cs" />
+    <Compile Remove="probe-gamedb\**\*.cs" />
   </ItemGroup>
 
   <ItemGroup>
