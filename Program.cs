@@ -59,6 +59,17 @@ var tempoOnly = false;
 #else
 var steamOnly = args.Any(a => a.Equals("--steam-only", StringComparison.OrdinalIgnoreCase));
 var tempoOnly = args.Any(a => a.Equals("--tempo-only", StringComparison.OrdinalIgnoreCase));
+// Default-from-binary-name: shipping two copies of the binary —
+// "TheBazaarRusPatcher-Steam.exe" / "TheBazaarRusPatcher-Tempo.exe" —
+// lets each one auto-target the correct launcher without the user
+// having to pass a flag. The flag still wins if explicitly given.
+if (!steamOnly && !tempoOnly)
+{
+    var procPath = Environment.ProcessPath ?? "";
+    var exeName = Path.GetFileNameWithoutExtension(procPath);
+    if (exeName.EndsWith("-Steam", StringComparison.OrdinalIgnoreCase)) steamOnly = true;
+    else if (exeName.EndsWith("-Tempo", StringComparison.OrdinalIgnoreCase)) tempoOnly = true;
+}
 if (steamOnly && tempoOnly)
 {
     Console.WriteLine("Cannot combine --steam-only and --tempo-only. Pick one or neither.");
@@ -264,14 +275,20 @@ void PatchCache(string root, string stamp, bool dryRun)
     PatchDataJsonFiles(root, stamp, dryRun);
     PatchGameDataDatabaseIfPresent(root, stamp, dryRun);
 
-    // Always recompute manifest hashes so the game's cache-integrity check
-    // accepts our patched files. Leaving the original CDN ETags in the
-    // manifest meant the game saw "local MD5 != manifest ETag" on launch
-    // and silently re-downloaded the fresh English file from CDN, wiping
-    // the translation. The legacy --update-manifest flag is no longer
-    // needed but is still honored as a no-op for backward compatibility.
-    UpdateManifestIfExists(Path.Combine(root, "manifest.json"), root, dryRun);
-    UpdateManifestIfExists(Path.Combine(root, "translations", "manifest.json"), Path.Combine(root, "translations"), dryRun);
+    // manifest.json's ETags are sent by the game in If-None-Match to the
+    // Tempo Storm CDN on every launch. As long as those ETags match what
+    // the CDN currently has, the server returns 304 and the game keeps the
+    // local file untouched — even if the file's actual MD5 no longer
+    // matches the ETag because we patched it. So we MUST leave the CDN
+    // ETags in manifest.json alone; rewriting them to our patched-file
+    // MD5s makes the conditional GET miss and the CDN sends a fresh
+    // English copy with 200, wiping the patch. Only update on explicit
+    // --update-manifest opt-in, kept around for diagnostics.
+    if (updateManifests)
+    {
+        UpdateManifestIfExists(Path.Combine(root, "manifest.json"), root, dryRun);
+        UpdateManifestIfExists(Path.Combine(root, "translations", "manifest.json"), Path.Combine(root, "translations"), dryRun);
+    }
 }
 
 void PatchStreamingAssets(string root, string stamp, bool dryRun)
@@ -1135,14 +1152,46 @@ void UpdateManifestIfExists(string manifestPath, string root, bool dryRun)
         return;
     }
 
+    // manifest.json maps file-name -> {"ETag": "<md5>"}. The ETag is the
+    // value the game forwards to the Tempo Storm CDN in `If-None-Match` on
+    // each launch; if CDN's current ETag matches, server returns 304 and the
+    // game keeps the local file untouched. Two distinct cases:
+    //
+    //  * Files the game never re-downloads (cards/tooltips/challenges/...):
+    //    safe to update the ETag to our patched file's MD5. The game uses
+    //    the ETag only for its own integrity check, not for CDN gating.
+    //
+    //  * Files the game ALWAYS conditional-GETs on launch (GameData.db, the
+    //    *.bytes translation databases): if we replace their ETag with our
+    //    patched MD5, the CDN sees an unknown ETag and sends a fresh
+    //    English copy with 200, wiping the patch. We MUST keep the original
+    //    CDN ETag for these so the conditional GET returns 304.
+    //
+    //    GameData's ETag in manifest is the MD5 of the ZIP the CDN serves,
+    //    not the MD5 of the extracted .db — recomputing it from our patched
+    //    .db would never match the server. Same logic for the *.bytes files
+    //    (their ETag is the MD5 of the CDN payload, not of the local file
+    //    after we've rewritten translation rows in-place).
+    var preserveCdnEtag = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+    {
+        "GameData", "GameData.db",
+        "de-DE", "de-DE.bytes", "es-ES", "es-ES.bytes", "it-IT", "it-IT.bytes",
+        "ko-KR", "ko-KR.bytes", "pt-BR", "pt-BR.bytes", "ru-RU", "ru-RU.bytes",
+        "tr-TR", "tr-TR.bytes", "zh-CN", "zh-CN.bytes"
+    };
+
     var changed = false;
     foreach (var file in Directory.EnumerateFiles(root, "*", SearchOption.TopDirectoryOnly))
     {
         var name = Path.GetFileName(file);
+        var nameWithoutExtension = Path.GetFileNameWithoutExtension(name);
+        if (preserveCdnEtag.Contains(name) || preserveCdnEtag.Contains(nameWithoutExtension))
+        {
+            continue;
+        }
         var md5 = ComputeMd5(file);
         UpdateManifestNode(manifest, name, md5, ref changed);
 
-        var nameWithoutExtension = Path.GetFileNameWithoutExtension(name);
         if (!string.Equals(name, nameWithoutExtension, StringComparison.Ordinal))
         {
             UpdateManifestNode(manifest, nameWithoutExtension, md5, ref changed);

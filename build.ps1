@@ -1,8 +1,11 @@
 # =============================================================================
-# Build script: TheBazaarRusPatcher console patcher (single .exe)
-# Produces dist\TheBazaarRusPatcher.exe — a self-contained Windows binary
-# the user runs directly from a terminal (or by double-clicking) to apply
-# the Russian translation patch to The Bazaar.
+# Build script: TheBazaarRusPatcher
+# Produces TWO copies of the console patcher in dist/:
+#   - TheBazaarRusPatcher-Tempo.exe  (auto-targets Tempo Launcher beta)
+#   - TheBazaarRusPatcher-Steam.exe  (auto-targets Steam install)
+# Same binary; the name itself selects which launcher to patch (no need
+# to remember --tempo-only / --steam-only). Either copy still accepts the
+# flags for explicit override.
 #
 # Requires: .NET SDK 8+
 # =============================================================================
@@ -14,7 +17,7 @@ $publish   = "publish-release"
 $dist      = "dist"
 
 Write-Host ""
-Write-Host "=== The Bazaar Russian Patcher — Build ===" -ForegroundColor Cyan
+Write-Host "=== The Bazaar Russian Patcher - Build ===" -ForegroundColor Cyan
 Write-Host ""
 
 if (-not (Get-Command dotnet -ErrorAction SilentlyContinue)) {
@@ -59,17 +62,22 @@ if (-not (Test-Path $exe)) {
 if (-not (Test-Path $dist)) {
     New-Item -ItemType Directory -Path $dist | Out-Null
 }
-Copy-Item $exe (Join-Path $dist "TheBazaarRusPatcher.exe") -Force
+
+# Ship two named copies so each auto-targets its launcher via exe-name detection
+$tempoExe = Join-Path $dist "TheBazaarRusPatcher-Tempo.exe"
+$steamExe = Join-Path $dist "TheBazaarRusPatcher-Steam.exe"
+Copy-Item $exe $tempoExe -Force
+Copy-Item $exe $steamExe -Force
 
 $sizeMb = [math]::Round((Get-Item $exe).Length / 1MB, 1)
 Write-Host ""
 Write-Host "=== Build complete ===" -ForegroundColor Green
-Write-Host "  $dist\TheBazaarRusPatcher.exe ($sizeMb MB)"
+Write-Host "  $tempoExe ($sizeMb MB) - patches Tempo Launcher copy"
+Write-Host "  $steamExe ($sizeMb MB) - patches Steam copy"
 Write-Host ""
 Write-Host "Usage:" -ForegroundColor Cyan
-Write-Host "  TheBazaarRusPatcher.exe                       — interactive menu"
-Write-Host "  TheBazaarRusPatcher.exe --install --yes       — apply patch to all detected"
-Write-Host "  TheBazaarRusPatcher.exe --install --tempo-only — Tempo Launcher only"
-Write-Host "  TheBazaarRusPatcher.exe --install --steam-only — Steam only"
-Write-Host "  TheBazaarRusPatcher.exe --restore             — restore from backup"
-Write-Host "  TheBazaarRusPatcher.exe --check               — verify state"
+Write-Host "  TheBazaarRusPatcher-Tempo.exe                  - interactive menu (Tempo)"
+Write-Host "  TheBazaarRusPatcher-Tempo.exe --install --yes  - apply patch to Tempo"
+Write-Host "  TheBazaarRusPatcher-Steam.exe --install --yes  - apply patch to Steam"
+Write-Host "  Either .exe --restore                          - restore from backup"
+Write-Host "  Either .exe --check                            - verify state"

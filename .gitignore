@@ -1,3 +1,4 @@
+# Build / publish output
 bin/
 obj/
 publish/
@@ -5,21 +6,37 @@ publish-*/
 release-assets/
 dist/
 
-*.lscache
-tools/.translate-*
-tools/.bazaardb-*
-
+# IDE / OS junk
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
-
+*.lscache
 .vs/
 .idea/
 .vscode/
 
+# Logs / temp
 *.log
 *.tmp
 *.bak
+*.zip
+*.broken_*
+__pycache__/
 
+# Game backups created by the patcher itself
 .rus_patch_backups/
+
+# Dev one-shot extraction artifacts
+extracted_game_assets/
+twitch_card_preview/
+скрин/
+files.zip
+tags-extracted.txt
+
+# Old per-language translation scratch files
+tools/.translate-*
+tools/.bazaardb-*
+tools/.english-in-game.json
+tools/.supplementary-patch.json
+tools/.untranslated-by-key.json
