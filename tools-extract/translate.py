@@ -196,7 +196,13 @@ GLOSSARY = [
     (r"\bValue\b",            "Ценность"),
     (r"\bduration\b",         "длительность"),
     (r"\bDuration\b",         "Длительность"),
-    (r"\bitems?\b",           "предмет(ы)"),
+    # "items" and "item" — context-sensitive. Sentence templates handle most
+    # cases; here we only do safe defaults (singular -> "предмет",
+    # plural -> "предметы"). Order matters: longer pattern first.
+    (r"\bitems\b",            "предметы"),
+    (r"\bItems\b",            "Предметы"),
+    (r"\bitem\b",             "предмет"),
+    (r"\bItem\b",             "Предмет"),
     (r"\bCrit\b",             "крит"),
     (r"\bCrits\b",            "криты"),
     (r"\bWin\b",              "Победа"),
@@ -289,9 +295,30 @@ SENTENCE_RULES = [
         r"Когда вы используете предмет \1, \2"),
     (r"^When you use the item to the (left|right), (.+)$",
         lambda m: f"Когда вы используете предмет {'слева' if m.group(1) == 'left' else 'справа'}, {m.group(2)}"),
-    # "When you Burn/Heal/Slow/Shield/Freeze/Enrage, Y"
-    (r"^When you (Burn|Heal|Slow|Shield|Freeze|Charge|Enrage|gain Max Health|use an item), (.+)$",
+    # "When you Burn/Heal/Slow/Shield/Freeze/Enrage, Y" — explicit verb list
+    (r"^When you (Burn|Heal|Slow|Shield|Freeze|Charge|Enrage|Haste|Crit|Poison|Regen|Destroy|Transform|Enchant|Sell|Buy|Repair|Reroll|gain Max Health|use an item|use a Skill|win a fight|lose a fight), (.+)$",
         r"Когда вы \1, \2"),
+    # Catch-all "When you X, Y" — preserve X for glossary/phrase pass to translate
+    (r"^When you (.+?), (.+)$",
+        r"Когда вы \1, \2"),
+    # "When your X" / "When this X" / "When an enemy X"
+    (r"^When your enemy uses their (.+?), (.+)$",
+        r"Когда враг использует свой \1, \2"),
+    (r"^When your Enemy uses their (.+?), (.+)$",
+        r"Когда враг использует свой \1, \2"),
+    (r"^When your (.+?) items? (.+)$",
+        r"Когда ваши \1 предметы \2"),
+    (r"^When your (.+)$",
+        r"Когда ваш \1"),
+    (r"^When this (.+?), (.+)$",
+        r"Когда этот предмет \1, \2"),
+    (r"^When this (.+)$",
+        r"Когда этот предмет \1"),
+    (r"^When (an?|the) (.+?) is (destroyed|sold|bought|enchanted), (.+)$",
+        r"Когда \1 \2 \3, \4"),
+    # "Haste/Slow/Freeze/Charge X for Y second(s)" — full sentence
+    (r"^(Haste|Slow|Freeze|Charge) (.+?) for (.+?) seconds?\(?s?\)?$",
+        lambda m: f"{ {'Haste':'Ускорьте','Slow':'Замедлите','Freeze':'Заморозьте','Charge':'Зарядите'}[m.group(1)] } {m.group(2)} на {m.group(3)} сек."),
     (r"^When your items stop Flying, (.+)$",
         r"Когда ваши предметы перестают быть Летающими, \1"),
     (r"^When one of your items stops Flying, (.+)$",
@@ -387,10 +414,133 @@ SENTENCE_RULES = [
         r"(если вы — \1) \2"),
 ]
 
+# ----- Phrase rules: substring patterns, applied ALL in order -----
+# Run after the (single matching) sentence template, before the word glossary.
+# These handle the leftover English fragments inside a sentence body the
+# template captured but didn't translate (e.g. "Когда вы X, gain {Y}" still
+# needs "gain" -> "получите").
+PHRASE_RULES = [
+    # Verbs taking "an item" / "the item"
+    (r"\bHaste an item\b",       "ускорьте предмет"),
+    (r"\bSlow an item\b",        "замедлите предмет"),
+    (r"\bFreeze an item\b",      "заморозьте предмет"),
+    (r"\bCharge an item\b",      "зарядите предмет"),
+    (r"\bShield an item\b",      "защитите предмет"),
+    (r"\bDestroy an item\b",     "уничтожьте предмет"),
+    (r"\bHeal an item\b",        "восстановите предмет"),
+    (r"\banother (\w+) item\b",  r"другой \1 предмет"),
+    (r"\bAdjacent items?\b",     "Соседние предметы"),
+    (r"\badjacent items?\b",     "соседние предметы"),
+    (r"\bAn adjacent item\b",    "Соседний предмет"),
+    (r"\ban adjacent item\b",    "соседний предмет"),
+    (r"\banother item\b",        "другой предмет"),
+    (r"\bany item\b",            "любой предмет"),
+    (r"\ban item\b",             "предмет"),
+    (r"\bthe item\b",            "предмет"),
+    (r"\bthis item'?s\b",        "этого предмета"),
+    (r"\bthis item\b",           "этот предмет"),
+
+    # "gains X" / "gain X" after subject
+    (r"\bgains \+?(\{[\w.]+\})",  r"получает \1"),
+    (r"\bgain \+?(\{[\w.]+\})",   r"получают \1"),
+    (r"\bgains \+?(\d+)",         r"получает \1"),
+    (r"\bgain \+?(\d+)",          r"получают \1"),
+    (r"\bgains a\b",              "получает"),
+    (r"\bgain a\b",               "получают"),
+    (r"\bgains\b",                "получает"),
+    (r"\bgain\b",                 "получают"),
+
+    # "for X seconds" tail
+    (r"\bfor \{([\w.]+)\} seconds?\(?s?\)?",  r"на {\1} сек."),
+    (r"\bfor (\d+) seconds?\(?s?\)?",         r"на \1 сек."),
+    (r"\bfor \{([\w.]+)\} sec\b",             r"на {\1} сек."),
+    (r"\bsecond\(s\)",                        "сек."),
+
+    # Damage / Heal / Burn / Shield / Poison / Regen amounts
+    (r"\bdeal \+?(\{[\w.]+\}) [Dd]amage",     r"нанесите \1 урона"),
+    (r"\bdeal \+?(\d+) [Dd]amage",            r"нанесите \1 урона"),
+    (r"\bdeals \+?(\{[\w.]+\}) [Dd]amage",    r"наносит \1 урона"),
+    (r"\bdeals \+?(\d+) [Dd]amage",           r"наносит \1 урона"),
+    (r"\bHeal \+?(\{[\w.]+\})",               r"восстанавливает \1 здоровья"),
+    (r"\bHeal \+?(\d+)",                      r"восстанавливает \1 здоровья"),
+    (r"\bShield \+?(\{[\w.]+\})",             r"щит \1"),
+    (r"\bShield \+?(\d+)",                    r"щит \1"),
+    (r"\bBurn \+?(\{[\w.]+\})",               r"поджигает на \1"),
+    (r"\bBurn \+?(\d+)",                      r"поджигает на \1"),
+    (r"\bPoison \+?(\{[\w.]+\})",             r"яд \1"),
+    (r"\bPoison \+?(\d+)",                    r"яд \1"),
+    (r"\bRegen \+?(\{[\w.]+\})",              r"регенерация \1"),
+
+    # Connectives
+    (r"\bequal to (.+?)$",        r"равное \1"),
+    (r"\beach fight\b",           "в каждом бою"),
+    (r"\bevery fight\b",          "в каждом бою"),
+    (r"\beach turn\b",            "каждый ход"),
+    (r"\bout of combat\b",        "вне боя"),
+    (r"\bover time\b",            "со временем"),
+    (r"\binstead of\b",           "вместо"),
+    (r"\bof your\b",              "от ваших",),
+    (r"\buse this\b",             "используйте этот предмет"),
+    (r"\buse another\b",          "используете другой"),
+    (r"\buse the\b",              "используете"),
+    (r"\bup to\b",                "до"),
+    (r"\bat the start of\b",      "в начале"),
+    (r"\bat the end of\b",        "в конце"),
+    (r"\bthe right\b",            "справа"),
+    (r"\bthe left\b",             "слева"),
+
+    # Common English-only sentence fragments that survived
+    (r"\bstart of combat\b",      "начало боя"),
+    (r"\bend of combat\b",        "конец боя"),
+    (r"\bWhen used\b",            "При использовании"),
+    (r"\bIf able\b",              "если возможно"),
+    (r"\bif you have\b",          "если у вас есть"),
+    (r"\bget a\b",                "получите"),
+    (r"\bget an\b",               "получите"),
+    (r"\bGet a\b",                "Получите"),
+    (r"\bGet an\b",               "Получите"),
+
+    # "use a/an X" mid-sentence (typically inside captured sentence body)
+    (r"\buse an (\w)",            r"используете \1"),
+    (r"\buse a (\w)",             r"используете \1"),
+    (r"\bUse an (\w)",            r"Используете \1"),
+    (r"\bUse a (\w)",             r"Используете \1"),
+    (r"\buse this\b",             "используйте этот"),
+    (r"\buse another\b",          "используете другой"),
+
+    # "deal" — generic verb still left over
+    (r"\bdeal\b",                 "нанесите"),
+    (r"\bdeals\b",                "наносит"),
+    (r"\bdealt\b",                "нанесён"),
+
+    # Standalone leftovers
+    (r"\bthis\b",                 "это"),
+    (r"\bThis\b",                 "Это"),
+    (r"\b or \b",                 " или "),
+    (r"\b and \b",                " и "),
+    (r"\b to \b",                 " к "),
+    (r"\b from \b",               " от "),
+    (r"\b with \b",               " с "),
+    (r"\b of \b",                 " "),  # often safe to drop (already implied by genitive)
+
+    # Common short phrases
+    (r"\bsell this\b",            "продайте это"),
+    (r"\bbuy this\b",             "купите это"),
+    (r"\bdestroy this\b",         "уничтожьте это"),
+    (r"\bcharge this\b",          "зарядите это"),
+    (r"\bare reduced\b",          "уменьшены"),
+    (r"\bis reduced\b",           "уменьшен"),
+
+    # Trailing "times" / "as much"
+    (r"\btimes\b",                "раз"),
+    (r"\bas much\b",              "столько же"),
+    (r"\bas long\b",              "столько же по времени"),
+]
+
 OUT_DIR = Path(r"E:\memore\the-bazaar-rus-patcher\tools-extract")
 
 def translate(text: str) -> str:
-    """Apply sentence rules first, then glossary substitution."""
+    """Apply sentence template (first match) -> phrase rules (all) -> glossary (all)."""
     s = text
     # Sentence templates (try each; first match transforms it)
     for pattern, repl in SENTENCE_RULES:
@@ -398,12 +548,12 @@ def translate(text: str) -> str:
         if new != s:
             s = new
             break
-    # Glossary pass — apply all
+    # Phrase rules — apply ALL to whatever the template produced
+    for pattern, repl in PHRASE_RULES:
+        s = re.sub(pattern, repl, s)
+    # Glossary pass — apply all word-level subs
     for pattern, repl in GLOSSARY:
         s = re.sub(pattern, repl, s)
-    # Fix some common artifacts
-    s = re.sub(r"\bgain a (\w)", lambda m: f"получите {m.group(1)}", s, flags=re.IGNORECASE)
-    s = re.sub(r"\bgains? (\w)", lambda m: f"получает {m.group(1)}", s, flags=re.IGNORECASE)
     return s
 
 def main():

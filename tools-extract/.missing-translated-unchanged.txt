@@ -1,33 +1,24 @@
-c360647ca8124f78eea4f98c1d1bebc6 | When you buy this, get a Truffle
 30e82fe351c07f41fb29bf39780b330d | Lag-bolt
 330b4d05f17cae2f2379c46d8e0fe02d | Just Keep Moving
 345fe0a6e82cb74ae91e79a959e798ec | Stelle Template PVP
 1343f6fc8525fe51671f0e31f518fd5e | Shell Necklace
-bcd4cfec78c7c5ac93ee913519a0ffb5 | When you buy this, get {ability.1} Nanobots
 8adb6cc55036cac8b222f065099a5ec8 | Risky! Anything could happen here
 286d8eea99c595efefc2b27cefc08410 | Not a Spy
-b8d5131fc23426f40ac9aea118a828cd | This is an Encounter Step Template
 86062aca60a8f2a97c594a48a3590229 | Tracer Pistol
 61687df86d7b1e21cea8973cf1ee4897 | Starfish
 2cc5ec6ddb60503b982dcdb62dfab71f | Keep the wallet for yourself
-71f7ebb5a9ff92fbf93c94a6b7cc0ca9 | Return home and get back into shape
 9faea28f95e61c179a1fdc9cc807842e | Rimestone Amulet
 748ef094d49cae9ebf15786c2f1f2fbf | Overwhelmed Student
 eb8b446fa536619ac8bd0193e9f28bf8 | Buy out the circus
 763dbc5003796f3fac2a790f548a4063 | The Roughtown Kyvers Lost..
-945c29b527a4ec97ca5b8bcce07be06a | The Kyvers fall to the Rogues {aura.4}-{aura.3}!
-But at least you got something to eat
 cf96ed77476a3325ee2ed4df3e783663 | PVE_Karnok_D6_001
 5d3f1f918e4bd87ef193ca104355d45a | Overbearing Teacher
-518bb24f3d7617b041de00f364ad1bf0 | When you sell this at the start of Hours 1 to 5, reroll {aura.9} new Encounter(s)
 a4a08a709ec213627e165acba9b316db | Look for opportunities in the Financial District
 9dd4e461268c8034f5c8564e155c67a6 | x
 fbf944ce5632d8785b09f231a580d219 | C.O.R.A
-bc0518fd68062f0389c70e720f454504 | An echo of the past. A vision of the future
 7e7667ce84048df4e37fb491cc22a764 | Dreampearl
 96b9be048d1e0de148291f3c4199a31c | Prepared for Anything
 4525c417fe0f922cd138b0d1add29ed3 | Gourmet Kitchen
-697f14682217a4819c6088cd5ea075ef | The mighty Guardian has sealed the temple. Return to the Bazaar
 551ce30bf01a812fd20657cf6078fdf7 | You take {aura.9}% less damage
 577988a303c3c82a15b63c155a38a0bf | Crimson Orchid
 ef5a8eda177f835955345c5e6fcc014a | Happy Accident
@@ -37,36 +28,23 @@ ef5a8eda177f835955345c5e6fcc014a | Happy Accident
 4caad1f3faae5f872ede9574d74f8363 | Aid a caravan descending the Great Plateau
 d06c0e5d13501593c6c3a307b40c160f | Aged Cask
 537992561b1a1c95598e1d8fc21303cf | Spark Plug
-603dfcd4005653fb209e0c66e3daba1c | When you defeat a Monster with this, get a Pelt
 32f8c451b7d1dde37be4ae00182d8b36 | PVE_Jules_D6_001
-8a2103c214e9b72b8175c955a3eb802b | The Monster returns and sniffed you out
-bae4c46987c221333bc32d48de30a3e2 | When this runs out of ammo, destroy it
-127f85f3c730f73bb00c5b2d4e824c63 | This is not the end
 32098790db99fa9988190a86b66bfb19 | Byg
 cf8ee1756acf29a93a55c32977418bf3 | Test your build against the Sparring Partner
 4a0340374e0fdfb8a9939648ea65b7d4 | Finders keepers
-3470c05e5b77bb6e57d15a47ecd9dd68 | Boost your stats with tasty treats
-3d3f5b328a98d974702b0ac44e92bda2 | When you buy this, get a Piranha
 b69420d84cb3290b80d123b914bc1692 | Visit the Artist
 848a1aec00308f2304b6c87fb47bdacc | Gorgon Spore
 b3137bb3c42f423dec02c86ea0f21daf | Foundation Robe
 6bd46f4cbc59831239ef58af4e45d9a0 | Stickybeans
-e50601b1d8744b210a179592933cf048 | Stelle's sister shows up to get her to come home
 cb92fa8a0bb34bc98df3ec5bf072769d | Fairy Statue
-4100647f1827c0300e9ad21b3b8e2ba8 | Return to the Bazaar and purge the toxins
 8ae135eea127e5b0127a6353c348d829 | Mad Diver
 c34483b94013f989e766ef037480325b | Stress Ball
 b59cd14584ea578f0271afa5a853042d | Infernal Catapult
-6d43eea6185c2db4cb1b3e3647817837 | You are overwhelmed with cosmic visions! Return home to ponder these mysteries
 07c4992765c13d1ab8e6671e7632f2d5 | Penthouse
-916cbd1273c987e967151ed3ad9293d8 | Double the effects of the Artisans' options
-f61b31d12af63804ce1c414fcb5158b2 | This is an Event Template
-1ec9b09ad8838e794a976dc3582f90b4 | When this is destroyed, deal {ability.1} damage
 475255a703de3b1b2eeee43869459dc4 | You learned a lot in your seminar
 f907de3405b280b6b1e046a74e48d726 | You know what? He makes a good point, actually
 a5c0daf3ba69a44ca791711d659f9c63 | Championship Belt
 2f6ba6c877a4e5e265ed094779fca25c | Defeat {completionRequirement} Monsters
-439729eec0c529195f463cb54e667747 | Use weapons {completionRequirement} times
 3d7055a4d08ee6dc42a4558483d7e850 | Complete {completionRequirement} days
 a3caefe6ac5ad5add16ac7a6e596258a | Learn {completionRequirement} skills
 0e5cfacb56d102c5888a0052869590ac | Visit {completionRequirement} shops
