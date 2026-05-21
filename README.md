@@ -2,7 +2,7 @@
 
 Неофициальный фанатский перевод **The Bazaar** на русский язык.
 
-💬 **[Discord-сообщество](https://discord.gg/Hb5zeHwU7E)** — вопросы по установке, баг-репорты, предложения по переводу.
+💬 **[Discord-сообщество](https://discord.gg/FH8z7D3xe7)** — вопросы по установке, баг-репорты, предложения по переводу.
 
 Поддерживаются обе версии игры — Steam и Tempo Launcher. Скачайте нужный патчер в [Releases](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/latest):
 
@@ -67,7 +67,7 @@
 
 ## Обратная связь
 
-- **Discord:** [discord.gg/Hb5zeHwU7E](https://discord.gg/Hb5zeHwU7E) — обсуждение, помощь с установкой, баг-репорты.
+- **Discord:** [discord.gg/FH8z7D3xe7](https://discord.gg/FH8z7D3xe7) — обсуждение, помощь с установкой, баг-репорты.
 - **Email:** `adeptas3@gmail.com` — для длинных багов с приложениями.
 
 При репорте бага полезно приложить:
