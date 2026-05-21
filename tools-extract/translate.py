@@ -521,7 +521,10 @@ PHRASE_RULES = [
     (r"\b to \b",                 " к "),
     (r"\b from \b",               " от "),
     (r"\b with \b",               " с "),
-    (r"\b of \b",                 " "),  # often safe to drop (already implied by genitive)
+    # NOTE: do NOT add a blanket "of -> ' '" rule. Card / item names containing
+    # "of" (e.g. "Master of Coin", "King of Spades", "Bag of Jewels") would
+    # collapse to "Master Coin" / "King Spades" / "Bag Jewels". Handle each
+    # multi-word name as an explicit glossary entry instead.
 
     # Common short phrases
     (r"\bsell this\b",            "продайте это"),

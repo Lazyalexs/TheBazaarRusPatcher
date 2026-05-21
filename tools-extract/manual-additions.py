@@ -87,13 +87,13 @@ MANUAL = {
     "You take {aura.9}% less damage":    "Вы получаете на {aura.9}% меньше урона",
     "Double the effects of the Artisans' options": "Удваивает эффекты от опций Ремесленников",
 
-    # Internal templates (kept short but Russian for completeness)
+    # Internal templates that ARE user-visible
     "This is an Encounter Step Template": "Это шаблон шага встречи",
     "This is an Event Template":         "Это шаблон события",
-    "PVE_Karnok_D6_001":                 "PVE_Karnok_D6_001",
-    "PVE_Jules_D6_001":                  "PVE_Jules_D6_001",
     "Stelle Template PVP":               "Шаблон Стеллы для PVP",
-    "x":                                 "x",
+    # Internal IDs that the game shouldn't render to users — skipping these
+    # (identity-translating to themselves pollutes the patch dictionary).
+    #   "PVE_Karnok_D6_001", "PVE_Jules_D6_001", "x"
 
     # Challenge text — uses {completionRequirement} placeholder
     "Defeat {completionRequirement} Monsters":          "Победите {completionRequirement} монстров",

@@ -216,6 +216,11 @@ void InstallAll()
 
 void InstallOrCheck(bool dryRun)
 {
+    if (!dryRun && !EnsureGameClosed())
+    {
+        return;
+    }
+
     var stamp = DateTime.Now.ToString("yyyyMMdd-HHmmss");
     var targets = GetInstallTargets().Where(t => Directory.Exists(t.Root)).ToList();
 
@@ -229,25 +234,78 @@ void InstallOrCheck(bool dryRun)
     Console.WriteLine(dryRun ? "Проверка без установки..." : "Установка русификатора...");
     Console.WriteLine($"Строк перевода в патче: {patch.TranslationCount:N0}");
 
+    var failed = 0;
     foreach (var target in targets)
     {
         Console.WriteLine();
         Console.WriteLine($"[{target.Name}] {target.Root}");
 
-        if (target.Kind == TargetKind.Cache)
+        try
         {
-            PatchCache(target.Root, stamp, dryRun);
+            if (target.Kind == TargetKind.Cache)
+            {
+                PatchCache(target.Root, stamp, dryRun);
+            }
+            else
+            {
+                PatchStreamingAssets(target.Root, stamp, dryRun);
+            }
         }
-        else
+        catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or SqliteException)
         {
-            PatchStreamingAssets(target.Root, stamp, dryRun);
+            // The most common cause is a file held by the running game / launcher.
+            // Don't abort the whole install — log this target and try the next.
+            failed++;
+            Console.WriteLine($"  ОШИБКА: {ex.GetType().Name}: {ex.Message}");
+            Console.WriteLine($"  Этот путь не пропатчен. Полностью закройте игру и лаунчер и запустите снова.");
         }
     }
 
     Console.WriteLine();
-    Console.WriteLine(dryRun
-        ? "Проверка завершена. Файлы не изменялись."
-        : "Готово. Полностью закройте игру и лаунчер, затем запустите заново.");
+    if (failed > 0)
+    {
+        Console.WriteLine($"Завершено с ошибками ({failed}). Запустите снова после закрытия игры.");
+    }
+    else
+    {
+        Console.WriteLine(dryRun
+            ? "Проверка завершена. Файлы не изменялись."
+            : "Готово. Полностью закройте игру и лаунчер, затем запустите заново.");
+    }
+}
+
+// Pre-flight: the patcher opens GameData.db ReadWrite and copies several JSON
+// files; if the game or launcher still holds them, File.Copy / Sqlite throws
+// IOException and the install only partially completes. Warn the user first.
+bool EnsureGameClosed()
+{
+    var running = System.Diagnostics.Process
+        .GetProcesses()
+        .Where(p =>
+        {
+            try
+            {
+                return p.ProcessName.Equals("TheBazaar", StringComparison.OrdinalIgnoreCase)
+                    || p.ProcessName.StartsWith("Tempo Launcher", StringComparison.OrdinalIgnoreCase)
+                    || p.ProcessName.Equals("tempo-launcher-beta", StringComparison.OrdinalIgnoreCase);
+            }
+            catch { return false; }
+        })
+        .Select(p => $"{p.ProcessName} (PID {p.Id})")
+        .ToList();
+
+    if (running.Count == 0) return true;
+
+    Console.WriteLine();
+    Console.WriteLine("⚠ Запущен(ы) процесс(ы): " + string.Join(", ", running));
+    Console.WriteLine("Полностью закройте игру и лаунчер перед установкой — иначе файлы будут заблокированы.");
+    if (assumeYes)
+    {
+        Console.WriteLine("--yes указан: продолжаем (на свой риск).");
+        return true;
+    }
+    Console.Write("Продолжить всё равно? Введите YES чтобы продолжить, иначе любую другую строку для отмены: ");
+    return string.Equals(Console.ReadLine()?.Trim(), "YES", StringComparison.Ordinal);
 }
 
 bool ConfirmDisclaimer()
@@ -274,6 +332,7 @@ void PatchCache(string root, string stamp, bool dryRun)
     PatchTranslationDatabases(root, stamp, dryRun);
     PatchDataJsonFiles(root, stamp, dryRun);
     PatchGameDataDatabaseIfPresent(root, stamp, dryRun);
+    EnsureRussianLocaleInMaintenance(root, stamp, dryRun);
 
     // manifest.json's ETags are sent by the game in If-None-Match to the
     // Tempo Storm CDN on every launch. As long as those ETags match what
@@ -289,6 +348,59 @@ void PatchCache(string root, string stamp, bool dryRun)
         UpdateManifestIfExists(Path.Combine(root, "manifest.json"), root, dryRun);
         UpdateManifestIfExists(Path.Combine(root, "translations", "manifest.json"), Path.Combine(root, "translations"), dryRun);
     }
+}
+
+// maintenance.json has a "status.locales" array of {id, displayName} entries.
+// The in-game Settings → Language picker is populated from this list. Without
+// ru-RU here the user can't select Russian, so we inject it. The game's CDN
+// ETag for maintenance.json is preserved in manifest.json (see PatchCache
+// above), so the conditional GET on launch returns 304 and our edit survives.
+void EnsureRussianLocaleInMaintenance(string root, string stamp, bool dryRun)
+{
+    var path = Path.Combine(root, "maintenance.json");
+    if (!File.Exists(path)) return;
+
+    JsonNode? document;
+    try
+    {
+        document = JsonNode.Parse(File.ReadAllText(path));
+    }
+    catch
+    {
+        Console.WriteLine("  maintenance.json: не удалось прочитать (пропущено).");
+        return;
+    }
+    if (document is not JsonObject root_obj) return;
+
+    if (root_obj["status"] is not JsonObject status) return;
+    if (status["locales"] is not JsonArray locales) return;
+
+    // Already present?
+    foreach (var node in locales)
+    {
+        if (node is JsonObject entry
+            && entry["id"]?.GetValueKind() == JsonValueKind.String
+            && entry["id"]!.GetValue<string>().Equals("ru-RU", StringComparison.OrdinalIgnoreCase))
+        {
+            Console.WriteLine("  maintenance.json: ru-RU уже в списке локалей.");
+            return;
+        }
+    }
+
+    if (dryRun)
+    {
+        Console.WriteLine("  maintenance.json: будет добавлена локаль ru-RU (\"Русский\")");
+        return;
+    }
+
+    BackupExistingFile(root, path, stamp);
+    locales.Add(new JsonObject { ["id"] = "ru-RU", ["displayName"] = "Русский" });
+    File.WriteAllText(path, document.ToJsonString(new JsonSerializerOptions
+    {
+        WriteIndented = true,
+        Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+    }));
+    Console.WriteLine("  maintenance.json: добавлена локаль ru-RU (\"Русский\").");
 }
 
 void PatchStreamingAssets(string root, string stamp, bool dryRun)
@@ -397,8 +509,19 @@ Dictionary<string, (string Tag, string Keyword)> GameDataTooltips()
         var tableChanged = 0;
         foreach (var (id, data) in rows)
         {
-            var json = Encoding.UTF8.GetString(data);
-            var node = JsonNode.Parse(json);
+            JsonNode? node;
+            try
+            {
+                var json = Encoding.UTF8.GetString(data);
+                node = JsonNode.Parse(json);
+            }
+            catch
+            {
+                // Some tables (e.g. seasons / level_ups in older schemas) may
+                // ship non-JSON blobs. Skip silently rather than abort the
+                // whole transaction.
+                continue;
+            }
             if (node is null) continue;
 
             var ambiguousKeys = skipAmbig
@@ -463,8 +586,16 @@ Dictionary<string, (string Tag, string Keyword)> GameDataTooltips()
                 var tooltipsChanged = 0;
                 foreach (var (id, data) in tooltipRows)
                 {
-                    var json = Encoding.UTF8.GetString(data);
-                    var node = JsonNode.Parse(json) as JsonObject;
+                    JsonObject? node;
+                    try
+                    {
+                        var json = Encoding.UTF8.GetString(data);
+                        node = JsonNode.Parse(json) as JsonObject;
+                    }
+                    catch
+                    {
+                        continue;
+                    }
                     if (node is null) continue;
 
                     var rowChanged = 0;
