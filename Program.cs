@@ -607,9 +607,14 @@ void PatchTranslationDatabases(string root, string stamp, bool dryRun)
         .ThenBy(Path.GetFileName, StringComparer.OrdinalIgnoreCase)
         .ToList();
 #else
-    var dbFiles = Directory.EnumerateFiles(translationsDir, "*.bytes", SearchOption.TopDirectoryOnly)
-        .OrderBy(Path.GetFileName, StringComparer.OrdinalIgnoreCase)
-        .ToList();
+    // Only patch ru-RU.bytes — the other language databases (de-DE/es-ES/it-IT/
+    // ko-KR/pt-BR/tr-TR/zh-CN) are the game's localization for OTHER languages
+    // and must stay intact. Earlier versions iterated every *.bytes file in the
+    // translations/ folder and wrote Russian rows into all of them, which
+    // turned a player's German/Italian/etc. locale into Russian and counted
+    // each as "updated strings 14 0xx" in the install report.
+    var ruDb = Path.Combine(translationsDir, "ru-RU.bytes");
+    var dbFiles = File.Exists(ruDb) ? new List<string> { ruDb } : new List<string>();
 #endif
 
     if (dbFiles.Count == 0)
