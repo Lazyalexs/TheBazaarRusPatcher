@@ -86,6 +86,14 @@ var strictExact = false;
 #endif
 var updateManifests = args.Any(a => a.Equals("--update-manifest", StringComparison.OrdinalIgnoreCase));
 
+// Set by PatchTranslationDatabases (cache flow) when there is no ru-RU.bytes to
+// patch. In that state the game shows Russian in Settings (maintenance.json was
+// patched) but all on-screen text stays English, because the game renders text
+// from translations/ru-RU.bytes — which the game only downloads after Russian
+// is first selected in-game. The final install summary checks this flag to warn
+// the user with clear next steps instead of reporting a clean success.
+var translationDbMissing = false;
+
 // Explicit game StreamingAssets path passed by the installer (or user). When
 // supplied, this overrides Steam auto-discovery so users with games in
 // non-default libraries can still patch. Accepts:
@@ -221,6 +229,10 @@ void InstallOrCheck(bool dryRun)
         return;
     }
 
+    // Reset per-run so a --check followed by --install in the same process
+    // (interactive menu) doesn't carry a stale warning state.
+    translationDbMissing = false;
+
     var stamp = DateTime.Now.ToString("yyyyMMdd-HHmmss");
     var targets = GetInstallTargets().Where(t => Directory.Exists(t.Root)).ToList();
 
@@ -262,9 +274,28 @@ void InstallOrCheck(bool dryRun)
     }
 
     Console.WriteLine();
+    if (translationDbMissing)
+    {
+        Console.WriteLine("================================================");
+        Console.WriteLine("⚠ ВАЖНО: база перевода ru-RU.bytes не найдена в кэше.");
+        Console.WriteLine("Русский появится в настройках, но ВЕСЬ текст останется на английском.");
+        Console.WriteLine("Игра скачивает русскую локаль только после первого выбора языка.");
+        Console.WriteLine();
+        Console.WriteLine("Сделайте по шагам:");
+        Console.WriteLine("  1. Запустите игру, в настройках выберите русский язык.");
+        Console.WriteLine("  2. Дождитесь загрузки локали, затем ПОЛНОСТЬЮ закройте игру и лаунчер.");
+        Console.WriteLine("  3. Запустите этот патчер заново.");
+        Console.WriteLine("================================================");
+        Console.WriteLine();
+    }
+
     if (failed > 0)
     {
         Console.WriteLine($"Завершено с ошибками ({failed}). Запустите снова после закрытия игры.");
+    }
+    else if (translationDbMissing && !dryRun)
+    {
+        Console.WriteLine("Установка завершена ЧАСТИЧНО — текст не переведён, см. предупреждение выше.");
     }
     else
     {
@@ -756,7 +787,8 @@ void PatchTranslationDatabases(string root, string stamp, bool dryRun)
             Console.WriteLine("  translations/*.bytes not found.");
         }
 #else
-        Console.WriteLine("  translations/*.bytes not found.");
+        Console.WriteLine("  ⚠ ru-RU.bytes не найдена — игровой текст НЕ будет переведён (см. ниже).");
+        translationDbMissing = true;
 #endif
         return;
     }
