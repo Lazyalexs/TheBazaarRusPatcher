@@ -86,14 +86,6 @@ var strictExact = false;
 #endif
 var updateManifests = args.Any(a => a.Equals("--update-manifest", StringComparison.OrdinalIgnoreCase));
 
-// Set by PatchTranslationDatabases (cache flow) when there is no ru-RU.bytes to
-// patch. In that state the game shows Russian in Settings (maintenance.json was
-// patched) but all on-screen text stays English, because the game renders text
-// from translations/ru-RU.bytes — which the game only downloads after Russian
-// is first selected in-game. The final install summary checks this flag to warn
-// the user with clear next steps instead of reporting a clean success.
-var translationDbMissing = false;
-
 // Explicit game StreamingAssets path passed by the installer (or user). When
 // supplied, this overrides Steam auto-discovery so users with games in
 // non-default libraries can still patch. Accepts:
@@ -229,10 +221,6 @@ void InstallOrCheck(bool dryRun)
         return;
     }
 
-    // Reset per-run so a --check followed by --install in the same process
-    // (interactive menu) doesn't carry a stale warning state.
-    translationDbMissing = false;
-
     var stamp = DateTime.Now.ToString("yyyyMMdd-HHmmss");
     var targets = GetInstallTargets().Where(t => Directory.Exists(t.Root)).ToList();
 
@@ -274,28 +262,9 @@ void InstallOrCheck(bool dryRun)
     }
 
     Console.WriteLine();
-    if (translationDbMissing)
-    {
-        Console.WriteLine("================================================");
-        Console.WriteLine("⚠ ВАЖНО: база перевода ru-RU.bytes не найдена в кэше.");
-        Console.WriteLine("Русский появится в настройках, но ВЕСЬ текст останется на английском.");
-        Console.WriteLine("Игра скачивает русскую локаль только после первого выбора языка.");
-        Console.WriteLine();
-        Console.WriteLine("Сделайте по шагам:");
-        Console.WriteLine("  1. Запустите игру, в настройках выберите русский язык.");
-        Console.WriteLine("  2. Дождитесь загрузки локали, затем ПОЛНОСТЬЮ закройте игру и лаунчер.");
-        Console.WriteLine("  3. Запустите этот патчер заново.");
-        Console.WriteLine("================================================");
-        Console.WriteLine();
-    }
-
     if (failed > 0)
     {
         Console.WriteLine($"Завершено с ошибками ({failed}). Запустите снова после закрытия игры.");
-    }
-    else if (translationDbMissing && !dryRun)
-    {
-        Console.WriteLine("Установка завершена ЧАСТИЧНО — текст не переведён, см. предупреждение выше.");
     }
     else
     {
@@ -746,7 +715,6 @@ void PatchTranslationDatabases(string root, string stamp, bool dryRun)
     var translationsDir = Path.Combine(root, "translations");
     if (!Directory.Exists(translationsDir))
     {
-#if STEAM_ONLY
         if (dryRun)
         {
             Console.WriteLine("  translations: будет создана папка.");
@@ -755,15 +723,11 @@ void PatchTranslationDatabases(string root, string stamp, bool dryRun)
         }
 
         Directory.CreateDirectory(translationsDir);
-#else
-        Console.WriteLine("  translations not found.");
-        return;
-#endif
     }
 
 #if STEAM_ONLY
     var ruDbPath = Path.Combine(translationsDir, "ru-RU.bytes");
-    var willCreateRuDb = EnsureSteamTranslationDatabase(root, ruDbPath, stamp, dryRun);
+    var willCreateRuDb = EnsureTranslationDatabase(root, ruDbPath, stamp, dryRun);
     var dbFiles = Directory.EnumerateFiles(translationsDir, "*.bytes", SearchOption.TopDirectoryOnly)
         .OrderBy(path => string.Equals(Path.GetFileName(path), "ru-RU.bytes", StringComparison.OrdinalIgnoreCase) ? 0 : 1)
         .ThenBy(Path.GetFileName, StringComparer.OrdinalIgnoreCase)
@@ -775,21 +739,21 @@ void PatchTranslationDatabases(string root, string stamp, bool dryRun)
     // translations/ folder and wrote Russian rows into all of them, which
     // turned a player's German/Italian/etc. locale into Russian and counted
     // each as "updated strings 14 0xx" in the install report.
+    //
+    // The game's CDN serves no ru-RU locale (HTTP 404 — Russian is not an
+    // official language), so ru-RU.bytes can never arrive on its own: create
+    // it here and let the upsert in PatchTranslationDatabase fill every row.
     var ruDb = Path.Combine(translationsDir, "ru-RU.bytes");
+    var willCreateRuDb = EnsureTranslationDatabase(root, ruDb, stamp, dryRun);
     var dbFiles = File.Exists(ruDb) ? new List<string> { ruDb } : new List<string>();
 #endif
 
     if (dbFiles.Count == 0)
     {
-#if STEAM_ONLY
         if (!willCreateRuDb)
         {
             Console.WriteLine("  translations/*.bytes not found.");
         }
-#else
-        Console.WriteLine("  ⚠ ru-RU.bytes не найдена — игровой текст НЕ будет переведён (см. ниже).");
-        translationDbMissing = true;
-#endif
         return;
     }
 
@@ -814,8 +778,7 @@ void PatchTranslationDatabases(string root, string stamp, bool dryRun)
     }
 }
 
-#if STEAM_ONLY
-bool EnsureSteamTranslationDatabase(string root, string ruDbPath, string stamp, bool dryRun)
+bool EnsureTranslationDatabase(string root, string ruDbPath, string stamp, bool dryRun)
 {
     if (File.Exists(ruDbPath))
     {
@@ -857,7 +820,6 @@ void CreateTranslationDatabase(string dbPath)
         """;
     command.ExecuteNonQuery();
 }
-#endif
 
 void PatchJsonFile(string root, string path, string stamp, bool dryRun)
 {
