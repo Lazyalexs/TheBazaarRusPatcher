@@ -20,6 +20,7 @@ dist/
 *.log
 *.tmp
 *.bak
+*.bak_*
 *.zip
 *.broken_*
 __pycache__/
@@ -40,3 +41,12 @@ tools/.bazaardb-*
 tools/.english-in-game.json
 tools/.supplementary-patch.json
 tools/.untranslated-by-key.json
+
+# Throwaway per-run batches of the translation pipeline.
+# The merged deltas (.patch-*.json, .cleanup*.json) ARE tracked — they document
+# exactly what each release changed; only the intermediate splits are ignored.
+tools-extract/.llm-*
+tools-extract/.rough-*
+tools-extract/.uncovered-*
+tools-extract/.turkish-*
+tools-extract/.new-*

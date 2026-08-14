@@ -6,12 +6,14 @@ Merge .missing-translated.json into:
 import json
 import shutil
 import sqlite3
+import sys
 from pathlib import Path
 from datetime import datetime
 
 ROOT       = Path(r"E:\memore\the-bazaar-rus-patcher")
 OUT_DIR    = ROOT / "tools-extract"
-TRANSLATED = OUT_DIR / ".missing-translated.json"
+# Optional CLI arg: path to the {hash: russian} file to merge (default = last full run)
+TRANSLATED = Path(sys.argv[1]) if len(sys.argv) > 1 else OUT_DIR / ".missing-translated.json"
 PATCH_FILE = ROOT / "Patch" / "translation-patch.json"
 
 CACHE_RU_RU = Path(r"C:\Users\users\AppData\LocalLow\Tempo Storm\The Bazaar\prod\cache\translations\ru-RU.bytes")

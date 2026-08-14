@@ -31,14 +31,14 @@
 
 ## Что переведено
 
-- **15 000+ строк** в локализационной базе `ru-RU.bytes`;
+- **16 705 строк** в локализационной базе `ru-RU.bytes` (актуально для патча игры 17.2);
 - описания всех карт, тултипов и испытаний (в `cards.json`, `tooltips.json`, `challenges.json`);
 - BLOB-данные в `GameData.db` (cards, challenges, tooltips, monsters);
 - внутриигровой глоссарий терминов (`Burn → Поджог`, `Income → Доход`, `Charge → Зарядить`, и т.д.);
 - основные UI-элементы, главное меню, настройки, экраны побед/поражений;
 - **«Русский» добавлен в список языков** в настройках игры.
 
-Покрытие переводов **≈ 99.97%** (10 286 из 10 289 уникальных hash в game data).
+Покрытие переводов **100%** (7 956 из 7 956 уникальных hash в `GameData.db` патча 17.2).
 
 ## Команды
 
@@ -55,7 +55,7 @@
 
 ## Архитектура
 
-- `Patch/translation-patch.json` (14 000+ entries) — основная таблица переводов, встроена в exe как ресурс.
+- `Patch/translation-patch.json` (16 705 entries) — основная таблица переводов, встроена в exe как ресурс.
 - `Patch/gamedata-tooltips.json` (123 термина) — переводы tag/keyword для таблицы `tooltips` в `GameData.db`.
 - Патчер обрабатывает:
   - JSON-файлы в `StreamingAssets/` и LocalLow кэше (`cards.json`, `tooltips.json`, `challenges.json`);
