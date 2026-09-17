@@ -50,3 +50,6 @@ tools-extract/.rough-*
 tools-extract/.uncovered-*
 tools-extract/.turkish-*
 tools-extract/.new-*
+
+# Downloaded game databases; keep JSON audit reports and provenance.
+tools-extract/snapshot-*/GameData.db

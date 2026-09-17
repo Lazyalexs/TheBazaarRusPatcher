@@ -1,0 +1,21 @@
+{
+  "tables": {
+    "cards": 3327,
+    "challenges": 80,
+    "collectibles": 8,
+    "game_modes": 1,
+    "level_ups": 30,
+    "monsters": 174,
+    "seasons": 19,
+    "tooltips": 1
+  },
+  "unique_keys": 8083,
+  "patch_entries": 16705,
+  "added_keys": 241,
+  "removed_keys": 114,
+  "changed_source": 0,
+  "missing": 278,
+  "placeholder_mismatches": 119,
+  "conflicting_keys": 0,
+  "key_presence_percent": 96.56
+}

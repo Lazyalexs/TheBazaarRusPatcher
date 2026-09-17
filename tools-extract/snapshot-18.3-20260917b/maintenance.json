@@ -1,0 +1,91 @@
+{
+  "status": {
+    "systems": {
+      "temponet": {
+        "isAvailable": true
+      },
+      "tempoidentity": {
+        "isAvailable": true
+      },
+      "tempoplatform": {
+        "isAvailable": true
+      }
+    },
+    "versions": {
+      "windows-standalone": "1.0.12293-prod-windows-x64-a0455053",
+      "windows-steam": "1.0.12293-prod-windows-x64-a0455053",
+      "windows-standalone-demo": "1.0.10241-prod-windows-x64-112a3fb8",
+      "windows-steam-demo": "1.0.12225-prod-windows-x64-adc9ca50",
+      "macos-arm64-standalone": "1.0.12292-prod-macos-arm64-a0455053",
+      "macos-arm64-steam": "1.0.12292-prod-macos-arm64-a0455053",
+      "macos-arm64-standalone-demo": "1.0.8634-prod-macos-arm64-cb38aaf4",
+      "macos-arm64-steam-demo": "1.0.12226-prod-macos-arm64-adc9ca50",
+      "macos-x64-standalone": "1.0.12292-prod-macos-x64-a0455053",
+      "macos-x64-steam": "1.0.12292-prod-macos-x64-a0455053",
+      "macos-x64-standalone-demo": "1.0.8634-prod-macos-x64-cb38aaf4",
+      "macos-x64-steam-demo": "1.0.11896-prod-macos-x64-8414971f",
+      "android": "0.0.0",
+      "android-demo": "0.0.0",
+      "ios": "0.0.0",
+      "ios-demo": "0.0.0"
+    },
+    "locales": [
+      {
+        "id": "de-DE",
+        "displayName": "Deutsch"
+      },
+      {
+        "id": "pt-BR",
+        "displayName": "Portuguese"
+      },
+      {
+        "id": "zh-CN",
+        "displayName": "简体中文"
+      },
+      {
+        "id": "ko-KR",
+        "displayName": "한국어"
+      },
+      {
+        "id": "es-ES",
+        "displayName": "Español"
+      },
+      {
+        "id": "fr-FR",
+        "displayName": "Français"
+      },
+      {
+        "id": "it-IT",
+        "displayName": "Italiano"
+      },
+      {
+        "id": "th-TH",
+        "displayName": "ภาษาไทย"
+      },
+      {
+        "id": "tr-TR",
+        "displayName": "Türkçe"
+      }
+    ],
+    "breakingChange": false,
+    "httpGameClientTimeouts": {
+      "defaultRequestSeconds": 60,
+      "inRunCommandSeconds": 60,
+      "deleteSessionSeconds": 60
+    },
+    "maintenance": {
+      "startDateTime": "2026-09-02T16:00:00+00:00",
+      "endDateTime": "2026-09-02T19:00:00+00:00",
+      "message": "We are doing maintenance until 19:00 UTC."
+    },
+    "announcement": {
+      "id": "3_prod",
+      "image": "https://data.playthebazaar.com/web/img/Home_Announcement_Build101_TUI.png",
+      "title": "Builds 101",
+      "description": "Share and explain your builds to earn prizes!",
+      "link": "https://playthebazaar.com/patch-notes",
+      "startDateTime": "2026-09-09T17:33:30+00:00",
+      "endDateTime": "2026-09-13T11:59:30+00:00"
+    }
+  }
+}

@@ -1,0 +1,478 @@
+{
+  "ff44f64da1fd6f262c7838275ce99f39": {
+    "en": "Narwhal",
+    "ru": "Записать {ability.0}"
+  },
+  "2459387eaaf741458e9ae5ec311094d2": {
+    "en": "The first time an enemy uses an item of the same or lower tier as this, Slow their items {ability.e1} seconds",
+    "ru": "Когда вы перезаряжаете, этот предмет ускоряет врага на {ability.0} сек."
+  },
+  "a1b0462cc18f79b0e02b7e8f18743531": {
+    "en": "The first time an enemy uses an item of the same or lower tier as this, Freeze their items {ability.e1} second(s)",
+    "ru": "Когда вы получаете Темп в бою, этот предмет получает {ability.0} ценности [{aura.0}]"
+  },
+  "a197293aff8363370d7ac4474c478e79": {
+    "en": "The first time an enemy uses an item of the same or lower tier as this, Haste your items {ability.e1} seconds",
+    "ru": "Когда вы в ярости, ваш Инструмент и Одежда имеют +{aura.0}% Шанса крита"
+  },
+  "f08c24d2b1b8ec78cda1a56ab293aa15": {
+    "en": "The first time you fall below half Health, Shield equal to {aura.9}% of your Max Health [{ability.0}]",
+    "ru": "Когда вы используете Зачарованный предмет или предмет от другого героя, наносит {ability.2} урона."
+  },
+  "9de8fa906bb03da18fb588471303b994": {
+    "en": "The first time you fall below half Health, Heal equal to 30% of your Max Health and Cleanse half your Burn and Poison [{ability.0}]",
+    "ru": "Когда вы используете Зачарованный предмет или предмет от другого героя, Даёт Щит {ability.2}."
+  },
+  "fc99c87d97b5d6c786615ff68a80223a": {
+    "en": "The first time you fall below half Health, Haste your Burn and Regen items {ability.0} second(s)",
+    "ru": "Когда вы используете Инструмент, этот предмет получает {ability.0} ценности [{aura.0}]"
+  },
+  "241f22910c6b1729311864caa33c5acc": {
+    "en": "The first time you use a Shield item, gain {ability.0} Tempo",
+    "ru": "Когда вы используете предмет, ваши Темп-предметы получают {ability.0} ценности [{aura.0}]"
+  },
+  "9999500bd76179c80781a5a1a4148563": {
+    "en": "Gain {ability.0.mod} Gold for each fight you have won this run [{ability.0}]",
+    "ru": "Зарабатывайте золото {ability.0.mod} за каждый выигранный бой в этой кампании."
+  },
+  "9fede95a02d15c8ea7ec50386740b7a0": {
+    "en": "The first time you use an item, Shield equal to {aura.9}% of your Max Health [{ability.0}]",
+    "ru": "Когда вы уничтожаете предмет, получите {ability.0} золота"
+  },
+  "6c2934b996c6098dfa6eea9556a1e1a1": {
+    "en": "Robotic Factory",
+    "ru": "При использовании еды заряжает другую еду {ability.0} сек."
+  },
+  "c1e303bc6d3d112305a35fab75da18f0": {
+    "en": "The first time you fall below half Health, use your highest Shield item",
+    "ru": "Когда вы продаёте это, ваш Инструмент и Друг-предметы навсегда получают {ability.1} ценности"
+  },
+  "a542482c08a8fdcbf2eb8afd219aeca3": {
+    "en": "Katana",
+    "ru": "Наносит {ability.0} урона"
+  },
+  "7c926a7c3e30d4f7cb1b80028616e60b": {
+    "en": "Arms Race",
+    "ru": "Ваши предметы имеют +{aura.0.mod}% к шансу критического удара за каждый имеющийся у вас летающий предмет. [{aura.0}]"
+  },
+  "88104bb7d40bf46b218b75d6488fb480": {
+    "en": "The first {aura.9} times you Slow, Charge a Weapon {ability.0} second(s)",
+    "ru": "Ваши предметы получают Яд и +Поджог, равные Яду этого предмета"
+  },
+  "2ba6e5023980d9e2d9fa177b2a0f4389": {
+    "en": "The first time you Crit, Freeze an item {ability.0} second(s)",
+    "ru": "Когда вы получаете Крит, этот предмет ускоряет соседний предмет на {ability.2} сек."
+  },
+  "cce8c5805d150348536e9670c5858f6a": {
+    "en": "The first time an enemy uses an item, use this",
+    "ru": "Когда вы ускоряете, этот предмет поджигает на {ability.2}."
+  },
+  "2dc1bc317c2ca4cfe37ba9a2325907b7": {
+    "en": "When you Crit with an adjacent item, Slow an item {ability.e1} second(s)",
+    "ru": "{TempoCost} : Удваивает урон предмета справа"
+  },
+  "45cc56c6c42e49e5f41c8e5b71fe8235": {
+    "en": "When you Crit with an adjacent item, Freeze an item {ability.e1} second(s)",
+    "ru": "{TempoCost} : Удваивает Поджог предмета справа"
+  },
+  "895bb4a61ab20f0ec0f49a2b148999bf": {
+    "en": "When you Crit with an adjacent item, Haste an item {ability.e1} second(s)",
+    "ru": "{TempoCost} : Удваивает Яд предмета справа"
+  },
+  "e8d53b7746789cce59d05b28db69c10b": {
+    "en": "The first time you fall below half Health, Heal equal to 10% of your Max Health",
+    "ru": "Когда вы используете Зачарованный предмет или предмет от другого героя, Поджигает на {ability.2}."
+  },
+  "0312d1423e72682105a6343d2b35b5e3": {
+    "en": "The first time you Freeze each fight, Slow all enemy items {ability.0} second(s)",
+    "ru": "Когда вы получаете Крит, этот предмет даёт Щит {ability.2}."
+  },
+  "ed266d7ec91b407e7e768d898deaf766": {
+    "en": "The first time you fall below half Health, Freeze all enemy items {ability.2} second(s)",
+    "ru": "Когда вы используете другой предмет, получите {ability.0} Темпа."
+  },
+  "2432fbdebd9f0bfed2e62687fe14a365": {
+    "en": "The first time you use an item, Haste {ability.0.targets} Relic item(s) {ability.0} second(s)",
+    "ru": "Когда этот предмет используется, если это Еда, Одежда или Игрушка, Ускоряет предмет на {ability.0} сек."
+  },
+  "eb0903c0c85646394f5a9255a6f53e1d": {
+    "en": "The first {aura.9} times you use a Drone or Vehicle, Burn {ability.0}",
+    "ru": "Ваш крайний левый предмет — Инструмент, и его перезарядка снижена на {aura.1}%"
+  },
+  "2fe249d839bb716e2f3789a187a7a41a": {
+    "en": "The first time you use an item, charge your Heated and Chilled items {ability.0} second(s)",
+    "ru": "Когда Дракон слева наносит Крит, этот предмет получает {ability.2} ценности [{aura.0}]"
+  },
+  "5535c09e06637beb0a850b0b7961e203": {
+    "en": "The first time you fall below half Health, Slow all enemy items {ability.e1} second(s)",
+    "ru": "Когда вы покупаете предмет, этот предмет навсегда получает {ability.0} ценности [{aura.0}]"
+  },
+  "aa6841e5040a2ab3bf11f5b809e92b9b": {
+    "en": "The first time you fall below half Health, Freeze {ability.e1.targets} items {ability.e1} second(s)",
+    "ru": "Когда вы используете Инструмент, Одежду или Друга-предмет, Поджигает на величину, равную 10% ценности этого предмета"
+  },
+  "8f7d8510a53c5d8366b986e280a5eaf6": {
+    "en": "The first time you fall below half Health, Haste your items {ability.e1} second(s)",
+    "ru": "Когда вы используете Зачарованный предмет или предмет от другого героя, Замедляет {ability.e1.targets} предмет(ов) {ability.e1} сек."
+  },
+  "2939e5a995c7e015e2397c99821aba64": {
+    "en": "Flame Juggler",
+    "ru": "Ваши предметы горения имеют +{aura.0}% к шансу критического удара."
+  },
+  "d19052a3c5d8f50887b852df7f269d04": {
+    "en": "The first time you would be defeated, Freeze {ability.e1.targets} items {ability.e1} second(s)",
+    "ru": "Ваш крайний левый предмет получает тип Инструмента"
+  },
+  "a56494fe0198ce89e0cb9df2c149d15f": {
+    "en": "The first time you would be defeated, Burn equal to 10% of your Max Health",
+    "ru": "Когда вы Поджигаете, Охлаждаете или Отравляете, получите 1 Темпа [{aura.1}]"
+  },
+  "2f4d434a8c51e0ee0c89965219354a5b": {
+    "en": "The first time you use an item, Haste {ability.0.targets} Instruments {ability.0} second(s)",
+    "ru": "Когда этот предмет прекращает Летать, получите 1 опыта [{aura.0}]"
+  },
+  "250ec1d721118ffbfe7debd08325f2de": {
+    "en": "When you use a Friend or Flying item, Heal equal to {aura.e2.mod} times this item's Burn",
+    "ru": "При использовании инструмента, исцеляет {ability.e1}."
+  },
+  "5cd6afe17dcec23ce8336dc143b69203": {
+    "en": "Teaches skills unique to The Dragons",
+    "ru": "Когда вы Замедляете или Поджигаете, получите {ability.2} Макс. здоровья"
+  },
+  "05f0b23da60012874b3c4804cb331026": {
+    "en": "The first time you would be defeated, Freeze {ability.e1.targets} enemy items {ability.e1} second(s)",
+    "ru": "Когда Маленький или Средний Темп-предмет перестаёт летать, получите {ability.0} опыта [{aura.0}]"
+  },
+  "d65169af2303797d1b2f04cc10f5648f": {
+    "en": "Tech items to the left have their Cooldowns reduced by {aura.0}%",
+    "ru": "Когда вы Замедляете, этот предмет ускоряет врага на {ability.0} сек."
+  },
+  "ba9121073a8872b756a3f1b6f8714b91": {
+    "en": "Prosperity",
+    "ru": "Ваше +Макс. Здоровье равно {aura.9}, умноженному на урон вашего оружия. [{aura.0}]"
+  },
+  "b85e26368ab5cfcfbf758537dcd8b0ba": {
+    "en": "The first {aura.9} times you use a Core each fight, Slow an item {ability.0} second(s)",
+    "ru": "Ваш крайний левый предмет получает тип Инструмента"
+  },
+  "289d774cba0a5660d9835c83aa7840de": {
+    "en": "Guardian's Gravy Plate",
+    "ru": "Зарабатывайте победы {0}, чтобы завершить свою кампанию! Зарабатывайте сундуки за 4, 7 и {0} побед."
+  },
+  "24c5770c01b84c1ba1e0a75063aef710": {
+    "en": "The first time you use an item, {ability.0.targets} Small item(s) start Flying",
+    "ru": "Когда Инструмент слева используется, получите {ability.0} Темпа."
+  },
+  "5b005a361b7874fab1cce1c517c9e3d3": {
+    "en": "The first time you use an item, Haste {ability.0.targets} Poison item(s) {ability.0} second(s)",
+    "ru": "Когда этот предмет используется, используйте его снова, если рядом есть Дракон или Инструмент"
+  },
+  "b65f9bb7594b700568d2913ee1f7e07c": {
+    "en": "The first time you use an item, Haste {ability.0.targets} Aquatic item(s) {ability.0} second(s)",
+    "ru": "Когда этот предмет наносит Крит, получите {ability.0} золота [{aura.0}]"
+  },
+  "0de95f180115c8f56b586833e7b6a978": {
+    "en": "DJ Circuit Breaker",
+    "ru": "Купив это, вы получите наноботов {ability.1}."
+  },
+  "2b5f1f5b93d5846d63e3a22495b2ba0b": {
+    "en": "The first time you use a Large item, Heal equal to {aura.9}% of your Max Health [{ability.0}]",
+    "ru": "Когда вы используете соседний предмет, Поджог на 10% ценности этого предмета"
+  },
+  "66a35dd1ec752dcdfc7d87c763bd82dc": {
+    "en": "When you Crit with an adjacent item, Haste {ability.e1.targets} items {ability.e1} second(s)",
+    "ru": "{TempoCost} : Удваивает Щит предмета справа"
+  },
+  "056491248988169fe559b265fbfe786f": {
+    "en": "The first time you fall below half Health, Slow {ability.e1.targets} items {ability.e1} second(s)",
+    "ru": "Когда вы продаёте другую Еду, ваш крайний левый маленький предмет получает {ability.1} и {ability.2}"
+  },
+  "bc7ef2f58355f80005d1150c6138fac8": {
+    "en": "The first time you fall below half Health, Freeze {ability.e1.targets} enemy items {ability.e1} second(s)",
+    "ru": "Когда вы используете Летающий или Друга-предмет, получите {ability.0} Темпа."
+  },
+  "9ba852f0078e85fafc33080a044089ed": {
+    "en": "The first time you fall below half Health, Haste {ability.e1.targets} items {ability.e1} second(s)",
+    "ru": "Когда вы используете Зачарованный предмет или предмет от другого героя, Замедляет {ability.1.targets} предмет(ов) {ability.1} сек."
+  },
+  "d7d110eebf8fe63f84df341ab70d8f0a": {
+    "en": "The first time you fall below half Health, Shield equal to 20% of your Max Health",
+    "ru": "Когда вы используете Зачарованный предмет или предмет от другого героя, Ускоряет один предмет на {ability.e1} сек."
+  },
+  "f45e3a0dbb56ea39d89b0f9692f9ea03": {
+    "en": "The first time you fall below half Health, Heal equal to 20% of your Max Health",
+    "ru": "Когда вы используете Зачарованный предмет или предмет от другого героя, Восстанавливает {ability.1}."
+  },
+  "6423af6231a94aa803517b356de7ce3b": {
+    "en": "The first time you fall below half Health, Poison equal to 5% of your Max Health",
+    "ru": "Когда вы используете Зачарованный предмет или предмет от другого героя, Ускоряет один предмет на {ability.1} сек."
+  },
+  "1f31d9e0f26864bd7f361d1bea139563": {
+    "en": "The first time you fall below half Health, deal Damage equal to 20% of your Max Health",
+    "ru": "Когда вы продаёте предмет Инструмент, получите {ability.0} золота"
+  },
+  "79c8f7424c625b7afeca32dc5e105194": {
+    "en": "The first time you fall below half Health, Regen equal to 5% of your Max Health",
+    "ru": "Когда вы используете Зачарованный предмет или предмет от другого героя, Лечит {ability.1}."
+  },
+  "82bde768e734d9e0de25d4b44181d9b2": {
+    "en": "The first time any item is used, gain {ability.0} Rage",
+    "ru": "Когда вы даёте Щит, этот предмет наносит {ability.2} урона."
+  },
+  "a118cd614341b38deff8c4f306457467": {
+    "en": "The first {aura.9} times you use a Core each fight, Haste an item {ability.0} second(s)",
+    "ru": "Ваши предметы имеют +{aura.1.mod}% Шанса крита за каждый ваш предмет Одежды или Дракона [{aura.1}]"
+  },
+  "6f5621816bd7055d0448615e07df124e": {
+    "en": "The first time you use an item, Haste your items {ability.0} second(s)",
+    "ru": "Когда этот предмет Летает, его эффекты удваиваются"
+  },
+  "c863fa3538ef5cdff3131bcd6b850c1d": {
+    "en": "The first time you use a Food, Haste {ability.0.targets} Tool(s) {ability.0} second(s)",
+    "ru": "Когда вы используете соседний предмет, получите {ability.0} Темпа."
+  },
+  "866833aef991bf8525c7d803297e5225": {
+    "en": "Slow all enemy items {ability.e1} second(s)",
+    "ru": "Предметы Замедления на Нотах До имеют +1 Мультивыстрела"
+  },
+  "5000a68e43f946c726a17e1008e230a7": {
+    "en": "Feather",
+    "ru": "При продаже, уменьшите время восстановления крайнего левого предмета на {ability.0}%."
+  },
+  "7f8e1c6d73a98b1a8586d631c3e7fdd5": {
+    "en": "The first time you use this, destroy a Small enemy item",
+    "ru": "Когда враг использует предмет, этот предмет даёт Щит {ability.2}."
+  },
+  "310311b1c1bb4bcc86c4cf678b79e50c": {
+    "en": "The first time you fall below half Health, Freeze {ability.1.targets} item {ability.1} second(s)",
+    "ru": "Когда вы используете другой предмет, этот предмет получает {ability.0} и {ability.1}"
+  },
+  "f1a56bd424d5a713031398f5cc19adb6": {
+    "en": "Advanced Synthetics",
+    "ru": "В первый раз, когда один из ваших предметов будет уничтожен в каждом бою, {aura.9} отремонтируйте его."
+  },
+  "e1383452059670a4f2920b91ec996a9f": {
+    "en": "When you Crit with an adjacent item, Freeze {ability.e1.targets} item(s) {ability.e1} second(s)",
+    "ru": "{TempoCost} : Удваивает Лечение предмета справа"
+  },
+  "678394ea455f3a850d5ecae9a24c6d7a": {
+    "en": "When you Crit with an adjacent item, Haste {ability.e1.targets} item(s) {ability.e1} second(s)",
+    "ru": "{TempoCost} : Удваивает Восстановление предмета справа"
+  },
+  "c297d8866c09551b4a711c0cc645186b": {
+    "en": "The first time you use an item, Haste {ability.0.targets} Burn item(s) {ability.0} second(s)",
+    "ru": "Когда этот предмет продаётся, ваши Драконьи предметы навсегда получают {ability.2} ценности"
+  },
+  "c207cc868626474c7559491b376aa30a": {
+    "en": "Workin' Hard",
+    "ru": "Ваше оружие имеет +{aura.0.mod} урона за каждый имеющийся у вас летающий предмет. [{aura.0}]"
+  },
+  "dc5217bcac2d2d8d9c717086709bd486": {
+    "en": "The first {aura.9} times you Haste, Charge a Tool {ability.0} second",
+    "ru": "Ваши Темп-предметы имеют +{aura.e1}% Шанса крита"
+  },
+  "8c0af1e6fb7b508caa489e86f575d0a2": {
+    "en": "The first time you use a large item, adjacent items gain {ability.0}% Crit Chance",
+    "ru": "Когда этот предмет Зачарован, вы также получаете случайное Зачарование."
+  },
+  "83a7801f2b8d10da857de5e30f42b9b1": {
+    "en": "The first time you use this, use the Medium Food to the left",
+    "ru": "Когда друг слева получает Крит, получите {ability.0} Темпа."
+  },
+  "1308840927df0e358fce43007031fe0b": {
+    "en": "The Dragons",
+    "ru": "Когда вы Поджигаете, этот предмет даёт Щит {ability.2}."
+  },
+  "98a76caa7e435b2b340cd53624a1aa31": {
+    "en": "Dumpster Diving",
+    "ru": "При использовании друга, наносит {ability.0}."
+  },
+  "55feb818d64a088d158e18d9c869500e": {
+    "en": "The first time an enemy uses an item, your items gain {ability.e1}% Crit Chance",
+    "ru": "Когда вы исцеляете, этот предмет замедляет врага на {ability.0} сек."
+  },
+  "8375ff52f59356412b4564f8a6f7596c": {
+    "en": "Slow all other Weapons for both Players {ability.e1} second(s)",
+    "ru": "Замедляет не-Друга предмет на {ability.0} сек."
+  },
+  "3954351f475e6aa5d188966a8dafd99c": {
+    "en": "The first time you use a Large item, Slow all items {ability.0} second",
+    "ru": "Когда вы используете соседний предмет, увеличьте его ценность на {ability.1}"
+  },
+  "d95839f752905be561d0720d479a3fa3": {
+    "en": "The first time you fall below half Health, Haste all items {ability.1} second",
+    "ru": "Когда вы используете Инструмент, получите {ability.0} Темпа."
+  },
+  "59450d4983837d6ad745c48b59482e1d": {
+    "en": "The first time you fall below half Health, your items gain {ability.0}% Crit Chance and Charge them {ability.1} seconds",
+    "ru": "Когда вы используете Ловушку, получите {ability.0} Темпа."
+  },
+  "7a5358b1ec48621a92df630e7a3a57ba": {
+    "en": "The first time an enemy falls below half Health , your items' Cooldowns are halved",
+    "ru": "Когда вы Зачаровываете предмет, получите {ability.0} Темпа."
+  },
+  "e5498d65621b260663e3ab86655f7a59": {
+    "en": "Spray Can",
+    "ru": "Когда Маленький или Средний Темп-предмет перестаёт летать, получите 1 опыта [{aura.0}]"
+  },
+  "67aa4f14d85d0b0eac2ddae652e10455": {
+    "en": "The first time you use an item, Haste {ability.0.targets} Food {ability.0} second(s)",
+    "ru": "Когда этот предмет останавливается, ваш Инструмент слева получает +{ability.2} к Урону, Лечению и Щиту"
+  },
+  "368ce9ab0f1089bd8c0c5dbeebf5a124": {
+    "en": "Incense",
+    "ru": "Замедляет предмет на {ability.0} сек."
+  },
+  "18fe761b6e175731a854b2471f59ef0d": {
+    "en": "Morning Rush",
+    "ru": "При первом использовании инструмента в каждом бою заряжает еду {ability.0.targets} на {ability.0} сек."
+  },
+  "bb95596b3561e858bb86560f7bdbc4fd": {
+    "en": "The first {aura.9} times you use a Food each fight, Haste an item {ability.0} second(s)",
+    "ru": "и замораживает все вражеские предметы на {ability.e1} сек."
+  },
+  "a81ade396af1050071b943da6f527771": {
+    "en": "The first time you use a large item, Slow {ability.0.targets} item(s) {ability.0} second(s)",
+    "ru": "Когда вы выигрываете бой, получите {ability.0} золота"
+  },
+  "c6783f2fa242227388cdede03e94aef8": {
+    "en": "The first time you fall below half Health, Slow all enemy items {ability.0} second(s)",
+    "ru": "Когда вы используете Зачарованный предмет или предмет от другого героя, даёт Щит {ability.1}."
+  },
+  "5629f2e67b37884c93b68067183f4834": {
+    "en": "The first time you use an item, your Vehicles and Drones start Flying",
+    "ru": "Когда Дракон слева наносит Крит, этот предмет получает {ability.2} ценности [{aura.0}]"
+  },
+  "502b1ec472a8cbb5b17d7d3e5bcc095e": {
+    "en": "The first time you use an item, Slow an item {ability.0} second(s)",
+    "ru": "Когда Дракон слева наносит Крит, этот предмет навсегда получает {ability.2} ценности [{aura.0}]"
+  },
+  "52a8ccb30e1fb67282d6136d4c4c7d75": {
+    "en": "The first time you use a Tempo item each fight, {ability.0.targets} item(s) start Flying",
+    "ru": "Когда вы получаете Сияние, получите {ability.0} золота"
+  },
+  "39b47c68735a13df39f346e76478140f": {
+    "en": "The first {aura.9} times you Haste, Shield {ability.0}",
+    "ru": "Ваши Игрушки и Друзья получают Урон, Лечение и Щит, равные их Ценности"
+  },
+  "66989470f9dacc14b1719d6e9be7dbb8": {
+    "en": "The first time you use a large item, Shield equal to {aura.9}% of your Max Health [{ability.0}]",
+    "ru": "Когда вы выигрываете бой с боссом, получите {ability.0} Темпа."
+  },
+  "90ac59e36cd141d8ac8003749b1cd687": {
+    "en": "Slow items on C Notes have +1 Multicast",
+    "ru": "Медленная подача\n[Осталось Темпа: {aura.10}]"
+  },
+  "c16e1ddfc30d2a6a9b810f407d6d1b8f": {
+    "en": "Slow all items {ability.3} second(s)",
+    "ru": "Замедляет вражеский(ие) предмет(ы) на {ability.e1} сек."
+  },
+  "7a4af30f10a5e4592ec29cca994825a2": {
+    "en": "The first time you fall below half Health, you take no Damage for {aura.9} second(s) and gain {ability.4}",
+    "ru": "Когда вы продаёте это, получите {ability.0} Темпа."
+  },
+  "316fef1a15b2d86a32e75ac80c1562bf": {
+    "en": "The first time you use an item, Slow {ability.0.targets} item(s) {ability.0} second(s)",
+    "ru": "Когда Дракон слева наносит Крит, этот предмет получает {ability.2} ценности [{aura.0}]"
+  },
+  "dd5125fc13d3b211d33bff94980cc835": {
+    "en": "Hogwash",
+    "ru": "Исцеление равно {aura.9}% от вашего максимального здоровья."
+  },
+  "a3d5d628c2d0ec82501dcc3aa150c0cd": {
+    "en": "The first time you fall below half Health, Shield equal to {aura.9} times the Poison on your enemy. [{ability.0}]",
+    "ru": "Когда вы используете Зачарованный предмет или предмет от другого героя, Лечит {ability.e1}."
+  },
+  "cfde4f00182c93f781d5e28814b2fdf1": {
+    "en": "Slow the fastest enemy item {ability.0} second(s)",
+    "ru": "Разрывная"
+  },
+  "a3b6b2f1bead3f2eb5890a8fdb3009a6": {
+    "en": "The first {aura.9} times you Slow, Charge a Burn item {ability.0} second(s)",
+    "ru": "Ваши предметы получают Урон, равный половине золота, полученного вами в этом забеге [{ability.0}]"
+  },
+  "6a1f00d92f225613ca2ceb3e4d9eecef": {
+    "en": "The first time an enemy falls below half Health each fight, gain {ability.0} Tempo",
+    "ru": "Когда вы получаете Темп в бою, этот предмет навсегда получает {ability.0} ценности [{aura.0}]"
+  },
+  "215fb85638a6d40f0edfd4ebcacedd2b": {
+    "en": "The first time you Freeze each fight, Haste {ability.0.targets} item(s) {ability.0} second(s)",
+    "ru": "Когда вы получаете Крит, этот предмет восстанавливает {ability.2}."
+  },
+  "71046d4b14800ae9ec890560487611f5": {
+    "en": "The first {aura.9} times you Crit, you take no Damage for 1 second",
+    "ru": "и замораживает все вражеские предметы на {ability.e1} сек."
+  },
+  "67cbbe8fdd4882961bbc95c07daf3434": {
+    "en": "The first {aura.9} times you Poison, Charge a Burn item {ability.0} second(s)",
+    "ru": "Ваши предметы Оружия, Щита и Лечения получают {ability.0}"
+  },
+  "0287f91ffd063da803fde36c89baef72": {
+    "en": "The first time you fall below half Health, Haste {ability.0.targets} item(s) {ability.0} second(s)",
+    "ru": "Когда вы используете Зачарованный предмет или предмет от другого героя, Ускоряет соседний предмет на {ability.1} сек."
+  },
+  "30437df84959c51b9be855af325d49d7": {
+    "en": "Explosive Potions",
+    "ru": "Заряжает предмет не-игрушку на {ability.0} сек."
+  },
+  "28dfb70cd97437608806dc3f34753cb7": {
+    "en": "The first time you fall below half Health, Slow all enemy items {ability.1} second(s) and destroy this",
+    "ru": "Когда вы покупаете предмет, получите {ability.0} Темпа."
+  },
+  "8dc0b2a941ae13b1560a1e30ff625745": {
+    "en": "The first time you use an item, {ability.0.targets} item(s) start Flying",
+    "ru": "Когда враг наносит Крит, этот предмет даёт Щит {ability.2}."
+  },
+  "1cb0f8c0baa1158c023e0b3b5a08f922": {
+    "en": "The first {aura.9} times you Freeze each fight, Haste Your Core {ability.0} second(s)",
+    "ru": "Ваши Инструменты, Одежда и Друзья имеют +{aura.e1}% Шанса крита"
+  },
+  "c09c32dff86cfbac0533e172170051f9": {
+    "en": "The first time an enemy falls below half Health , Burn {ability.0}",
+    "ru": "Когда вы Продаёте это, получите случайный предмет Зачарования"
+  },
+  "ed3756f8dff64850c4bb36bd2b8410cf": {
+    "en": "The first time you Poison each fight, Freeze an item {ability.0} second(s)",
+    "ru": "Когда вы используете предмет с ценностью более 10, даёт Щит {ability.1}."
+  },
+  "d13559780ab3ee3b23da86e908bc6def": {
+    "en": "The first {aura.9} times you Burn each fight, Haste your Cores {ability.0} second(s)",
+    "ru": "Ваш крайний левый предмет — Инструмент, и его перезарядка снижена на {aura.1}%"
+  },
+  "a90c7aa84874e54b073a6635abf23edd": {
+    "en": "Chef Hat",
+    "ru": "Получите щит {ability.0}"
+  },
+  "c9fd8cf0278c7d10fe637a2f062c4918": {
+    "en": "The first {aura.9} times you Slow each fight, Haste a Vehicle {ability.0} second(s)",
+    "ru": "Ваши предметы получают Урон и +Лечение, равные ценности этого предмета"
+  },
+  "55b5429ec3569c90ed9e1e747e9606f7": {
+    "en": "Slow the Slowest enemy item {ability.0} second(s)",
+    "ru": "Стартовый набор Шоумена"
+  },
+  "203cf6b3cdb1f57021f7570047e0659e": {
+    "en": "Tempo items on G Notes have +1 Multicast",
+    "ru": "Когда вы Поджигаете, восстанавливает {ability.2}."
+  },
+  "5a455a612047a34ede7a6c564fa67c0a": {
+    "en": "Strength",
+    "ru": "Самый левый предмет — это технология, время восстановления которого уменьшено на {aura.1}%."
+  },
+  "f29da5d45a37c74bb9ee64c8e1f8a0fb": {
+    "en": "The first time an enemy uses an item, Slow {ability.e1.targets} items {ability.e1} seconds",
+    "ru": "Когда вы ускоряете, этот предмет лечит {ability.2}."
+  },
+  "6f8c4156410ab670d8615ec683b922ef": {
+    "en": "The first time an enemy uses an item, Haste {ability.e1.targets} items {ability.e1} seconds",
+    "ru": "Когда вы ускоряете, этот предмет замедляет врага на {ability.0} сек."
+  },
+  "66ea2a85a4fbc51f32e2716097ddce5d": {
+    "en": "The first time an enemy uses an item, deal Damage equal to 20% of your Max Health",
+    "ru": "Когда вы ускоряете, этот предмет наносит {ability.2} урона."
+  },
+  "16f5a73b11ddfb5fb3850c2db7726270": {
+    "en": "The first time an enemy uses an item, Freeze it and {ability.0.targets} item(s) {ability.0} second(s)",
+    "ru": "Когда вы ускоряете, этот предмет даёт Щит {ability.2}."
+  }
+}

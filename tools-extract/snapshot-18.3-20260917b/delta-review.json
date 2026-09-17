@@ -1,0 +1,2569 @@
+{
+  "4748813347fe1babb1d6816fbc3c675b": {
+    "en": "The Heal or Regen item here has its cooldown reduced by {aura.0}%",
+    "ru": "Перезарядка предмета лечения или регенерации на этом месте сокращена на {aura.0}%",
+    "context": [
+      "cards/001092a2-3703-4f7d-b686-ce812f6622ea"
+    ],
+    "kind": "addition"
+  },
+  "7c130935718f838c1da23a814f258cac": {
+    "en": "Running with Scissors",
+    "ru": "Бег с ножницами",
+    "context": [
+      "cards/02ae11ee-14a6-4735-b8df-4d668fc16f88"
+    ],
+    "kind": "addition"
+  },
+  "e29950ab7addbe0b279b1d2be0186e1d": {
+    "en": "When you use a Toy, your items gain {ability.0} Damage",
+    "ru": "Когда вы используете игрушку, ваши предметы получают {ability.0} урона",
+    "context": [
+      "cards/02ae11ee-14a6-4735-b8df-4d668fc16f88"
+    ],
+    "kind": "addition"
+  },
+  "bc46c7f6a332a0faec557db532c9f7de": {
+    "en": "Debut Album",
+    "ru": "Дебютный альбом",
+    "context": [
+      "cards/034032d0-41db-46d2-b7d2-41e633194b12"
+    ],
+    "kind": "addition"
+  },
+  "e023a01510f29644d358da2eb2d935db": {
+    "en": "At the start of each fight, gain {ability.0} Tempo",
+    "ru": "В начале каждого боя получите {ability.0} темпа",
+    "context": [
+      "cards/034032d0-41db-46d2-b7d2-41e633194b12"
+    ],
+    "kind": "addition"
+  },
+  "0d0cc1ee662f3b055541389b6238b351": {
+    "en": "The Haste item here has its cooldown reduced by {aura.0}%",
+    "ru": "Перезарядка предмета ускорения на этом месте сокращена на {aura.0}%",
+    "context": [
+      "cards/04eca54a-69bf-4874-8b6d-56d284bb58be"
+    ],
+    "kind": "addition"
+  },
+  "2775037086e8b5ff228bc0abe8521adb": {
+    "en": "Cortek Music Generator",
+    "ru": "Музыкальный генератор Кортек",
+    "context": [
+      "cards/0ad744f1-6b36-4f7b-a5b7-a5f5e6b855a0"
+    ],
+    "kind": "addition"
+  },
+  "8cdb6acc10635f9995c9671d9035a431": {
+    "en": "Learn a new Tune",
+    "ru": "Выучить новую мелодию",
+    "context": [
+      "cards/0b9ab2cc-5b99-4482-8fa4-66000fbc8ceb"
+    ],
+    "kind": "addition"
+  },
+  "c870d0e57f319489cdac5985bda33683": {
+    "en": "Get {ability.0} XP and a Tempo item",
+    "ru": "Получите {ability.0} опыта и предмет темпа",
+    "context": [
+      "cards/0b9ab2cc-5b99-4482-8fa4-66000fbc8ceb"
+    ],
+    "kind": "addition"
+  },
+  "bbf6ab73ccf089322090be4b144cc2ca": {
+    "en": "Pick up a New Instrument",
+    "ru": "Взять новый музыкальный инструмент",
+    "context": [
+      "cards/0d828e1c-a120-4b2b-bc89-a905abf5ad53"
+    ],
+    "kind": "addition"
+  },
+  "cf54fb4c1bfd004cf666d7cfd38d55f2": {
+    "en": "Choose an Enchanted Instrument from any Hero",
+    "ru": "Выберите зачарованный музыкальный инструмент любого героя",
+    "context": [
+      "cards/0d828e1c-a120-4b2b-bc89-a905abf5ad53"
+    ],
+    "kind": "addition"
+  },
+  "18823e8affb253ff561703cff022dda2": {
+    "en": "When your items start Flying, Slow {ability.e1.targets} item {ability.e1} second(s)",
+    "ru": "Когда ваши предметы начинают летать, замедлите {ability.e1.targets} предметов на {ability.e1} сек.",
+    "context": [
+      "cards/0eda3b66-76dc-4a45-b3b7-5bb12d26c655"
+    ],
+    "kind": "addition"
+  },
+  "edf30a0f0f3cfb839aa9994d45e4209e": {
+    "en": "When your items start Flying, Haste {ability.e1.targets} items {ability.e1} second(s)",
+    "ru": "Когда ваши предметы начинают летать, ускорьте {ability.e1.targets} предметов на {ability.e1} сек.",
+    "context": [
+      "cards/0eda3b66-76dc-4a45-b3b7-5bb12d26c655"
+    ],
+    "kind": "addition"
+  },
+  "adcfdb20462a62a11843402b186e32ab": {
+    "en": "When your items start Flying, they stop Flying",
+    "ru": "Когда ваши предметы начинают летать, они перестают летать",
+    "context": [
+      "cards/0eda3b66-76dc-4a45-b3b7-5bb12d26c655"
+    ],
+    "kind": "addition"
+  },
+  "8032986cffa04380246fc66650f9dd62": {
+    "en": "When you Repair, this gains {ability.2}",
+    "ru": "Когда вы ремонтируете предмет, этот предмет получает {ability.2}",
+    "context": [
+      "cards/0f96e2e4-2bd8-4fcf-aaaf-e4e0ee5cb627"
+    ],
+    "kind": "addition"
+  },
+  "78f84a7d2a0a608043a4a46cf7e88371": {
+    "en": "Melted Crayons",
+    "ru": "Расплавленные мелки",
+    "context": [
+      "cards/102413a3-4f40-4571-be54-d91aec686724"
+    ],
+    "kind": "addition"
+  },
+  "a21e9c96520ee3ec75e1c68d7ca82351": {
+    "en": "When you use a Toy, your items gain {ability.0} Burn",
+    "ru": "Когда вы используете игрушку, ваши предметы получают {ability.0} поджога",
+    "context": [
+      "cards/102413a3-4f40-4571-be54-d91aec686724"
+    ],
+    "kind": "addition"
+  },
+  "03d385dc425410606a510a2433bcfa2d": {
+    "en": "Adjacent items are Heated",
+    "ru": "Соседние предметы нагреты",
+    "context": [
+      "cards/124862bc-eb77-4835-9e3b-68a4c3e4490e"
+    ],
+    "kind": "addition"
+  },
+  "8b47bebf99e167e6ce82c87cf31a27c1": {
+    "en": "When you use a Food or Tool, Shield {ability.0}",
+    "ru": "Когда вы используете еду или инструмент, получите {ability.0} щита",
+    "context": [
+      "cards/1d71b2a3-e098-4d78-9df2-58e2e2dccb2b"
+    ],
+    "kind": "addition"
+  },
+  "81394b7dfcc539da601de6193a601ff2": {
+    "en": "Adds random Types to your items",
+    "ru": "Добавляет случайные типы вашим предметам",
+    "context": [
+      "cards/26164d27-60b8-4935-840c-816bbe535a64"
+    ],
+    "kind": "addition"
+  },
+  "c6e84af0899c2ea0bc28f496459e20c3": {
+    "en": "Your leftmost Instrument item gains {ability.0}% Crit Chance",
+    "ru": "Ваш крайний левый музыкальный инструмент получает {ability.0}% шанса крита",
+    "context": [
+      "cards/26e2bff1-48b2-4777-b682-71d37808885b"
+    ],
+    "kind": "addition"
+  },
+  "842b99886ef7b751885972415168ebb9": {
+    "en": "Make a Detour",
+    "ru": "Свернуть с маршрута",
+    "context": [
+      "cards/29b44148-7efc-45fe-af2f-e375d6dd3acd"
+    ],
+    "kind": "addition"
+  },
+  "49b117766a5b80852b96c5e6e2962edb": {
+    "en": "(if you have Tour Schedule)\nVisit 1 of 3 Hero Merchants",
+    "ru": "(если у вас есть «Расписание тура»)\nПосетите 1 из 3 торговцев героев",
+    "context": [
+      "cards/29b44148-7efc-45fe-af2f-e375d6dd3acd"
+    ],
+    "kind": "addition"
+  },
+  "316493a6914eec24fb5624df8b3bab6c": {
+    "en": "Sweeper Drone",
+    "ru": "Дрон-уборщик",
+    "context": [
+      "cards/2bf24a3d-6b2c-424f-9221-442fcc71bf81"
+    ],
+    "kind": "addition"
+  },
+  "c455cad21fea6774f852bf724927471f": {
+    "en": "Charge a non-Tech item {ability.2} second",
+    "ru": "Зарядите нетехнический предмет на {ability.2} сек.",
+    "context": [
+      "cards/2e10cce3-b242-411b-a35f-0882341e71a7"
+    ],
+    "kind": "addition"
+  },
+  "bc9e8a7ca7b309410b6a52f38b443db4": {
+    "en": "For every 5 Tempo you gain, this has +1 Multicast",
+    "ru": "За каждые 5 полученного темпа этот предмет имеет +1 к мультивыстрелу",
+    "context": [
+      "cards/3315000c-3499-485a-85ac-70a17e3fc0bd",
+      "cards/33c070fe-7af5-4157-b81c-a98c5cbbe4c3"
+    ],
+    "kind": "addition"
+  },
+  "1715fd4007bbe663794cf41bb57327f8": {
+    "en": "At the end of each fight with this, permanently destroy it and gain {ability.5} Max Health",
+    "ru": "В конце каждого боя с этим предметом уничтожьте его навсегда и получите {ability.5} макс. здоровья",
+    "context": [
+      "cards/367c2ad9-94b3-4f01-a130-a673922244ef"
+    ],
+    "kind": "addition"
+  },
+  "255f5bcefbaa835dca68abe4e0d99a3f": {
+    "en": "The Shield item here has its cooldown reduced by {aura.0}%",
+    "ru": "Перезарядка предмета щита на этом месте сокращена на {aura.0}%",
+    "context": [
+      "cards/38686c0c-ef93-4fb3-81ce-4f5f6d918f11"
+    ],
+    "kind": "addition"
+  },
+  "55c686fccba15d3c5adc651400fcbe49": {
+    "en": "Your items have +Shield equal to {aura.e1.mod} times the number of Weapons you have bought this run [{aura.e1}]",
+    "ru": "Ваши предметы имеют бонус щита, равный количеству оружия, купленного вами за этот забег, умноженному на {aura.e1.mod} [{aura.e1}]",
+    "context": [
+      "cards/3d185981-0b60-47ce-9ed3-58be5d7b2737"
+    ],
+    "kind": "addition"
+  },
+  "84468b48d53ab87ec69fb6b52304b912": {
+    "en": "Your items have +Heal equal to {aura.e1.mod} times the number of Weapons you have bought this run [{aura.e1}]",
+    "ru": "Ваши предметы имеют бонус лечения, равный количеству оружия, купленного вами за этот забег, умноженному на {aura.e1.mod} [{aura.e1}]",
+    "context": [
+      "cards/3d185981-0b60-47ce-9ed3-58be5d7b2737"
+    ],
+    "kind": "addition"
+  },
+  "9a9775c191bee3ad5e85a1604fc383e4": {
+    "en": "Your items have +Poison equal to {aura.e1.mod} times the number of Weapons you have bought this run [{aura.e1}]",
+    "ru": "Ваши предметы имеют бонус яда, равный количеству оружия, купленного вами за этот забег, умноженному на {aura.e1.mod} [{aura.e1}]",
+    "context": [
+      "cards/3d185981-0b60-47ce-9ed3-58be5d7b2737"
+    ],
+    "kind": "addition"
+  },
+  "768d45db34a99bbb4cb5cb5618e92481": {
+    "en": "Your items have +Burn equal to {aura.e1.mod} times the number of Weapons you have bought this run [{aura.e1}]",
+    "ru": "Ваши предметы имеют бонус поджога, равный количеству оружия, купленного вами за этот забег, умноженному на {aura.e1.mod} [{aura.e1}]",
+    "context": [
+      "cards/3d185981-0b60-47ce-9ed3-58be5d7b2737"
+    ],
+    "kind": "addition"
+  },
+  "c39e0acfdb1014be305b6dd9321b4577": {
+    "en": "Your items have +Regen equal to {aura.e1.mod} times the number of Weapons you have bought this run [{aura.e1}]",
+    "ru": "Ваши предметы имеют бонус регенерации, равный количеству оружия, купленного вами за этот забег, умноженному на {aura.e1.mod} [{aura.e1}]",
+    "context": [
+      "cards/3d185981-0b60-47ce-9ed3-58be5d7b2737"
+    ],
+    "kind": "addition"
+  },
+  "263d69c315a25e32ac9016e357ff08f4": {
+    "en": "Your items have +Damage equal to {aura.9} times the number of Weapons you have bought this run [{aura.0}]",
+    "ru": "Ваши предметы имеют бонус урона, равный количеству оружия, купленного вами за этот забег, умноженному на {aura.9} [{aura.0}]",
+    "context": [
+      "cards/3d185981-0b60-47ce-9ed3-58be5d7b2737"
+    ],
+    "kind": "addition"
+  },
+  "86548deb892f0311b40f8c52edd8cfc7": {
+    "en": "This has +{aura.9} for each Aquatic item you have bought this run [{aura.1}]",
+    "ru": "Этот предмет имеет +{aura.9} за каждый водный предмет, купленный вами за этот забег [{aura.1}]",
+    "context": [
+      "cards/40814ac2-ee63-4482-8f3b-d2242750fbd8"
+    ],
+    "kind": "addition"
+  },
+  "76761472f6bea523989a0a14f6f4d89d": {
+    "en": "When you use another Instrument or Tempo item, Charge this {ability.2} second(s)",
+    "ru": "Когда вы используете другой музыкальный инструмент или предмет темпа, зарядите этот предмет на {ability.2} сек.",
+    "context": [
+      "cards/410dbcde-16e1-4b92-9e12-cc7b9fa90600"
+    ],
+    "kind": "addition"
+  },
+  "13f011d48a0eea8d5604bc7291972e69": {
+    "en": "Share with Followers",
+    "ru": "Поделиться с подписчиками",
+    "context": [
+      "cards/4503488d-5c22-4853-988e-a9045146fb40"
+    ],
+    "kind": "addition"
+  },
+  "b42e0874701563e330bca67b19a25cc0": {
+    "en": "Add a random Type to your leftmost item, then gain Gold equal to the Types it has",
+    "ru": "Добавьте случайный тип вашему крайнему левому предмету, затем получите золото, равное количеству его типов",
+    "context": [
+      "cards/4503488d-5c22-4853-988e-a9045146fb40"
+    ],
+    "kind": "addition"
+  },
+  "df82ff8f850157d8bb96b4d5884952e6": {
+    "en": "Charge adjacent items {ability.0} seconds",
+    "ru": "Зарядите соседние предметы на {ability.0} сек.",
+    "context": [
+      "cards/458e19fa-9c19-420a-90cd-d7fb3943271c"
+    ],
+    "kind": "addition"
+  },
+  "e653450d9d3e36685cea163930878523": {
+    "en": "Secret Meeting",
+    "ru": "Тайная встреча",
+    "context": [
+      "cards/494941cc-e837-4bf2-9fec-70ebd67c83e8"
+    ],
+    "kind": "addition"
+  },
+  "4def0f321800500b21af4ca62363e892": {
+    "en": "(if you have Orange Julian)\nGain {ability.0} XP and reduce Orange Julian's cooldown by {ability.1} second",
+    "ru": "(если у вас есть «Оранжевый Джулиан»)\nПолучите {ability.0} опыта и сократите перезарядку «Оранжевого Джулиана» на {ability.1} сек.",
+    "context": [
+      "cards/494941cc-e837-4bf2-9fec-70ebd67c83e8"
+    ],
+    "kind": "addition"
+  },
+  "472f74c2b5018f44e4682566dfaef2df": {
+    "en": "When you use another Tool or Destroy an item, Charge this {ability.2} second(s)",
+    "ru": "Когда вы используете другой инструмент или уничтожаете предмет, зарядите этот предмет на {ability.2} сек.",
+    "context": [
+      "cards/4b1eb7a7-3e65-43ed-905f-72fc7be4233f"
+    ],
+    "kind": "addition"
+  },
+  "db3cb4eacd5add6049ca3a846e581b08": {
+    "en": "When you Enrage, your items gain Shield equal to 1% of your Max Health",
+    "ru": "Когда вы впадаете в ярость, ваши предметы получают бонус щита, равный 1% вашего макс. здоровья",
+    "context": [
+      "cards/4d1bdb16-40f8-4932-a56c-c2e89895e433",
+      "cards/904ffad8-86e3-4e3b-8a26-723604cc4f0e"
+    ],
+    "kind": "addition"
+  },
+  "e87bd89a0992456df6809da0e7a2a1f4": {
+    "en": "When you Enrage, your items gain Heal equal to 1% of your Max Health",
+    "ru": "Когда вы впадаете в ярость, ваши предметы получают бонус лечения, равный 1% вашего макс. здоровья",
+    "context": [
+      "cards/4d1bdb16-40f8-4932-a56c-c2e89895e433",
+      "cards/904ffad8-86e3-4e3b-8a26-723604cc4f0e"
+    ],
+    "kind": "addition"
+  },
+  "760338edbe0c17404bad2c1a0033f443": {
+    "en": "When you Enrage, your items gain Burn equal to 1% of your Max Health",
+    "ru": "Когда вы впадаете в ярость, ваши предметы получают бонус поджога, равный 1% вашего макс. здоровья",
+    "context": [
+      "cards/4d1bdb16-40f8-4932-a56c-c2e89895e433"
+    ],
+    "kind": "addition"
+  },
+  "bb152e1095ad31fb17f1f0030c9a298a": {
+    "en": "When you Enrage, your items gain Damage equal to 1% of your Max Health",
+    "ru": "Когда вы впадаете в ярость, ваши предметы получают бонус урона, равный 1% вашего макс. здоровья",
+    "context": [
+      "cards/4d1bdb16-40f8-4932-a56c-c2e89895e433",
+      "cards/904ffad8-86e3-4e3b-8a26-723604cc4f0e"
+    ],
+    "kind": "addition"
+  },
+  "00a381f2d72d3223b3a95154ea517287": {
+    "en": "When you Enrage, your items gain Regen equal to 1% of your Max Health",
+    "ru": "Когда вы впадаете в ярость, ваши предметы получают бонус регенерации, равный 1% вашего макс. здоровья",
+    "context": [
+      "cards/4d1bdb16-40f8-4932-a56c-c2e89895e433",
+      "cards/904ffad8-86e3-4e3b-8a26-723604cc4f0e"
+    ],
+    "kind": "addition"
+  },
+  "62bd55799a42c0d2b3aafca07b7c81c9": {
+    "en": "Toxic Sigil",
+    "ru": "Токсичная печать",
+    "context": [
+      "cards/4d1bdb16-40f8-4932-a56c-c2e89895e433"
+    ],
+    "kind": "addition"
+  },
+  "722c2ecbd2ba3ad0459d118cdcb8a367": {
+    "en": "When you Poison, gain {ability.0} Rage",
+    "ru": "Когда вы накладываете яд, получите {ability.0} ярости",
+    "context": [
+      "cards/4d1bdb16-40f8-4932-a56c-c2e89895e433"
+    ],
+    "kind": "addition"
+  },
+  "86f1068d105dce2810e0592fc6691ec1": {
+    "en": "When you Enrage, your items gain Poison equal to 1% of your Max Health [{aura.9}]",
+    "ru": "Когда вы впадаете в ярость, ваши предметы получают бонус яда, равный 1% вашего макс. здоровья [{aura.9}]",
+    "context": [
+      "cards/4d1bdb16-40f8-4932-a56c-c2e89895e433"
+    ],
+    "kind": "addition"
+  },
+  "8907a99c557712ab0934b6d6eb854092": {
+    "en": "Charge your other items equal to {aura.9}% of that item's cooldown",
+    "ru": "Зарядите ваши другие предметы на время, равное {aura.9}% перезарядки того предмета",
+    "context": [
+      "cards/4f2b2cd3-88db-43e6-ae79-53eb2554b887"
+    ],
+    "kind": "addition"
+  },
+  "34eed4137fc9a05d4ab271aeabb492b1": {
+    "en": "You take no damage for 1 second longer, and the first time you fall below half Health, use this",
+    "ru": "Вы не получаете урон на 1 сек. дольше, а когда ваше здоровье впервые падает ниже половины, используйте этот предмет",
+    "context": [
+      "cards/4fdc947b-3646-429e-ba4e-bb693fe44bc2"
+    ],
+    "kind": "addition"
+  },
+  "f85a1ea0c0b94743660cfa09c1f76dd3": {
+    "en": "Huge Healer",
+    "ru": "Огромный целитель",
+    "context": [
+      "cards/52492df1-d2da-4784-ad59-2afb05802684"
+    ],
+    "kind": "addition"
+  },
+  "a227b9989861d6455e85ef49ea356722": {
+    "en": "Your items have +Heal equal to {aura.9}% of your Max Health [{aura.0}]",
+    "ru": "Ваши предметы имеют бонус лечения, равный {aura.9}% вашего макс. здоровья [{aura.0}]",
+    "context": [
+      "cards/52492df1-d2da-4784-ad59-2afb05802684"
+    ],
+    "kind": "addition"
+  },
+  "6cc1685df8e67eabc363f56eb2d71282": {
+    "en": "Deep Study",
+    "ru": "Глубокое изучение",
+    "context": [
+      "cards/54188628-46cd-4baa-bebd-944bf541abc9"
+    ],
+    "kind": "addition"
+  },
+  "7302570a2d43800f71bf6fdb309d2298": {
+    "en": "(if you have Staff of the Wise)\nGet {ability.0} XP and learn a Skill from any Hero",
+    "ru": "(если у вас есть «Посох мудрости»)\nПолучите {ability.0} опыта и изучите навык любого героя",
+    "context": [
+      "cards/54188628-46cd-4baa-bebd-944bf541abc9"
+    ],
+    "kind": "addition"
+  },
+  "cb9df473948d2fbc1d75305e0615be49": {
+    "en": "Burn equal to half of this item's Damage",
+    "ru": "Наложите поджог в количестве, равном половине урона этого предмета",
+    "context": [
+      "cards/568ca1fe-7d31-44a9-8e11-bdcc28086948"
+    ],
+    "kind": "addition"
+  },
+  "961bce3ecda284fbdad36077fd95ca1d": {
+    "en": "Regen equal to half of this item's Damage",
+    "ru": "Получите регенерацию, равную половине урона этого предмета",
+    "context": [
+      "cards/568ca1fe-7d31-44a9-8e11-bdcc28086948"
+    ],
+    "kind": "addition"
+  },
+  "ac36b586268a1f9ddf866e3f74610775": {
+    "en": "Dilly",
+    "ru": "Дилли",
+    "context": [
+      "cards/568ca1fe-7d31-44a9-8e11-bdcc28086948"
+    ],
+    "kind": "addition"
+  },
+  "cd0297f33f002d7b080962d3fb303ece": {
+    "en": "Poison equal to half of this item's Damage",
+    "ru": "Наложите яд в количестве, равном половине урона этого предмета",
+    "context": [
+      "cards/568ca1fe-7d31-44a9-8e11-bdcc28086948"
+    ],
+    "kind": "addition"
+  },
+  "595a953556f8cb158fb08d4f6c5e2d4d": {
+    "en": "The first time your enemy reaches 60 Poison, destroy a small item",
+    "ru": "Когда у противника впервые накапливается 60 яда, уничтожьте маленький предмет",
+    "context": [
+      "cards/568ca1fe-7d31-44a9-8e11-bdcc28086948"
+    ],
+    "kind": "addition"
+  },
+  "cf804fa782296a03a13007725f25c2c9": {
+    "en": "This has double Heal, Shield and Damage gain",
+    "ru": "Этот предмет получает вдвое больше лечения, щита и урона",
+    "context": [
+      "cards/59f5169f-5717-4ff7-bef7-22ca274d538d"
+    ],
+    "kind": "addition"
+  },
+  "b4f5df2cc35fe58d2eb4d5bfa462a772": {
+    "en": "When you Enrage, Heal equal to this item's Crit Chance",
+    "ru": "Когда вы впадаете в ярость, восстановите здоровье в количестве, равном шансу крита этого предмета",
+    "context": [
+      "cards/5b4b3685-aa1d-477e-aed5-805813faa2b2"
+    ],
+    "kind": "addition"
+  },
+  "101eaf604529651e041cd0796bbb12af": {
+    "en": "When you Enrage, your items gain Damage and Shield equal to their Crit Chance",
+    "ru": "Когда вы впадаете в ярость, ваши предметы получают урон и щит, равные их шансу крита",
+    "context": [
+      "cards/5b4b3685-aa1d-477e-aed5-805813faa2b2"
+    ],
+    "kind": "addition"
+  },
+  "0f917292546d9ace6429bb9796f2bdbd": {
+    "en": "Cirrus Feather",
+    "ru": "Перо Цирруса",
+    "context": [
+      "cards/5c32e9bb-bf6e-43e7-ae62-494bc250c553"
+    ],
+    "kind": "addition"
+  },
+  "5f1e7d61a40348021f9715e91f153058": {
+    "en": "When this stops Flying, reduce your other items' cooldowns by {ability.2}%",
+    "ru": "Когда этот предмет перестаёт летать, сократите перезарядку ваших других предметов на {ability.2}%",
+    "context": [
+      "cards/5c32e9bb-bf6e-43e7-ae62-494bc250c553"
+    ],
+    "kind": "addition"
+  },
+  "562fdd90577d425765250f0b1f0591c5": {
+    "en": "Enchant your leftmost Instrument item",
+    "ru": "Зачаруйте ваш крайний левый музыкальный инструмент",
+    "context": [
+      "cards/5cf769d2-7595-4701-a91a-b02b1a10671f"
+    ],
+    "kind": "addition"
+  },
+  "474bb1e7ee439b3e44ae0e3842539dac": {
+    "en": "Candid Group Photo",
+    "ru": "Непостановочное групповое фото",
+    "context": [
+      "cards/5ef47056-007d-4e43-be2e-30783171eaaf"
+    ],
+    "kind": "addition"
+  },
+  "2815dea07b066ab071cd6ed8c3d9d3e7": {
+    "en": "Add a random Type to all your items",
+    "ru": "Добавьте случайный тип всем вашим предметам",
+    "context": [
+      "cards/5ef47056-007d-4e43-be2e-30783171eaaf"
+    ],
+    "kind": "addition"
+  },
+  "6e9c5a6bbf99f047609b4475d1346d1a": {
+    "en": "Upgrade your leftmost Instrument item",
+    "ru": "Улучшите ваш крайний левый музыкальный инструмент",
+    "context": [
+      "cards/622c5189-50f1-4967-9e03-fb6446579d46"
+    ],
+    "kind": "addition"
+  },
+  "3f2026e8df32fb1e92bf8bde74be6df0": {
+    "en": "Industry Plant",
+    "ru": "Продюсерский проект",
+    "context": [
+      "cards/64d6f9df-9003-44f8-bad6-ae9f81f1f7bf"
+    ],
+    "kind": "addition"
+  },
+  "63d6e6a8055e8cc56723892ee95f8ccf": {
+    "en": "Power Chord",
+    "ru": "Пауэр-аккорд",
+    "context": [
+      "cards/67a57206-bf3c-4e18-a878-82d5dbf87c3e"
+    ],
+    "kind": "addition"
+  },
+  "be6296a348bfeaf2db65c7768a4ad9f9": {
+    "en": "When you use an Instrument or Tech item, Charge a Weapon {ability.0} second(s)",
+    "ru": "Когда вы используете музыкальный инструмент или технический предмет, зарядите оружие на {ability.0} сек.",
+    "context": [
+      "cards/67a57206-bf3c-4e18-a878-82d5dbf87c3e"
+    ],
+    "kind": "addition"
+  },
+  "29c1d4cc5cb861bb19bb839d92dc4f41": {
+    "en": "The Tempo item here has its cooldown reduced by {aura.0}%",
+    "ru": "Перезарядка предмета темпа на этом месте сокращена на {aura.0}%",
+    "context": [
+      "cards/681de13d-5388-4638-b2e7-20bc566fdda1"
+    ],
+    "kind": "addition"
+  },
+  "9dd0800604444c7af8d429dcabd9bb71": {
+    "en": "Your items gain +{ability.1}% Crit Chance",
+    "ru": "Ваши предметы получают +{ability.1}% шанса крита",
+    "context": [
+      "cards/68e7c206-6e85-42b6-a2d0-0f02a5822dcb"
+    ],
+    "kind": "addition"
+  },
+  "cb94a4f56216896643207757d0ba17d0": {
+    "en": "This has double Crit bonus",
+    "ru": "Этот предмет имеет удвоенный бонус крита",
+    "context": [
+      "cards/6d77bee5-7e9c-46f4-974f-38c26e4615be"
+    ],
+    "kind": "addition"
+  },
+  "c54ef92447b140777924d3f24ad7bad3": {
+    "en": "Adjacent items have +Damage, Heal, and Shield equal to half their Crit Chance",
+    "ru": "Соседние предметы имеют бонус к урону, лечению и щиту, равный половине их шанса крита",
+    "context": [
+      "cards/6d77bee5-7e9c-46f4-974f-38c26e4615be"
+    ],
+    "kind": "addition"
+  },
+  "aca10ca2dd3eb78ca123454debc6f11e": {
+    "en": "Box of Fireworks",
+    "ru": "Коробка фейерверков",
+    "context": [
+      "cards/6f65b541-ec4e-4475-8ca1-fa8546aa2477"
+    ],
+    "kind": "addition"
+  },
+  "b7f505970b841626b85af25f5197d7dc": {
+    "en": "When this is Destroyed, Burn {ability.1} and transform this into 2 Firecrackers",
+    "ru": "Когда этот предмет уничтожен, наложите {ability.1} поджога и превратите его в 2 петарды",
+    "context": [
+      "cards/6f65b541-ec4e-4475-8ca1-fa8546aa2477"
+    ],
+    "kind": "addition"
+  },
+  "52239b3e243e8bf7ca31ca3f46ea92e4": {
+    "en": "Spiked Censer",
+    "ru": "Шипастая кадильница",
+    "context": [
+      "cards/70f3fd94-d441-4ac3-824a-42d9738dbe47"
+    ],
+    "kind": "addition"
+  },
+  "46fee270193b1890b042fe7bd6ea1bb5": {
+    "en": "Deal damage equal to your Regen",
+    "ru": "Нанесите урон, равный вашей регенерации",
+    "context": [
+      "cards/70f3fd94-d441-4ac3-824a-42d9738dbe47"
+    ],
+    "kind": "addition"
+  },
+  "de471ae9e8ec8e2fd5cafdd0366737a2": {
+    "en": "Heal equal to 5 times this item's Poison",
+    "ru": "Восстановите здоровье в количестве, равном значению яда этого предмета, умноженному на 5",
+    "context": [
+      "cards/743652ce-51f9-408f-af43-5546a216ac3a"
+    ],
+    "kind": "addition"
+  },
+  "087e87b9342c93de1881465bcf8e28e4": {
+    "en": "Deal Damage equal to 5 times this item's Poison",
+    "ru": "Нанесите урон, равный значению яда этого предмета, умноженному на 5",
+    "context": [
+      "cards/743652ce-51f9-408f-af43-5546a216ac3a"
+    ],
+    "kind": "addition"
+  },
+  "46f1f80ce859f3d119d0cd304a375481": {
+    "en": "Lionfish",
+    "ru": "Крылатка",
+    "context": [
+      "cards/743652ce-51f9-408f-af43-5546a216ac3a"
+    ],
+    "kind": "addition"
+  },
+  "39bee7fc527a220e15956a6c06374df9": {
+    "en": "Deal {aura.2.mod} Damage for each unique Type on your other items",
+    "ru": "Нанесите {aura.2.mod} урона за каждый уникальный тип ваших других предметов",
+    "context": [
+      "cards/74d0780a-4d98-478e-b136-f1810bc88346"
+    ],
+    "kind": "addition"
+  },
+  "7fff2a523a9e05da61b2a2ca69fb0c70": {
+    "en": "Delete Bin",
+    "ru": "Корзина удаления",
+    "context": [
+      "cards/75c44aaa-dd75-4db3-a47e-8f72a64ffcb7"
+    ],
+    "kind": "addition"
+  },
+  "396c159f9380ffc1938d5e1b6b2a18af": {
+    "en": "Resonant Frequency",
+    "ru": "Резонансная частота",
+    "context": [
+      "cards/765d7fa2-52a5-432d-b6fe-80763c4b5a8a"
+    ],
+    "kind": "addition"
+  },
+  "ae2c8489e1ac5b692e77523cce62a8b1": {
+    "en": "When you use an Instrument or Tech item, Charge a Shield item {ability.0} second(s)",
+    "ru": "Когда вы используете музыкальный инструмент или технический предмет, зарядите предмет щита на {ability.0} сек.",
+    "context": [
+      "cards/765d7fa2-52a5-432d-b6fe-80763c4b5a8a"
+    ],
+    "kind": "addition"
+  },
+  "d24fefde473ff862b943cc57e7a55405": {
+    "en": "The Baron Boys",
+    "ru": "Парни Барона",
+    "context": [
+      "cards/82a64f45-ca55-4a24-b1ef-18d41cc77fa5"
+    ],
+    "kind": "addition"
+  },
+  "0aeb4fc4f856e875b3ef85d7c8d0cdc2": {
+    "en": "Haste {ability.0.targets} item(s) {ability.0} seconds",
+    "ru": "Ускорьте {ability.0.targets} предметов на {ability.0} сек.",
+    "context": [
+      "cards/844f0836-fa5f-485d-83ba-e0795dd3c937"
+    ],
+    "kind": "addition"
+  },
+  "c6962c1c7516dc824c27ac1098e06bab": {
+    "en": "Shield equal to {aura.9} times the Rage you have gained this fight",
+    "ru": "Получите щит, равный количеству ярости, полученной вами за этот бой, умноженному на {aura.9}",
+    "context": [
+      "cards/8666a1de-066f-47c4-9d9b-87eea7d9f25a"
+    ],
+    "kind": "addition"
+  },
+  "24a04aa708aa2131f5ddf756ad6138d6": {
+    "en": "Huge Warrior",
+    "ru": "Огромный воин",
+    "context": [
+      "cards/87d058f2-828f-4737-a61e-3c9320bfd4a5"
+    ],
+    "kind": "addition"
+  },
+  "84df77c3b4411b21bd7df903303c28e1": {
+    "en": "Your items have +Damage equal to {aura.9}% of your Max Health [{aura.0}]",
+    "ru": "Ваши предметы имеют бонус урона, равный {aura.9}% вашего макс. здоровья [{aura.0}]",
+    "context": [
+      "cards/87d058f2-828f-4737-a61e-3c9320bfd4a5"
+    ],
+    "kind": "addition"
+  },
+  "e4dc49aee2408eb85d6d7e9c824ac204": {
+    "en": "Deal damage equal to 7 times this item's Crit Chance",
+    "ru": "Нанесите урон, равный шансу крита этого предмета, умноженному на 7",
+    "context": [
+      "cards/8938035e-be96-4827-bd34-7258253bd942"
+    ],
+    "kind": "addition"
+  },
+  "a42c989551f643715524b929ba9b3b9f": {
+    "en": "When you take damage, this gains 7% Crit Chance",
+    "ru": "Когда вы получаете урон, этот предмет получает 7% шанса крита",
+    "context": [
+      "cards/8938035e-be96-4827-bd34-7258253bd942"
+    ],
+    "kind": "addition"
+  },
+  "6b8a071d3bbcb8dbc788e488f7ece25c": {
+    "en": "Disco",
+    "ru": "Диско",
+    "context": [
+      "cards/89f6bc92-a2f9-477d-8acc-43903a58afc3"
+    ],
+    "kind": "addition"
+  },
+  "648c7bf58af3dbe840804cc52f500efd": {
+    "en": "When you Enchant an item in combat, gain {ability.0} Tempo",
+    "ru": "Когда вы зачаровываете предмет в бою, получите {ability.0} темпа",
+    "context": [
+      "cards/89f6bc92-a2f9-477d-8acc-43903a58afc3"
+    ],
+    "kind": "addition"
+  },
+  "a2d8430adaf99bdf9b98309f4ce5f12e": {
+    "en": "You are Enraged for 1 second shorter\nChoose a Gold-tier Sigil",
+    "ru": "Ваша ярость длится на 1 сек. меньше\nВыберите золотую печать",
+    "context": [
+      "cards/8a452702-604e-4e26-941e-619ba6396c36"
+    ],
+    "kind": "addition"
+  },
+  "d3fd0384de89580a85502fe499b4fa3a": {
+    "en": "Your Instrument items are affected by Freeze and Slow for half as long",
+    "ru": "Заморозка и замедление действуют на ваши музыкальные инструменты вдвое меньше времени",
+    "context": [
+      "cards/8bf6a0b7-52f0-498c-bc45-21e47c8ea76f"
+    ],
+    "kind": "addition"
+  },
+  "bc4c5be0c22be63db622bf746b31d474": {
+    "en": "Your Instrument items have +{aura.e1}% Crit Chance",
+    "ru": "Ваши музыкальные инструменты имеют +{aura.e1}% шанса крита",
+    "context": [
+      "cards/8bf6a0b7-52f0-498c-bc45-21e47c8ea76f"
+    ],
+    "kind": "addition"
+  },
+  "54aa741daad95dcd460e994234e070f2": {
+    "en": "Your Instruments have +{aura.0} Multicast",
+    "ru": "Ваши музыкальные инструменты имеют +{aura.0} к мультивыстрелу",
+    "context": [
+      "cards/8bf6a0b7-52f0-498c-bc45-21e47c8ea76f"
+    ],
+    "kind": "addition"
+  },
+  "970cc7e682f221a20307362e14639470": {
+    "en": "When you use an Instrument on a matching Note, gain 1 Tempo",
+    "ru": "Когда вы используете музыкальный инструмент на подходящей ноте, получите 1 темпа",
+    "context": [
+      "cards/8bf6a0b7-52f0-498c-bc45-21e47c8ea76f"
+    ],
+    "kind": "addition"
+  },
+  "bdc8629a102da202557184184eaf269b": {
+    "en": "When you use a small Potion, transform it into another Potion from any Hero",
+    "ru": "Когда вы используете маленькое зелье, превратите его в другое зелье любого героя",
+    "context": [
+      "cards/8f6eebd6-db14-48f8-9407-5962772e7dec"
+    ],
+    "kind": "addition"
+  },
+  "56d5944e6b7d248660e47496c12337bc": {
+    "en": "When you Enrage, your items gain Poison equal to 1% of your Max Health",
+    "ru": "Когда вы впадаете в ярость, ваши предметы получают бонус яда, равный 1% вашего макс. здоровья",
+    "context": [
+      "cards/904ffad8-86e3-4e3b-8a26-723604cc4f0e"
+    ],
+    "kind": "addition"
+  },
+  "9cae995355b1441ee200d43ea819aea3": {
+    "en": "When you Enrage, your items gain Burn equal to 1% of your Max Health [{aura.9}]",
+    "ru": "Когда вы впадаете в ярость, ваши предметы получают бонус поджога, равный 1% вашего макс. здоровья [{aura.9}]",
+    "context": [
+      "cards/904ffad8-86e3-4e3b-8a26-723604cc4f0e"
+    ],
+    "kind": "addition"
+  },
+  "1d79a6c191aad30b56c7f6129226fc00": {
+    "en": "When you Enrage, your items gain Shield equal to this item's Heal",
+    "ru": "Когда вы впадаете в ярость, ваши предметы получают бонус щита, равный лечению этого предмета",
+    "context": [
+      "cards/90b3cc1a-2251-4af7-a7c7-496aac457784"
+    ],
+    "kind": "addition"
+  },
+  "20d8cf1639b3b06d3504f76742eddfa7": {
+    "en": "When you Enrage, your items gain Poison equal to 20% of this item's Heal",
+    "ru": "Когда вы впадаете в ярость, ваши предметы получают бонус яда, равный 20% лечения этого предмета",
+    "context": [
+      "cards/90b3cc1a-2251-4af7-a7c7-496aac457784"
+    ],
+    "kind": "addition"
+  },
+  "ace5e5a16666501ed2f6dddee01edb31": {
+    "en": "When you Enrage, your items gain Burn equal to 20% of this item's Heal",
+    "ru": "Когда вы впадаете в ярость, ваши предметы получают бонус поджога, равный 20% лечения этого предмета",
+    "context": [
+      "cards/90b3cc1a-2251-4af7-a7c7-496aac457784"
+    ],
+    "kind": "addition"
+  },
+  "34247257ce703cf8057fe40f56cb5322": {
+    "en": "When you Enrage, your items gain Damage equal to this item's Heal",
+    "ru": "Когда вы впадаете в ярость, ваши предметы получают бонус урона, равный лечению этого предмета",
+    "context": [
+      "cards/90b3cc1a-2251-4af7-a7c7-496aac457784"
+    ],
+    "kind": "addition"
+  },
+  "d0b028146e21bfd80cce383ae3ab6bb2": {
+    "en": "When you Enrage, your items gain Regen equal to 20% of this item's Heal",
+    "ru": "Когда вы впадаете в ярость, ваши предметы получают бонус регенерации, равный 20% лечения этого предмета",
+    "context": [
+      "cards/90b3cc1a-2251-4af7-a7c7-496aac457784"
+    ],
+    "kind": "addition"
+  },
+  "3864935dc32009b128ddd14334f0f1d0": {
+    "en": "Selfie",
+    "ru": "Селфи",
+    "context": [
+      "cards/9786cf78-cca1-4c67-8088-f9f64411eb0d"
+    ],
+    "kind": "addition"
+  },
+  "29514745db440f49c407937d43f72777": {
+    "en": "Add 3 random Types to your leftmost item",
+    "ru": "Добавьте 3 случайных типа вашему крайнему левому предмету",
+    "context": [
+      "cards/9786cf78-cca1-4c67-8088-f9f64411eb0d"
+    ],
+    "kind": "addition"
+  },
+  "4ec7bb5a5e0ecb75cbb17716dcc80f6f": {
+    "en": "When you spend Tempo, Slow {ability.e1.targets} item {ability.e1} second(s)",
+    "ru": "Когда вы тратите темп, замедлите {ability.e1.targets} предметов на {ability.e1} сек.",
+    "context": [
+      "cards/98aa3e24-d793-408b-b20b-8ce98cd4708b"
+    ],
+    "kind": "addition"
+  },
+  "083eef450536a5f3dc04d8785dabf7e7": {
+    "en": "When you spend Tempo, Freeze an item {ability.e1} second(s)",
+    "ru": "Когда вы тратите темп, заморозьте предмет на {ability.e1} сек.",
+    "context": [
+      "cards/98aa3e24-d793-408b-b20b-8ce98cd4708b"
+    ],
+    "kind": "addition"
+  },
+  "dd0e52912b1d05863e052f8fd97ba97c": {
+    "en": "When you spend Tempo, Shield {ability.e1}",
+    "ru": "Когда вы тратите темп, получите {ability.e1} щита",
+    "context": [
+      "cards/98aa3e24-d793-408b-b20b-8ce98cd4708b"
+    ],
+    "kind": "addition"
+  },
+  "3583ce0af99c3ea1c823f065e457381a": {
+    "en": "When you spend Tempo, Heal {ability.e1}",
+    "ru": "Когда вы тратите темп, восстановите {ability.e1} здоровья",
+    "context": [
+      "cards/98aa3e24-d793-408b-b20b-8ce98cd4708b"
+    ],
+    "kind": "addition"
+  },
+  "d81308459f81709eb4d26b6587142edd": {
+    "en": "When you spend Tempo, Poison {ability.e1}",
+    "ru": "Когда вы тратите темп, наложите {ability.e1} яда",
+    "context": [
+      "cards/98aa3e24-d793-408b-b20b-8ce98cd4708b"
+    ],
+    "kind": "addition"
+  },
+  "97b5c10292d3a6baf532e3a9e7731f1e": {
+    "en": "When you spend Tempo, Burn {ability.e1}",
+    "ru": "Когда вы тратите темп, наложите {ability.e1} поджога",
+    "context": [
+      "cards/98aa3e24-d793-408b-b20b-8ce98cd4708b"
+    ],
+    "kind": "addition"
+  },
+  "60cfaab635e21dd3e04d90e568cedcc5": {
+    "en": "When you spend Tempo, Haste an item {ability.e1} second(s)",
+    "ru": "Когда вы тратите темп, ускорьте предмет на {ability.e1} сек.",
+    "context": [
+      "cards/98aa3e24-d793-408b-b20b-8ce98cd4708b"
+    ],
+    "kind": "addition"
+  },
+  "5ccdc41ba1ecb08de89320eb82deedfa": {
+    "en": "When you spend Tempo, deal {ability.e1} Damage",
+    "ru": "Когда вы тратите темп, нанесите {ability.e1} урона",
+    "context": [
+      "cards/98aa3e24-d793-408b-b20b-8ce98cd4708b"
+    ],
+    "kind": "addition"
+  },
+  "b5e66b55c28b82f07878d7095c51f613": {
+    "en": "When you spend Tempo, Regen {ability.e1}",
+    "ru": "Когда вы тратите темп, получите {ability.e1} регенерации",
+    "context": [
+      "cards/98aa3e24-d793-408b-b20b-8ce98cd4708b"
+    ],
+    "kind": "addition"
+  },
+  "4262178f615fd92c4f8d7e849ba03c18": {
+    "en": "When you spend Tempo, Haste an item {ability.0} second(s)",
+    "ru": "Когда вы тратите темп, ускорьте предмет на {ability.0} сек.",
+    "context": [
+      "cards/98aa3e24-d793-408b-b20b-8ce98cd4708b"
+    ],
+    "kind": "addition"
+  },
+  "c13ec3527a7738f775cea775f1b3b410": {
+    "en": "This Slows for half as long and has double Heal bonus",
+    "ru": "Этот предмет замедляет на вдвое меньшее время и имеет удвоенный бонус лечения",
+    "context": [
+      "cards/991efa4e-b4d6-4a20-9de5-81ce00c3e2ae"
+    ],
+    "kind": "addition"
+  },
+  "1b57bf53f8196b297dfde1275e886588": {
+    "en": "Deal Damage {ability.e1}",
+    "ru": "Нанесите {ability.e1} урона",
+    "context": [
+      "cards/991efa4e-b4d6-4a20-9de5-81ce00c3e2ae"
+    ],
+    "kind": "addition"
+  },
+  "ef71255aabf6e99b9cf22e9f690f2e33": {
+    "en": "River Otter",
+    "ru": "Речная выдра",
+    "context": [
+      "cards/991efa4e-b4d6-4a20-9de5-81ce00c3e2ae"
+    ],
+    "kind": "addition"
+  },
+  "750c0cbb0aa97c294a51d18c9e803b30": {
+    "en": "Slow one of your Heal items {ability.0} second(s)",
+    "ru": "Замедлите один из ваших предметов лечения на {ability.0} сек.",
+    "context": [
+      "cards/991efa4e-b4d6-4a20-9de5-81ce00c3e2ae"
+    ],
+    "kind": "addition"
+  },
+  "1216f3e5575cc06e99e0b99eafe2f919": {
+    "en": "When you Slow one of your Heal items, it gains {ability.1}",
+    "ru": "Когда вы замедляете один из своих предметов лечения, он получает {ability.1}",
+    "context": [
+      "cards/991efa4e-b4d6-4a20-9de5-81ce00c3e2ae"
+    ],
+    "kind": "addition"
+  },
+  "c62e91441a41f2483055471a292855c7": {
+    "en": "Your leftmost Weapon has +Damage equal to {aura.9} times its value",
+    "ru": "Ваше крайнее левое оружие имеет бонус к урону, равный его стоимости, умноженной на {aura.9}",
+    "context": [
+      "cards/994de267-673b-4838-9302-1b3b47ab0934"
+    ],
+    "kind": "addition"
+  },
+  "be1e97f4251efbd28c127084d83aff0b": {
+    "en": "Breakdown Interlude",
+    "ru": "Брейкдаун-интерлюдия",
+    "context": [
+      "cards/9a02c491-873c-455e-b984-756c428a8fc9"
+    ],
+    "kind": "addition"
+  },
+  "6ab1d1ee7c2062b6bfe9a8c31557e125": {
+    "en": "The first time you fall below half Health, Charge your items {ability.0} second(s)",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, зарядите ваши предметы на {ability.0} сек.",
+    "context": [
+      "cards/9a02c491-873c-455e-b984-756c428a8fc9"
+    ],
+    "kind": "addition"
+  },
+  "d4b92e166e2b659fa6d05e1ad229df86": {
+    "en": "Your Friends have 40% Crit Chance",
+    "ru": "Ваши друзья имеют 40% шанса крита",
+    "context": [
+      "cards/9b44aac3-173a-4d22-92f7-e2678b33c230"
+    ],
+    "kind": "addition"
+  },
+  "9462a68b74e868646d0966ac6e0b5770": {
+    "en": "When you Haste, Slow or Freeze, Charge this {ability.3} second(s)",
+    "ru": "Когда вы ускоряете, замедляете или замораживаете, зарядите этот предмет на {ability.3} сек.",
+    "context": [
+      "cards/9bf2d4d3-d753-4419-8f6f-d56686e967b8"
+    ],
+    "kind": "addition"
+  },
+  "78d2072fe9b865a388d18eb59fb6d363": {
+    "en": "The Burn item here has its cooldown reduced by {aura.0}%",
+    "ru": "Перезарядка предмета поджога на этом месте сокращена на {aura.0}%",
+    "context": [
+      "cards/9d043620-fcd5-40d7-94c0-208d31480562"
+    ],
+    "kind": "addition"
+  },
+  "b6ef60afe622aa2c5b1534b9c72ebfd9": {
+    "en": "When you Enrage, reduce this item's Cooldown by half",
+    "ru": "Когда вы впадаете в ярость, сократите перезарядку этого предмета вдвое",
+    "context": [
+      "cards/9e1173c2-c44d-4aa5-9aa3-10271be80943"
+    ],
+    "kind": "addition"
+  },
+  "e7dabc2122739176393aec6e1ad8c30a": {
+    "en": "When you Crit, Slow {ability.e1.targets} item {ability.e1} second(s)",
+    "ru": "Когда вы наносите критический удар, замедлите {ability.e1.targets} предметов на {ability.e1} сек.",
+    "context": [
+      "cards/a046d7a0-effe-41c0-850f-de1f4bfa08f2"
+    ],
+    "kind": "addition"
+  },
+  "2ab0b2d54ad1b1df5a2778f3494f06e7": {
+    "en": "When you Crit, Haste {ability.e1.targets} item {ability.e1} second(s)",
+    "ru": "Когда вы наносите критический удар, ускорьте {ability.e1.targets} предметов на {ability.e1} сек.",
+    "context": [
+      "cards/a046d7a0-effe-41c0-850f-de1f4bfa08f2"
+    ],
+    "kind": "addition"
+  },
+  "5b2f18fa354ddb62346da3edd6a5e2ea": {
+    "en": "When you Crit, Charge another Food {ability.0} second(s)",
+    "ru": "Когда вы наносите критический удар, зарядите другую еду на {ability.0} сек.",
+    "context": [
+      "cards/a046d7a0-effe-41c0-850f-de1f4bfa08f2"
+    ],
+    "kind": "addition"
+  },
+  "dc8ac8df42ee5de06b3f6f50b6df45ba": {
+    "en": "Reduce your Instrument items' Cooldowns by {ability.0}%",
+    "ru": "Сократите перезарядки ваших музыкальных инструментов на {ability.0}%",
+    "context": [
+      "cards/a09835cb-b648-49da-ab1a-c8d5276bfc11"
+    ],
+    "kind": "addition"
+  },
+  "86ce574dcd02e15f5eea2d540115042b": {
+    "en": "Improve your Instrument items",
+    "ru": "Усильте ваши музыкальные инструменты",
+    "context": [
+      "cards/a5bbdcf8-c1a3-41e3-898f-71a1819039d3"
+    ],
+    "kind": "addition"
+  },
+  "6dc50eb21c47a86960673b20b75ec3ba": {
+    "en": "When you use a Medium or Large item, this gains +{aura.9}% Damage",
+    "ru": "Когда вы используете средний или большой предмет, этот предмет получает +{aura.9}% урона",
+    "context": [
+      "cards/a7ceeecc-d802-4bbf-9521-afe89db4af45"
+    ],
+    "kind": "addition"
+  },
+  "c8f0bc81ed8cdc0f5fca8e2ef757b6c0": {
+    "en": "Your items have +40% Crit Chance",
+    "ru": "Ваши предметы имеют +40% шанса крита",
+    "context": [
+      "cards/a89a0b5d-bbbb-4818-b002-1ad0156156f7"
+    ],
+    "kind": "addition"
+  },
+  "c245c8d9b0d80f8abbc0b5d5af263037": {
+    "en": "The Weapon here has its cooldown reduced by {aura.0}%",
+    "ru": "Перезарядка оружия на этом месте сокращена на {aura.0}%",
+    "context": [
+      "cards/a9adbfdc-567e-4fe6-a9e3-7eded0bc1279"
+    ],
+    "kind": "addition"
+  },
+  "ba6faf091a90e30f81e20e52e8007cd4": {
+    "en": "Deal damage equal to {aura.9} times the Rage you have gained this fight",
+    "ru": "Нанесите урон, равный количеству ярости, полученной вами за этот бой, умноженному на {aura.9}",
+    "context": [
+      "cards/aa258418-04c1-4fc2-b597-6897fb7544f0"
+    ],
+    "kind": "addition"
+  },
+  "47b2b7bcf3204f02db5d8e5a36145efa": {
+    "en": "Thrifted Threads",
+    "ru": "Одежда из секонд-хенда",
+    "context": [
+      "cards/ac15029f-b733-4284-a122-5b40d866e6a8"
+    ],
+    "kind": "addition"
+  },
+  "4c0f46b3a62baa4230ca2b9158bab69d": {
+    "en": "Your leftmost item is an Apparel and has its cooldown reduced by {aura.1}%",
+    "ru": "Ваш крайний левый предмет считается одеждой, и его перезарядка сокращена на {aura.1}%",
+    "context": [
+      "cards/ac15029f-b733-4284-a122-5b40d866e6a8"
+    ],
+    "kind": "addition"
+  },
+  "c5e2cad8279f14f3241eaf34eb6886a0": {
+    "en": "When you Crit with an adjacent item, Charge {ability.0.targets} other Tech or Instrument {ability.0} second(s)",
+    "ru": "Когда соседний предмет наносит критический удар, зарядите {ability.0.targets} других технических предметов или музыкальных инструментов на {ability.0} сек.",
+    "context": [
+      "cards/ae2a2609-a2cf-4657-8abb-a73ce3c56d30"
+    ],
+    "kind": "addition"
+  },
+  "d4be46c20b9ac4d3ebbcebe1de620ccf": {
+    "en": "Order an Upgrade",
+    "ru": "Заказать улучшение",
+    "context": [
+      "cards/af3772c6-78a7-4ce6-849d-5f374d12f779"
+    ],
+    "kind": "addition"
+  },
+  "ec72bed3254b1dc40c760606f7ee94da": {
+    "en": "Staged Photo",
+    "ru": "Постановочное фото",
+    "context": [
+      "cards/af5c9789-2782-443b-bac3-e5724f5e125d"
+    ],
+    "kind": "addition"
+  },
+  "f67300f42c140bbd042297c7334dc593": {
+    "en": "Add 2 random Types to all your items",
+    "ru": "Добавьте 2 случайных типа всем вашим предметам",
+    "context": [
+      "cards/af5c9789-2782-443b-bac3-e5724f5e125d"
+    ],
+    "kind": "addition"
+  },
+  "fe1a0568758201920f08509a4579dcd7": {
+    "en": "This is destroyed after 6 seconds instead",
+    "ru": "Вместо этого предмет уничтожается через 6 сек.",
+    "context": [
+      "cards/b18ca39c-8aa4-40c1-a687-524380b64370"
+    ],
+    "kind": "addition"
+  },
+  "20642fc256028372cdb89422ff70a9aa": {
+    "en": "Sitting Duck",
+    "ru": "Лёгкая мишень",
+    "context": [
+      "cards/b18ca39c-8aa4-40c1-a687-524380b64370"
+    ],
+    "kind": "addition"
+  },
+  "0feae48f352b039f6c2df086c0f2c89f": {
+    "en": "Your other items cannot be Frozen, Slowed or Destroyed",
+    "ru": "Ваши другие предметы нельзя заморозить, замедлить или уничтожить",
+    "context": [
+      "cards/b18ca39c-8aa4-40c1-a687-524380b64370"
+    ],
+    "kind": "addition"
+  },
+  "45baaacfa846f854382e235734961c02": {
+    "en": "After {aura.9} seconds in combat, Destroy this",
+    "ru": "Через {aura.9} сек. боя уничтожьте этот предмет",
+    "context": [
+      "cards/b18ca39c-8aa4-40c1-a687-524380b64370"
+    ],
+    "kind": "addition"
+  },
+  "f6515c27bbdf7d55aa810d20fc7ccc13": {
+    "en": "This item's Cooldown is reduced by 1% for each Damage it has",
+    "ru": "Перезарядка этого предмета сокращена на 1% за каждую единицу его урона",
+    "context": [
+      "cards/b2681448-9dec-47c7-bb4f-58c51830735d"
+    ],
+    "kind": "addition"
+  },
+  "fe67c5ddabff34e0af2f80d8949f4701": {
+    "en": "You are Enraged for 1 second longer\nChoose a Gold-tier Sigil",
+    "ru": "Ваша ярость длится на 1 сек. дольше\nВыберите золотую печать",
+    "context": [
+      "cards/b4a51feb-dbea-4300-a409-3e41001b2061"
+    ],
+    "kind": "addition"
+  },
+  "7e7504da83608342fe744f7a20711365": {
+    "en": "Gain a second skill",
+    "ru": "Получите второй навык",
+    "context": [
+      "cards/b4e92058-ea77-43a6-af6b-858fd73e5750"
+    ],
+    "kind": "addition"
+  },
+  "253ac8210857f7dad98cc21a07a6a085": {
+    "en": "When you sell this, get an Enchanted item from another Hero",
+    "ru": "Когда вы продаёте этот предмет, получите зачарованный предмет другого героя",
+    "context": [
+      "cards/b4e92058-ea77-43a6-af6b-858fd73e5750"
+    ],
+    "kind": "addition"
+  },
+  "d6332f190c12a43d1ea514670343ca3d": {
+    "en": "When you sell this, get 2 XP",
+    "ru": "Когда вы продаёте этот предмет, получите 2 опыта",
+    "context": [
+      "cards/b4e92058-ea77-43a6-af6b-858fd73e5750"
+    ],
+    "kind": "addition"
+  },
+  "09698d40063a7aa199e9c8991c43d21d": {
+    "en": "When you complete a quest on any item, gain a Skill from another Hero",
+    "ru": "Когда вы выполняете задание любого предмета, получите навык другого героя",
+    "context": [
+      "cards/b4e92058-ea77-43a6-af6b-858fd73e5750"
+    ],
+    "kind": "addition"
+  },
+  "3cc72afc76e0d054b05c35717b305eeb": {
+    "en": "When you use an adjacent Toy, Slow an item {ability.e1} second(s)",
+    "ru": "Когда вы используете соседнюю игрушку, замедлите предмет на {ability.e1} сек.",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "kind": "addition"
+  },
+  "975df4eee6bb81768979813eb256a547": {
+    "en": "When you use an adjacent Toy, Freeze an item {ability.e1} second(s)",
+    "ru": "Когда вы используете соседнюю игрушку, заморозьте предмет на {ability.e1} сек.",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "kind": "addition"
+  },
+  "71019b2f40dc781a5009981b0f087cbe": {
+    "en": "When you use an adjacent Toy, Haste an item {ability.e1} second(s)",
+    "ru": "Когда вы используете соседнюю игрушку, ускорьте предмет на {ability.e1} сек.",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "kind": "addition"
+  },
+  "9ff7776de158728bbe72ff182158328a": {
+    "en": "When you use an adjacent Toy, Shield {ability.e1}",
+    "ru": "Когда вы используете соседнюю игрушку, получите {ability.e1} щита",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "kind": "addition"
+  },
+  "1cd36ef2584571e07234d37672da34be": {
+    "en": "When you use an adjacent Toy, Heal {ability.e1}",
+    "ru": "Когда вы используете соседнюю игрушку, восстановите {ability.e1} здоровья",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "kind": "addition"
+  },
+  "ab471410db25715fb6f30cd756c39cf8": {
+    "en": "When you use an adjacent Toy, Poison {ability.e1}",
+    "ru": "Когда вы используете соседнюю игрушку, наложите {ability.e1} яда",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "kind": "addition"
+  },
+  "1e3744d7321858f491bd8fac477e2804": {
+    "en": "When you use an adjacent Toy, Burn {ability.e1}",
+    "ru": "Когда вы используете соседнюю игрушку, наложите {ability.e1} поджога",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "kind": "addition"
+  },
+  "82c1287cb547638b1996c0c1868270ff": {
+    "en": "At the start of each day, get a second Toy or Tool Skill",
+    "ru": "В начале каждого дня получите второй навык игрушек или инструментов",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "kind": "addition"
+  },
+  "9428151f9400478a4849faf5891f525c": {
+    "en": "When you use an adjacent Toy, deal {ability.e1} Damage",
+    "ru": "Когда вы используете соседнюю игрушку, нанесите {ability.e1} урона",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "kind": "addition"
+  },
+  "b0f7a4e761505767d38609e4b35e795f": {
+    "en": "When you use an adjacent Toy, Regen {ability.e1}",
+    "ru": "Когда вы используете соседнюю игрушку, получите {ability.e1} регенерации",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "kind": "addition"
+  },
+  "5830daa278ffad5b54016677f3d7ccaa": {
+    "en": "Fridge Art",
+    "ru": "Рисунок на холодильнике",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "kind": "addition"
+  },
+  "ac2955ec155846069ce400f793836ab0": {
+    "en": "Your Small Tools are Toys",
+    "ru": "Ваши маленькие инструменты считаются игрушками",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "kind": "addition"
+  },
+  "684f08b71601978c7125f8c4841666c7": {
+    "en": "At the start of each day, get a Toy or Tool Skill",
+    "ru": "В начале каждого дня получите навык игрушек или инструментов",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "kind": "addition"
+  },
+  "d2ba4a364a4d9d3c39ffcff54c39250b": {
+    "en": "This has +{aura.9} for each Aquatic item bought this run [{aura.1}]",
+    "ru": "Этот предмет имеет +{aura.9} за каждый водный предмет, купленный за этот забег [{aura.1}]",
+    "context": [
+      "cards/bdb95fa6-1607-4fd6-a78b-063f826df717"
+    ],
+    "kind": "addition"
+  },
+  "1f5643fe5588b698c87d09d2fa246d75": {
+    "en": "Transform into 2 Enchanted Potions from any Hero",
+    "ru": "Превратите в 2 зачарованных зелья любого героя",
+    "context": [
+      "cards/bef0a78b-b3b4-4e7b-85d3-7c42aca6379f"
+    ],
+    "kind": "addition"
+  },
+  "3ba0e000723e8f8dd6c31060414308b3": {
+    "en": "When you use a Dragon, Slow an item {ability.e1} second(s)",
+    "ru": "Когда вы используете дракона, замедлите предмет на {ability.e1} сек.",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "kind": "addition"
+  },
+  "87f77e9295cd154cd98854f65a1716c6": {
+    "en": "When you use a Dragon, Freeze an item {ability.e1} second(s)",
+    "ru": "Когда вы используете дракона, заморозьте предмет на {ability.e1} сек.",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "kind": "addition"
+  },
+  "1782122f478c76212dd1ebade5dd5412": {
+    "en": "When you use a Dragon, Haste it {ability.e1} second(s)",
+    "ru": "Когда вы используете дракона, ускорьте его на {ability.e1} сек.",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "kind": "addition"
+  },
+  "2b1be5a5947e262502e692cf7d71e83a": {
+    "en": "When you use a Dragon, Shield {ability.e1}",
+    "ru": "Когда вы используете дракона, получите {ability.e1} щита",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "kind": "addition"
+  },
+  "1cc9c44cafa1f35591eccd4fa560a887": {
+    "en": "When you use a Dragon, Heal {ability.e1}",
+    "ru": "Когда вы используете дракона, восстановите {ability.e1} здоровья",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "kind": "addition"
+  },
+  "a46cea738a1a2e2526ff288179ae4957": {
+    "en": "When you use a Dragon, Poison {ability.e1}",
+    "ru": "Когда вы используете дракона, наложите {ability.e1} яда",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "kind": "addition"
+  },
+  "d269f64d7ccd3c27cf66cc97e8bccf92": {
+    "en": "When you use a Dragon, Burn {ability.e1}",
+    "ru": "Когда вы используете дракона, наложите {ability.e1} поджога",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "kind": "addition"
+  },
+  "6ed5f96414f1aaba895bdc29966e8a46": {
+    "en": "Your Dragons have 40% Crit Chance",
+    "ru": "Ваши драконы имеют 40% шанса крита",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "kind": "addition"
+  },
+  "8e0e12a0b0e1adca0b86669bf4a233e0": {
+    "en": "When you use a Dragon, deal {ability.e1} Damage",
+    "ru": "Когда вы используете дракона, нанесите {ability.e1} урона",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "kind": "addition"
+  },
+  "75ea2dc60fc6f0349bfdbb8cca6886b1": {
+    "en": "When you use a Dragon, Regen {ability.e1}",
+    "ru": "Когда вы используете дракона, получите {ability.e1} регенерации",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "kind": "addition"
+  },
+  "7ec30fa6ecc98068df44966408e33a34": {
+    "en": "A Dragon gains +{ability.1} Multicast",
+    "ru": "Один дракон получает +{ability.1} к мультивыстрелу",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "kind": "addition"
+  },
+  "7b18862af0b87391f1fdfc1b6a690142": {
+    "en": "Ice Tongs",
+    "ru": "Щипцы для льда",
+    "context": [
+      "cards/c49dac47-a0e1-45db-bfe7-e84fe740d9ef"
+    ],
+    "kind": "addition"
+  },
+  "721c1b845edd3397e7ccb376b1ce4c14": {
+    "en": "When you use a Chilled item, this gains {ability.1} Damage",
+    "ru": "Когда вы используете охлаждённый предмет, этот предмет получает {ability.1} урона",
+    "context": [
+      "cards/c49dac47-a0e1-45db-bfe7-e84fe740d9ef"
+    ],
+    "kind": "addition"
+  },
+  "ad85473f088e9af4777bd5e5dd62e369": {
+    "en": "Huge Tank",
+    "ru": "Огромный танк",
+    "context": [
+      "cards/c4c70f57-c51e-4bc4-848c-0f0e7fbddd28"
+    ],
+    "kind": "addition"
+  },
+  "1b350d3d21857f6bfd67516ca24d18ea": {
+    "en": "Your items have +Shield equal to {aura.9}% of your Max Health [{aura.0}]",
+    "ru": "Ваши предметы имеют бонус щита, равный {aura.9}% вашего макс. здоровья [{aura.0}]",
+    "context": [
+      "cards/c4c70f57-c51e-4bc4-848c-0f0e7fbddd28"
+    ],
+    "kind": "addition"
+  },
+  "265445170da695059245625ccdbceae8": {
+    "en": "The Slow item here has its cooldown reduced by {aura.0}%",
+    "ru": "Перезарядка предмета замедления на этом месте сокращена на {aura.0}%",
+    "context": [
+      "cards/c82b1942-e666-495e-8ed2-54ad13e15c97"
+    ],
+    "kind": "addition"
+  },
+  "206fc6787a5b47762c0b566ded6f4196": {
+    "en": "This and a Tool or Drone start Flying",
+    "ru": "Этот предмет и один инструмент или дрон начинают летать",
+    "context": [
+      "cards/c8daaaa2-e652-465a-8d5b-718c33674f0c"
+    ],
+    "kind": "addition"
+  },
+  "f045c03bf5646f0e105781b02f3aed22": {
+    "en": "(if you have a Bushel) Get 2 Silver-tier Truffles",
+    "ru": "(если у вас есть «Бушель») Получите 2 серебряных трюфеля",
+    "context": [
+      "cards/cde1b158-1d74-4758-8542-151330fcb1c1"
+    ],
+    "kind": "addition"
+  },
+  "aca54f04ea829c3c44f30e1e17c49508": {
+    "en": "When you use an item, gain {ability.2} Regen",
+    "ru": "Когда вы используете предмет, получите {ability.2} регенерации",
+    "context": [
+      "cards/cdf39547-ab9b-4c90-bfec-db12c0c9a514"
+    ],
+    "kind": "addition"
+  },
+  "6c10d7ec835d833147982748ade997be": {
+    "en": "Aquatic Bought Effect",
+    "ru": "Эффект покупки водного предмета",
+    "context": [
+      "cards/cef03dfe-b415-4c58-a3a9-1a7d3d8fc4ec"
+    ],
+    "kind": "addition"
+  },
+  "60e3e400afcc1f67cceda37a43df91da": {
+    "en": "The Dragons' Hideout",
+    "ru": "Убежище Драконов",
+    "context": [
+      "cards/d33129a9-5df2-47e5-9b6a-7469743fe5a8"
+    ],
+    "kind": "addition"
+  },
+  "f5048af04b3596b76043d40063abd550": {
+    "en": "What happens between gigs?",
+    "ru": "Что происходит между выступлениями?",
+    "context": [
+      "cards/d33129a9-5df2-47e5-9b6a-7469743fe5a8"
+    ],
+    "kind": "addition"
+  },
+  "7545ef7ec83200c081add207b06a3f70": {
+    "en": "Haste adjacent items {ability.1} second(s), they gain {ability.2} and {ability.3}",
+    "ru": "Ускорьте соседние предметы на {ability.1} сек.; они получают {ability.2} и {ability.3}",
+    "context": [
+      "cards/d8199e77-6687-4fe7-b6a7-2d3e34145bf3"
+    ],
+    "kind": "addition"
+  },
+  "2b81ba5f7e3487444b7defa6d902e0ee": {
+    "en": "Poison equal to 20% of this item's Damage",
+    "ru": "Наложите яд в количестве, равном 20% урона этого предмета",
+    "context": [
+      "cards/d89ab2c6-bd85-4e7e-b32e-95c242fa5358"
+    ],
+    "kind": "addition"
+  },
+  "4dc02da2c8b51da5b126cb3cf8ea6304": {
+    "en": "Regen equal to 20% of this item's Damage",
+    "ru": "Получите регенерацию, равную 20% урона этого предмета",
+    "context": [
+      "cards/d89ab2c6-bd85-4e7e-b32e-95c242fa5358"
+    ],
+    "kind": "addition"
+  },
+  "244852f73dc416c71cc90d875d71e85e": {
+    "en": "Burn equal to 20% of this item's Damage",
+    "ru": "Наложите поджог в количестве, равном 20% урона этого предмета",
+    "context": [
+      "cards/d89ab2c6-bd85-4e7e-b32e-95c242fa5358"
+    ],
+    "kind": "addition"
+  },
+  "a0f088187ff580ee7cc8e3cd4c1ebff0": {
+    "en": "When you Heal or Slow, this gains {ability.2} Value",
+    "ru": "Когда вы лечитесь или замедляете, этот предмет получает {ability.2} стоимости",
+    "context": [
+      "cards/dc43ae7a-a60a-42e7-a019-eb3c89b59a01"
+    ],
+    "kind": "addition"
+  },
+  "9de733b06f2716b1455ae95dae573367": {
+    "en": "When you Shield, an item gains {ability.1}",
+    "ru": "Когда вы получаете щит, один предмет получает {ability.1}",
+    "context": [
+      "cards/dd913d79-7509-4c8a-b68a-5bf364dc521e"
+    ],
+    "kind": "addition"
+  },
+  "999090b7d34d9353a38ca370131e75dd": {
+    "en": "Adjacent Shield items have +{aura.1.mod} Multicast",
+    "ru": "Соседние предметы щита имеют +{aura.1.mod} к мультивыстрелу",
+    "context": [
+      "cards/e923019b-fd40-487c-85af-edaa930095b8"
+    ],
+    "kind": "addition"
+  },
+  "dea76ab0ea132da60f44e82f4fc981a3": {
+    "en": "Slumcee",
+    "ru": "Сламси",
+    "context": [
+      "cards/eccecbd7-1695-49a8-b82b-6e9e974c634a"
+    ],
+    "kind": "addition"
+  },
+  "19135ad9d8f0ff4d726e7092d89b9bda": {
+    "en": "When your Enemy uses their fastest item, Slow an item {ability.e1} second(s)",
+    "ru": "Когда противник использует свой самый быстрый предмет, замедлите предмет на {ability.e1} сек.",
+    "context": [
+      "cards/ee318a20-e1a0-4651-a904-a1e6c3939c97"
+    ],
+    "kind": "addition"
+  },
+  "d0d876452eafa68c9d9207aefab008d3": {
+    "en": "When your Enemy uses their fastest item, Freeze an item {ability.e1} second(s)",
+    "ru": "Когда противник использует свой самый быстрый предмет, заморозьте предмет на {ability.e1} сек.",
+    "context": [
+      "cards/ee318a20-e1a0-4651-a904-a1e6c3939c97"
+    ],
+    "kind": "addition"
+  },
+  "9be363cded46579523b36862d655e626": {
+    "en": "When your Enemy uses their fastest item, Haste an item {ability.e1} second(s)",
+    "ru": "Когда противник использует свой самый быстрый предмет, ускорьте предмет на {ability.e1} сек.",
+    "context": [
+      "cards/ee318a20-e1a0-4651-a904-a1e6c3939c97"
+    ],
+    "kind": "addition"
+  },
+  "ce738393e20db4f706ea2ca92e3aa335": {
+    "en": "When your Enemy uses their fastest item, Shield equal to this item's Damage",
+    "ru": "Когда противник использует свой самый быстрый предмет, получите щит, равный урону этого предмета",
+    "context": [
+      "cards/ee318a20-e1a0-4651-a904-a1e6c3939c97"
+    ],
+    "kind": "addition"
+  },
+  "e24c40a843316ad761e31ebf8bb63145": {
+    "en": "When your Enemy uses their fastest item, Heal equal to this item's Damage",
+    "ru": "Когда противник использует свой самый быстрый предмет, восстановите здоровье в количестве, равном урону этого предмета",
+    "context": [
+      "cards/ee318a20-e1a0-4651-a904-a1e6c3939c97"
+    ],
+    "kind": "addition"
+  },
+  "997f8a6f2dffe4b33b860dc5a48f8493": {
+    "en": "When your Enemy uses their fastest item, Poison equal to 10% of this item's Damage",
+    "ru": "Когда противник использует свой самый быстрый предмет, наложите яд в количестве, равном 10% урона этого предмета",
+    "context": [
+      "cards/ee318a20-e1a0-4651-a904-a1e6c3939c97"
+    ],
+    "kind": "addition"
+  },
+  "054be813b1efd2d9f32f384b8f7488c4": {
+    "en": "When your Enemy uses their fastest item, Burn equal to 10% of this item's Damage",
+    "ru": "Когда противник использует свой самый быстрый предмет, наложите поджог в количестве, равном 10% урона этого предмета",
+    "context": [
+      "cards/ee318a20-e1a0-4651-a904-a1e6c3939c97"
+    ],
+    "kind": "addition"
+  },
+  "9805dcb24f86f4da154c05dccd430fdf": {
+    "en": "When your enemy uses their fastest item, your items gain {ability.e1}% Crit Chance",
+    "ru": "Когда противник использует свой самый быстрый предмет, ваши предметы получают {ability.e1}% шанса крита",
+    "context": [
+      "cards/ee318a20-e1a0-4651-a904-a1e6c3939c97"
+    ],
+    "kind": "addition"
+  },
+  "dde61f88b81d2c8e7cb7a7bb5beaae29": {
+    "en": "When your Enemy uses their fastest item, Regen equal to 10% of this item's Damage",
+    "ru": "Когда противник использует свой самый быстрый предмет, получите регенерацию, равную 10% урона этого предмета",
+    "context": [
+      "cards/ee318a20-e1a0-4651-a904-a1e6c3939c97"
+    ],
+    "kind": "addition"
+  },
+  "42fd93533408829d29684b8b9eb89794": {
+    "en": "When your enemy uses their fastest item, deal {ability.0} Damage",
+    "ru": "Когда противник использует свой самый быстрый предмет, нанесите {ability.0} урона",
+    "context": [
+      "cards/ee318a20-e1a0-4651-a904-a1e6c3939c97"
+    ],
+    "kind": "addition"
+  },
+  "66ad3c61b41d14db3d449bfd2a87cea9": {
+    "en": "This has has double value",
+    "ru": "Этот предмет имеет удвоенную стоимость",
+    "context": [
+      "cards/ee729aab-0107-4f42-91b2-636e252a17fd"
+    ],
+    "kind": "addition"
+  },
+  "be3c65bc79b305f872c8dd86820cf8d6": {
+    "en": "Heal equal to this item's damage",
+    "ru": "Восстановите здоровье в количестве, равном урону этого предмета",
+    "context": [
+      "cards/ee729aab-0107-4f42-91b2-636e252a17fd"
+    ],
+    "kind": "addition"
+  },
+  "5f6ca9f83cdbae5108d8018fcc2d9c23": {
+    "en": "Shield equal to this item's damage",
+    "ru": "Получите щит, равный урону этого предмета",
+    "context": [
+      "cards/ee729aab-0107-4f42-91b2-636e252a17fd"
+    ],
+    "kind": "addition"
+  },
+  "3ce210be8f2834c06e1ffbd3ff2512c7": {
+    "en": "This gains 3 random Types",
+    "ru": "Этот предмет получает 3 случайных типа",
+    "context": [
+      "cards/ee729aab-0107-4f42-91b2-636e252a17fd"
+    ],
+    "kind": "addition"
+  },
+  "23293611a7feaf41d30af9014f7ffdca": {
+    "en": "Visit Mr. Tuskari",
+    "ru": "Посетите мистера Тускари",
+    "context": [
+      "cards/ee729aab-0107-4f42-91b2-636e252a17fd"
+    ],
+    "kind": "addition"
+  },
+  "1d8dd7aa0691e3a6ca3b3eca054904d6": {
+    "en": "Jabalian Totem",
+    "ru": "Джабалийский тотем",
+    "context": [
+      "cards/ee729aab-0107-4f42-91b2-636e252a17fd"
+    ],
+    "kind": "addition"
+  },
+  "d96e6f6998fc86f5503f96b8f9cea94b": {
+    "en": "Deal {aura.1.mod} Damage for each Type this has",
+    "ru": "Нанесите {aura.1.mod} урона за каждый тип этого предмета",
+    "context": [
+      "cards/ee729aab-0107-4f42-91b2-636e252a17fd"
+    ],
+    "kind": "addition"
+  },
+  "bfe897a6bdac1eb183616a89239ff3f9": {
+    "en": "Your items gain {ability.0}, {ability.1}, {ability.2} and {ability.4}",
+    "ru": "Ваши предметы получают {ability.0}, {ability.1}, {ability.2} и {ability.4}",
+    "context": [
+      "cards/f104a9ab-c8bd-44b9-b08a-5587b77a2215"
+    ],
+    "kind": "addition"
+  },
+  "1f980bd6e591326eacf85bcfa2698a11": {
+    "en": "When you Crit, this gains {ability.1}",
+    "ru": "Когда вы наносите критический удар, этот предмет получает {ability.1}",
+    "context": [
+      "cards/f43844fe-cefa-40c7-ba86-e601c3596064"
+    ],
+    "kind": "addition"
+  },
+  "3e490217df1f755d08682330d516db74": {
+    "en": "Shield {aura.9} for each Chilled item you have",
+    "ru": "Получите {aura.9} щита за каждый ваш охлаждённый предмет",
+    "context": [
+      "cards/f79155e6-d476-4257-a5fc-7e081e7d2f3c"
+    ],
+    "kind": "addition"
+  },
+  "f7348a5f5a7c4a4e1c35b8b0e2076dda": {
+    "en": "Chilled: Chill another item",
+    "ru": "Охлаждён: охладите другой предмет",
+    "context": [
+      "cards/f79155e6-d476-4257-a5fc-7e081e7d2f3c"
+    ],
+    "kind": "addition"
+  },
+  "2199384089e6622dc65a2482f2fcc1e0": {
+    "en": "Critical Fashion",
+    "ru": "Критическая мода",
+    "context": [
+      "cards/f9ab4e52-9035-4280-8a01-98c6ed2ce9fe"
+    ],
+    "kind": "addition"
+  },
+  "e24940f1f8409f5d9493feed98104dd2": {
+    "en": "Your Apparel have +{aura.0}% Crit Chance",
+    "ru": "Ваша одежда имеет +{aura.0}% шанса крита",
+    "context": [
+      "cards/f9ab4e52-9035-4280-8a01-98c6ed2ce9fe"
+    ],
+    "kind": "addition"
+  },
+  "c5c62b654d7a1bc8e25fd0cf5bbb8ca7": {
+    "en": "All item Cooldowns are increased by {aura.1} seconds",
+    "ru": "Перезарядки всех предметов увеличены на {aura.1} сек.",
+    "context": [
+      "cards/fb9bc349-bc38-40f4-a67e-a9c580e1e681"
+    ],
+    "kind": "addition"
+  },
+  "14ecd8fffd35ae737ece6c5294287b79": {
+    "en": "Critical Sound",
+    "ru": "Критический звук",
+    "context": [
+      "cards/fd2acb3e-c7bb-4485-bdac-76845abddcd2"
+    ],
+    "kind": "addition"
+  },
+  "8a5bab779d3798b6d7fc373e001e180b": {
+    "en": "Your Instruments have +{aura.0}% Crit Chance",
+    "ru": "Ваши музыкальные инструменты имеют +{aura.0}% шанса крита",
+    "context": [
+      "cards/fd2acb3e-c7bb-4485-bdac-76845abddcd2"
+    ],
+    "kind": "addition"
+  },
+  "3be6115e0df350dff65249e1b3bdd9c7": {
+    "en": "Permanently gain Regen equal to triple your level [{ability.0}]",
+    "ru": "Навсегда получите регенерацию, равную утроенному уровню вашего героя [{ability.0}]",
+    "context": [
+      "cards/fe756e73-bedb-4700-901f-07ef13b3c512"
+    ],
+    "kind": "addition"
+  },
+  "ff44f64da1fd6f262c7838275ce99f39": {
+    "en": "Narwhal",
+    "ru": "Нарвал",
+    "context": [],
+    "kind": "repair"
+  },
+  "2459387eaaf741458e9ae5ec311094d2": {
+    "en": "The first time an enemy uses an item of the same or lower tier as this, Slow their items {ability.e1} seconds",
+    "ru": "Когда противник впервые использует предмет того же или более низкого ранга, чем этот, замедлите предметы противника на {ability.e1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "a1b0462cc18f79b0e02b7e8f18743531": {
+    "en": "The first time an enemy uses an item of the same or lower tier as this, Freeze their items {ability.e1} second(s)",
+    "ru": "Когда противник впервые использует предмет того же или более низкого ранга, чем этот, заморозьте предметы противника на {ability.e1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "a197293aff8363370d7ac4474c478e79": {
+    "en": "The first time an enemy uses an item of the same or lower tier as this, Haste your items {ability.e1} seconds",
+    "ru": "Когда противник впервые использует предмет того же или более низкого ранга, чем этот, ускорьте ваши предметы на {ability.e1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "f08c24d2b1b8ec78cda1a56ab293aa15": {
+    "en": "The first time you fall below half Health, Shield equal to {aura.9}% of your Max Health [{ability.0}]",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, получите щит в размере {aura.9}% вашего макс. здоровья [{ability.0}]",
+    "context": [],
+    "kind": "repair"
+  },
+  "9de8fa906bb03da18fb588471303b994": {
+    "en": "The first time you fall below half Health, Heal equal to 30% of your Max Health and Cleanse half your Burn and Poison [{ability.0}]",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, восстановите 30% вашего макс. здоровья и снимите половину своего поджога и яда [{ability.0}]",
+    "context": [],
+    "kind": "repair"
+  },
+  "fc99c87d97b5d6c786615ff68a80223a": {
+    "en": "The first time you fall below half Health, Haste your Burn and Regen items {ability.0} second(s)",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, ускорьте ваши предметы поджога и регенерации на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "241f22910c6b1729311864caa33c5acc": {
+    "en": "The first time you use a Shield item, gain {ability.0} Tempo",
+    "ru": "Когда вы впервые используете предмет щита, получите {ability.0} темпа",
+    "context": [],
+    "kind": "repair"
+  },
+  "9999500bd76179c80781a5a1a4148563": {
+    "en": "Gain {ability.0.mod} Gold for each fight you have won this run [{ability.0}]",
+    "ru": "Получите {ability.0.mod} золота за каждый выигранный бой в этом забеге [{ability.0}]",
+    "context": [],
+    "kind": "repair"
+  },
+  "9fede95a02d15c8ea7ec50386740b7a0": {
+    "en": "The first time you use an item, Shield equal to {aura.9}% of your Max Health [{ability.0}]",
+    "ru": "Когда вы впервые используете предмет, получите щит в размере {aura.9}% вашего макс. здоровья [{ability.0}]",
+    "context": [],
+    "kind": "repair"
+  },
+  "6c2934b996c6098dfa6eea9556a1e1a1": {
+    "en": "Robotic Factory",
+    "ru": "Фабрика роботов",
+    "context": [],
+    "kind": "repair"
+  },
+  "c1e303bc6d3d112305a35fab75da18f0": {
+    "en": "The first time you fall below half Health, use your highest Shield item",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, используйте ваш предмет с наибольшим щитом",
+    "context": [],
+    "kind": "repair"
+  },
+  "a542482c08a8fdcbf2eb8afd219aeca3": {
+    "en": "Katana",
+    "ru": "Катана",
+    "context": [],
+    "kind": "repair"
+  },
+  "7c926a7c3e30d4f7cb1b80028616e60b": {
+    "en": "Arms Race",
+    "ru": "Гонка вооружений",
+    "context": [],
+    "kind": "repair"
+  },
+  "88104bb7d40bf46b218b75d6488fb480": {
+    "en": "The first {aura.9} times you Slow, Charge a Weapon {ability.0} second(s)",
+    "ru": "Первые {aura.9} раз, когда вы замедляете, зарядите оружие на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "2ba6e5023980d9e2d9fa177b2a0f4389": {
+    "en": "The first time you Crit, Freeze an item {ability.0} second(s)",
+    "ru": "Когда вы впервые наносите критический удар, заморозьте предмет на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "cce8c5805d150348536e9670c5858f6a": {
+    "en": "The first time an enemy uses an item, use this",
+    "ru": "Когда противник впервые использует предмет, используйте этот предмет",
+    "context": [],
+    "kind": "repair"
+  },
+  "2dc1bc317c2ca4cfe37ba9a2325907b7": {
+    "en": "When you Crit with an adjacent item, Slow an item {ability.e1} second(s)",
+    "ru": "Когда соседний предмет наносит критический удар, замедлите предмет на {ability.e1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "45cc56c6c42e49e5f41c8e5b71fe8235": {
+    "en": "When you Crit with an adjacent item, Freeze an item {ability.e1} second(s)",
+    "ru": "Когда соседний предмет наносит критический удар, заморозьте предмет на {ability.e1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "895bb4a61ab20f0ec0f49a2b148999bf": {
+    "en": "When you Crit with an adjacent item, Haste an item {ability.e1} second(s)",
+    "ru": "Когда соседний предмет наносит критический удар, ускорьте предмет на {ability.e1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "e8d53b7746789cce59d05b28db69c10b": {
+    "en": "The first time you fall below half Health, Heal equal to 10% of your Max Health",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, восстановите здоровье в размере 10% вашего макс. здоровья",
+    "context": [],
+    "kind": "repair"
+  },
+  "0312d1423e72682105a6343d2b35b5e3": {
+    "en": "The first time you Freeze each fight, Slow all enemy items {ability.0} second(s)",
+    "ru": "Когда вы впервые за бой замораживаете, замедлите все предметы противника на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "ed266d7ec91b407e7e768d898deaf766": {
+    "en": "The first time you fall below half Health, Freeze all enemy items {ability.2} second(s)",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, заморозьте все предметы противника на {ability.2} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "2432fbdebd9f0bfed2e62687fe14a365": {
+    "en": "The first time you use an item, Haste {ability.0.targets} Relic item(s) {ability.0} second(s)",
+    "ru": "Когда вы впервые используете предмет, ускорьте {ability.0.targets} реликвий на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "eb0903c0c85646394f5a9255a6f53e1d": {
+    "en": "The first {aura.9} times you use a Drone or Vehicle, Burn {ability.0}",
+    "ru": "Первые {aura.9} раз, когда вы используете дрон или транспортное средство, наложите {ability.0} поджога",
+    "context": [],
+    "kind": "repair"
+  },
+  "2fe249d839bb716e2f3789a187a7a41a": {
+    "en": "The first time you use an item, charge your Heated and Chilled items {ability.0} second(s)",
+    "ru": "Когда вы впервые используете предмет, зарядите ваши нагретые и охлаждённые предметы на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "5535c09e06637beb0a850b0b7961e203": {
+    "en": "The first time you fall below half Health, Slow all enemy items {ability.e1} second(s)",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, замедлите все предметы противника на {ability.e1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "aa6841e5040a2ab3bf11f5b809e92b9b": {
+    "en": "The first time you fall below half Health, Freeze {ability.e1.targets} items {ability.e1} second(s)",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, заморозьте {ability.e1.targets} предметов на {ability.e1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "8f7d8510a53c5d8366b986e280a5eaf6": {
+    "en": "The first time you fall below half Health, Haste your items {ability.e1} second(s)",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, ускорьте ваши предметы на {ability.e1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "2939e5a995c7e015e2397c99821aba64": {
+    "en": "Flame Juggler",
+    "ru": "Жонглёр огнём",
+    "context": [],
+    "kind": "repair"
+  },
+  "d19052a3c5d8f50887b852df7f269d04": {
+    "en": "The first time you would be defeated, Freeze {ability.e1.targets} items {ability.e1} second(s)",
+    "ru": "Когда вы впервые должны потерпеть поражение, заморозьте {ability.e1.targets} предметов на {ability.e1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "a56494fe0198ce89e0cb9df2c149d15f": {
+    "en": "The first time you would be defeated, Burn equal to 10% of your Max Health",
+    "ru": "Когда вы впервые должны потерпеть поражение, наложите поджог в размере 10% вашего макс. здоровья",
+    "context": [],
+    "kind": "repair"
+  },
+  "2f4d434a8c51e0ee0c89965219354a5b": {
+    "en": "The first time you use an item, Haste {ability.0.targets} Instruments {ability.0} second(s)",
+    "ru": "Когда вы впервые используете предмет, ускорьте {ability.0.targets} музыкальных инструментов на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "250ec1d721118ffbfe7debd08325f2de": {
+    "en": "When you use a Friend or Flying item, Heal equal to {aura.e2.mod} times this item's Burn",
+    "ru": "Когда вы используете друга или летающий предмет, восстановите здоровье в количестве, равном поджогу этого предмета, умноженному на {aura.e2.mod}",
+    "context": [],
+    "kind": "repair"
+  },
+  "5cd6afe17dcec23ce8336dc143b69203": {
+    "en": "Teaches skills unique to The Dragons",
+    "ru": "Обучает уникальным навыкам Драконов",
+    "context": [],
+    "kind": "repair"
+  },
+  "05f0b23da60012874b3c4804cb331026": {
+    "en": "The first time you would be defeated, Freeze {ability.e1.targets} enemy items {ability.e1} second(s)",
+    "ru": "Когда вы впервые должны потерпеть поражение, заморозьте {ability.e1.targets} предметов противника на {ability.e1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "d65169af2303797d1b2f04cc10f5648f": {
+    "en": "Tech items to the left have their Cooldowns reduced by {aura.0}%",
+    "ru": "Перезарядки технических предметов слева сокращены на {aura.0}%",
+    "context": [],
+    "kind": "repair"
+  },
+  "ba9121073a8872b756a3f1b6f8714b91": {
+    "en": "Prosperity",
+    "ru": "Процветание",
+    "context": [],
+    "kind": "repair"
+  },
+  "b85e26368ab5cfcfbf758537dcd8b0ba": {
+    "en": "The first {aura.9} times you use a Core each fight, Slow an item {ability.0} second(s)",
+    "ru": "Первые {aura.9} раз, когда вы используете ядро за бой, замедлите предмет на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "289d774cba0a5660d9835c83aa7840de": {
+    "en": "Guardian's Gravy Plate",
+    "ru": "Тарелка подливы стража",
+    "context": [],
+    "kind": "repair"
+  },
+  "24c5770c01b84c1ba1e0a75063aef710": {
+    "en": "The first time you use an item, {ability.0.targets} Small item(s) start Flying",
+    "ru": "Когда вы впервые используете предмет, {ability.0.targets} маленьких предметов начинают летать",
+    "context": [],
+    "kind": "repair"
+  },
+  "5b005a361b7874fab1cce1c517c9e3d3": {
+    "en": "The first time you use an item, Haste {ability.0.targets} Poison item(s) {ability.0} second(s)",
+    "ru": "Когда вы впервые используете предмет, ускорьте {ability.0.targets} предметов яда на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "b65f9bb7594b700568d2913ee1f7e07c": {
+    "en": "The first time you use an item, Haste {ability.0.targets} Aquatic item(s) {ability.0} second(s)",
+    "ru": "Когда вы впервые используете предмет, ускорьте {ability.0.targets} водных предметов на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "0de95f180115c8f56b586833e7b6a978": {
+    "en": "DJ Circuit Breaker",
+    "ru": "Диджей Автомат",
+    "context": [],
+    "kind": "repair"
+  },
+  "2b5f1f5b93d5846d63e3a22495b2ba0b": {
+    "en": "The first time you use a Large item, Heal equal to {aura.9}% of your Max Health [{ability.0}]",
+    "ru": "Когда вы впервые используете большой предмет, восстановите здоровье в размере {aura.9}% вашего макс. здоровья [{ability.0}]",
+    "context": [],
+    "kind": "repair"
+  },
+  "66a35dd1ec752dcdfc7d87c763bd82dc": {
+    "en": "When you Crit with an adjacent item, Haste {ability.e1.targets} items {ability.e1} second(s)",
+    "ru": "Когда соседний предмет наносит критический удар, ускорьте {ability.e1.targets} предметов на {ability.e1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "056491248988169fe559b265fbfe786f": {
+    "en": "The first time you fall below half Health, Slow {ability.e1.targets} items {ability.e1} second(s)",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, замедлите {ability.e1.targets} предметов на {ability.e1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "bc7ef2f58355f80005d1150c6138fac8": {
+    "en": "The first time you fall below half Health, Freeze {ability.e1.targets} enemy items {ability.e1} second(s)",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, заморозьте {ability.e1.targets} предметов противника на {ability.e1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "9ba852f0078e85fafc33080a044089ed": {
+    "en": "The first time you fall below half Health, Haste {ability.e1.targets} items {ability.e1} second(s)",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, ускорьте {ability.e1.targets} предметов на {ability.e1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "d7d110eebf8fe63f84df341ab70d8f0a": {
+    "en": "The first time you fall below half Health, Shield equal to 20% of your Max Health",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, получите щит в размере 20% вашего макс. здоровья",
+    "context": [],
+    "kind": "repair"
+  },
+  "f45e3a0dbb56ea39d89b0f9692f9ea03": {
+    "en": "The first time you fall below half Health, Heal equal to 20% of your Max Health",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, восстановите здоровье в размере 20% вашего макс. здоровья",
+    "context": [],
+    "kind": "repair"
+  },
+  "6423af6231a94aa803517b356de7ce3b": {
+    "en": "The first time you fall below half Health, Poison equal to 5% of your Max Health",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, наложите яд в размере 5% вашего макс. здоровья",
+    "context": [],
+    "kind": "repair"
+  },
+  "1f31d9e0f26864bd7f361d1bea139563": {
+    "en": "The first time you fall below half Health, deal Damage equal to 20% of your Max Health",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, нанесите урон в размере 20% вашего макс. здоровья",
+    "context": [],
+    "kind": "repair"
+  },
+  "79c8f7424c625b7afeca32dc5e105194": {
+    "en": "The first time you fall below half Health, Regen equal to 5% of your Max Health",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, получите регенерацию в размере 5% вашего макс. здоровья",
+    "context": [],
+    "kind": "repair"
+  },
+  "82bde768e734d9e0de25d4b44181d9b2": {
+    "en": "The first time any item is used, gain {ability.0} Rage",
+    "ru": "При первом использовании любого предмета получите {ability.0} ярости",
+    "context": [],
+    "kind": "repair"
+  },
+  "a118cd614341b38deff8c4f306457467": {
+    "en": "The first {aura.9} times you use a Core each fight, Haste an item {ability.0} second(s)",
+    "ru": "Первые {aura.9} раз, когда вы используете ядро за бой, ускорьте предмет на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "6f5621816bd7055d0448615e07df124e": {
+    "en": "The first time you use an item, Haste your items {ability.0} second(s)",
+    "ru": "Когда вы впервые используете предмет, ускорьте ваши предметы на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "c863fa3538ef5cdff3131bcd6b850c1d": {
+    "en": "The first time you use a Food, Haste {ability.0.targets} Tool(s) {ability.0} second(s)",
+    "ru": "Когда вы впервые используете еду, ускорьте {ability.0.targets} инструментов на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "866833aef991bf8525c7d803297e5225": {
+    "en": "Slow all enemy items {ability.e1} second(s)",
+    "ru": "Замедлите все предметы противника на {ability.e1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "5000a68e43f946c726a17e1008e230a7": {
+    "en": "Feather",
+    "ru": "Перо",
+    "context": [],
+    "kind": "repair"
+  },
+  "7f8e1c6d73a98b1a8586d631c3e7fdd5": {
+    "en": "The first time you use this, destroy a Small enemy item",
+    "ru": "Когда вы впервые используете этот предмет, уничтожьте маленький предмет противника",
+    "context": [],
+    "kind": "repair"
+  },
+  "310311b1c1bb4bcc86c4cf678b79e50c": {
+    "en": "The first time you fall below half Health, Freeze {ability.1.targets} item {ability.1} second(s)",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, заморозьте {ability.1.targets} предметов на {ability.1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "f1a56bd424d5a713031398f5cc19adb6": {
+    "en": "Advanced Synthetics",
+    "ru": "Передовая синтетика",
+    "context": [],
+    "kind": "repair"
+  },
+  "e1383452059670a4f2920b91ec996a9f": {
+    "en": "When you Crit with an adjacent item, Freeze {ability.e1.targets} item(s) {ability.e1} second(s)",
+    "ru": "Когда соседний предмет наносит критический удар, заморозьте {ability.e1.targets} предметов на {ability.e1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "678394ea455f3a850d5ecae9a24c6d7a": {
+    "en": "When you Crit with an adjacent item, Haste {ability.e1.targets} item(s) {ability.e1} second(s)",
+    "ru": "Когда соседний предмет наносит критический удар, ускорьте {ability.e1.targets} предметов на {ability.e1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "c297d8866c09551b4a711c0cc645186b": {
+    "en": "The first time you use an item, Haste {ability.0.targets} Burn item(s) {ability.0} second(s)",
+    "ru": "Когда вы впервые используете предмет, ускорьте {ability.0.targets} предметов поджога на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "c207cc868626474c7559491b376aa30a": {
+    "en": "Workin' Hard",
+    "ru": "Усердный труд",
+    "context": [],
+    "kind": "repair"
+  },
+  "dc5217bcac2d2d8d9c717086709bd486": {
+    "en": "The first {aura.9} times you Haste, Charge a Tool {ability.0} second",
+    "ru": "Первые {aura.9} раз, когда вы ускоряете, зарядите инструмент на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "8c0af1e6fb7b508caa489e86f575d0a2": {
+    "en": "The first time you use a large item, adjacent items gain {ability.0}% Crit Chance",
+    "ru": "Когда вы впервые используете большой предмет, соседние предметы получают {ability.0}% шанса крита",
+    "context": [],
+    "kind": "repair"
+  },
+  "83a7801f2b8d10da857de5e30f42b9b1": {
+    "en": "The first time you use this, use the Medium Food to the left",
+    "ru": "Когда вы впервые используете этот предмет, используйте среднюю еду слева",
+    "context": [],
+    "kind": "repair"
+  },
+  "1308840927df0e358fce43007031fe0b": {
+    "en": "The Dragons",
+    "ru": "Драконы",
+    "context": [],
+    "kind": "repair"
+  },
+  "98a76caa7e435b2b340cd53624a1aa31": {
+    "en": "Dumpster Diving",
+    "ru": "Поиски в мусоре",
+    "context": [],
+    "kind": "repair"
+  },
+  "55feb818d64a088d158e18d9c869500e": {
+    "en": "The first time an enemy uses an item, your items gain {ability.e1}% Crit Chance",
+    "ru": "Когда противник впервые использует предмет, ваши предметы получают {ability.e1}% шанса крита",
+    "context": [],
+    "kind": "repair"
+  },
+  "8375ff52f59356412b4564f8a6f7596c": {
+    "en": "Slow all other Weapons for both Players {ability.e1} second(s)",
+    "ru": "Замедлите всё другое оружие обоих игроков на {ability.e1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "3954351f475e6aa5d188966a8dafd99c": {
+    "en": "The first time you use a Large item, Slow all items {ability.0} second",
+    "ru": "Когда вы впервые используете большой предмет, замедлите все предметы на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "d95839f752905be561d0720d479a3fa3": {
+    "en": "The first time you fall below half Health, Haste all items {ability.1} second",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, ускорьте все предметы на {ability.1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "59450d4983837d6ad745c48b59482e1d": {
+    "en": "The first time you fall below half Health, your items gain {ability.0}% Crit Chance and Charge them {ability.1} seconds",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, ваши предметы получают {ability.0}% шанса крита; зарядите их на {ability.1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "7a5358b1ec48621a92df630e7a3a57ba": {
+    "en": "The first time an enemy falls below half Health , your items' Cooldowns are halved",
+    "ru": "Когда здоровье противника впервые падает ниже половины, перезарядки ваших предметов сокращаются вдвое",
+    "context": [],
+    "kind": "repair"
+  },
+  "e5498d65621b260663e3ab86655f7a59": {
+    "en": "Spray Can",
+    "ru": "Аэрозольный баллончик",
+    "context": [],
+    "kind": "repair"
+  },
+  "67aa4f14d85d0b0eac2ddae652e10455": {
+    "en": "The first time you use an item, Haste {ability.0.targets} Food {ability.0} second(s)",
+    "ru": "Когда вы впервые используете предмет, ускорьте {ability.0.targets} предметов еды на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "368ce9ab0f1089bd8c0c5dbeebf5a124": {
+    "en": "Incense",
+    "ru": "Благовония",
+    "context": [],
+    "kind": "repair"
+  },
+  "18fe761b6e175731a854b2471f59ef0d": {
+    "en": "Morning Rush",
+    "ru": "Утренняя спешка",
+    "context": [],
+    "kind": "repair"
+  },
+  "bb95596b3561e858bb86560f7bdbc4fd": {
+    "en": "The first {aura.9} times you use a Food each fight, Haste an item {ability.0} second(s)",
+    "ru": "Первые {aura.9} раз, когда вы используете еду за бой, ускорьте предмет на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "a81ade396af1050071b943da6f527771": {
+    "en": "The first time you use a large item, Slow {ability.0.targets} item(s) {ability.0} second(s)",
+    "ru": "Когда вы впервые используете большой предмет, замедлите {ability.0.targets} предметов на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "c6783f2fa242227388cdede03e94aef8": {
+    "en": "The first time you fall below half Health, Slow all enemy items {ability.0} second(s)",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, замедлите все предметы противника на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "5629f2e67b37884c93b68067183f4834": {
+    "en": "The first time you use an item, your Vehicles and Drones start Flying",
+    "ru": "Когда вы впервые используете предмет, ваши транспортные средства и дроны начинают летать",
+    "context": [],
+    "kind": "repair"
+  },
+  "502b1ec472a8cbb5b17d7d3e5bcc095e": {
+    "en": "The first time you use an item, Slow an item {ability.0} second(s)",
+    "ru": "Когда вы впервые используете предмет, замедлите предмет на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "52a8ccb30e1fb67282d6136d4c4c7d75": {
+    "en": "The first time you use a Tempo item each fight, {ability.0.targets} item(s) start Flying",
+    "ru": "Когда вы впервые за бой используете предмет темпа, {ability.0.targets} предметов начинают летать",
+    "context": [],
+    "kind": "repair"
+  },
+  "39b47c68735a13df39f346e76478140f": {
+    "en": "The first {aura.9} times you Haste, Shield {ability.0}",
+    "ru": "Первые {aura.9} раз, когда вы ускоряете, получите {ability.0} щита",
+    "context": [],
+    "kind": "repair"
+  },
+  "66989470f9dacc14b1719d6e9be7dbb8": {
+    "en": "The first time you use a large item, Shield equal to {aura.9}% of your Max Health [{ability.0}]",
+    "ru": "Когда вы впервые используете большой предмет, получите щит в размере {aura.9}% вашего макс. здоровья [{ability.0}]",
+    "context": [],
+    "kind": "repair"
+  },
+  "90ac59e36cd141d8ac8003749b1cd687": {
+    "en": "Slow items on C Notes have +1 Multicast",
+    "ru": "Предметы замедления на нотах До имеют +1 к мультивыстрелу",
+    "context": [],
+    "kind": "repair"
+  },
+  "c16e1ddfc30d2a6a9b810f407d6d1b8f": {
+    "en": "Slow all items {ability.3} second(s)",
+    "ru": "Замедлите все предметы на {ability.3} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "7a4af30f10a5e4592ec29cca994825a2": {
+    "en": "The first time you fall below half Health, you take no Damage for {aura.9} second(s) and gain {ability.4}",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, вы не получаете урон в течение {aura.9} сек. и получаете {ability.4}",
+    "context": [],
+    "kind": "repair"
+  },
+  "316fef1a15b2d86a32e75ac80c1562bf": {
+    "en": "The first time you use an item, Slow {ability.0.targets} item(s) {ability.0} second(s)",
+    "ru": "Когда вы впервые используете предмет, замедлите {ability.0.targets} предметов на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "dd5125fc13d3b211d33bff94980cc835": {
+    "en": "Hogwash",
+    "ru": "Свиная купель",
+    "context": [],
+    "kind": "repair"
+  },
+  "a3d5d628c2d0ec82501dcc3aa150c0cd": {
+    "en": "The first time you fall below half Health, Shield equal to {aura.9} times the Poison on your enemy. [{ability.0}]",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, получите щит, равный яду на противнике, умноженному на {aura.9}. [{ability.0}]",
+    "context": [],
+    "kind": "repair"
+  },
+  "cfde4f00182c93f781d5e28814b2fdf1": {
+    "en": "Slow the fastest enemy item {ability.0} second(s)",
+    "ru": "Замедлите самый быстрый предмет противника на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "a3b6b2f1bead3f2eb5890a8fdb3009a6": {
+    "en": "The first {aura.9} times you Slow, Charge a Burn item {ability.0} second(s)",
+    "ru": "Первые {aura.9} раз, когда вы замедляете, зарядите предмет поджога на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "6a1f00d92f225613ca2ceb3e4d9eecef": {
+    "en": "The first time an enemy falls below half Health each fight, gain {ability.0} Tempo",
+    "ru": "Когда здоровье противника впервые за бой падает ниже половины, получите {ability.0} темпа",
+    "context": [],
+    "kind": "repair"
+  },
+  "215fb85638a6d40f0edfd4ebcacedd2b": {
+    "en": "The first time you Freeze each fight, Haste {ability.0.targets} item(s) {ability.0} second(s)",
+    "ru": "Когда вы впервые за бой замораживаете, ускорьте {ability.0.targets} предметов на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "71046d4b14800ae9ec890560487611f5": {
+    "en": "The first {aura.9} times you Crit, you take no Damage for 1 second",
+    "ru": "Первые {aura.9} раз, когда вы наносите критический удар, вы не получаете урон в течение 1 сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "67cbbe8fdd4882961bbc95c07daf3434": {
+    "en": "The first {aura.9} times you Poison, Charge a Burn item {ability.0} second(s)",
+    "ru": "Первые {aura.9} раз, когда вы накладываете яд, зарядите предмет поджога на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "0287f91ffd063da803fde36c89baef72": {
+    "en": "The first time you fall below half Health, Haste {ability.0.targets} item(s) {ability.0} second(s)",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, ускорьте {ability.0.targets} предметов на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "30437df84959c51b9be855af325d49d7": {
+    "en": "Explosive Potions",
+    "ru": "Взрывные зелья",
+    "context": [],
+    "kind": "repair"
+  },
+  "28dfb70cd97437608806dc3f34753cb7": {
+    "en": "The first time you fall below half Health, Slow all enemy items {ability.1} second(s) and destroy this",
+    "ru": "Когда ваше здоровье впервые падает ниже половины, замедлите все предметы противника на {ability.1} сек. и уничтожьте этот предмет",
+    "context": [],
+    "kind": "repair"
+  },
+  "8dc0b2a941ae13b1560a1e30ff625745": {
+    "en": "The first time you use an item, {ability.0.targets} item(s) start Flying",
+    "ru": "Когда вы впервые используете предмет, {ability.0.targets} предметов начинают летать",
+    "context": [],
+    "kind": "repair"
+  },
+  "1cb0f8c0baa1158c023e0b3b5a08f922": {
+    "en": "The first {aura.9} times you Freeze each fight, Haste Your Core {ability.0} second(s)",
+    "ru": "Первые {aura.9} раз, когда вы замораживаете за бой, ускорьте ваше ядро на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "c09c32dff86cfbac0533e172170051f9": {
+    "en": "The first time an enemy falls below half Health , Burn {ability.0}",
+    "ru": "Когда здоровье противника впервые падает ниже половины, наложите {ability.0} поджога",
+    "context": [],
+    "kind": "repair"
+  },
+  "ed3756f8dff64850c4bb36bd2b8410cf": {
+    "en": "The first time you Poison each fight, Freeze an item {ability.0} second(s)",
+    "ru": "Когда вы впервые за бой накладываете яд, заморозьте предмет на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "d13559780ab3ee3b23da86e908bc6def": {
+    "en": "The first {aura.9} times you Burn each fight, Haste your Cores {ability.0} second(s)",
+    "ru": "Первые {aura.9} раз, когда вы накладываете поджог за бой, ускорьте ваши ядра на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "a90c7aa84874e54b073a6635abf23edd": {
+    "en": "Chef Hat",
+    "ru": "Поварской колпак",
+    "context": [],
+    "kind": "repair"
+  },
+  "c9fd8cf0278c7d10fe637a2f062c4918": {
+    "en": "The first {aura.9} times you Slow each fight, Haste a Vehicle {ability.0} second(s)",
+    "ru": "Первые {aura.9} раз, когда вы замедляете за бой, ускорьте одно транспортное средство на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "55b5429ec3569c90ed9e1e747e9606f7": {
+    "en": "Slow the Slowest enemy item {ability.0} second(s)",
+    "ru": "Замедлите самый медленный предмет противника на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "203cf6b3cdb1f57021f7570047e0659e": {
+    "en": "Tempo items on G Notes have +1 Multicast",
+    "ru": "Предметы темпа на нотах Соль имеют +1 к мультивыстрелу",
+    "context": [],
+    "kind": "repair"
+  },
+  "5a455a612047a34ede7a6c564fa67c0a": {
+    "en": "Strength",
+    "ru": "Сила",
+    "context": [],
+    "kind": "repair"
+  },
+  "f29da5d45a37c74bb9ee64c8e1f8a0fb": {
+    "en": "The first time an enemy uses an item, Slow {ability.e1.targets} items {ability.e1} seconds",
+    "ru": "Когда противник впервые использует предмет, замедлите {ability.e1.targets} предметов на {ability.e1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "6f8c4156410ab670d8615ec683b922ef": {
+    "en": "The first time an enemy uses an item, Haste {ability.e1.targets} items {ability.e1} seconds",
+    "ru": "Когда противник впервые использует предмет, ускорьте {ability.e1.targets} предметов на {ability.e1} сек.",
+    "context": [],
+    "kind": "repair"
+  },
+  "66ea2a85a4fbc51f32e2716097ddce5d": {
+    "en": "The first time an enemy uses an item, deal Damage equal to 20% of your Max Health",
+    "ru": "Когда противник впервые использует предмет, нанесите урон в размере 20% вашего макс. здоровья",
+    "context": [],
+    "kind": "repair"
+  },
+  "16f5a73b11ddfb5fb3850c2db7726270": {
+    "en": "The first time an enemy uses an item, Freeze it and {ability.0.targets} item(s) {ability.0} second(s)",
+    "ru": "Когда противник впервые использует предмет, заморозьте его и ещё {ability.0.targets} предметов на {ability.0} сек.",
+    "context": [],
+    "kind": "repair"
+  }
+}

@@ -1,0 +1,2215 @@
+{
+  "4748813347fe1babb1d6816fbc3c675b": {
+    "en": "The Heal or Regen item here has its cooldown reduced by {aura.0}%",
+    "context": [
+      "cards/001092a2-3703-4f7d-b686-ce812f6622ea"
+    ],
+    "placeholders": [
+      "{aura.0}"
+    ]
+  },
+  "7c130935718f838c1da23a814f258cac": {
+    "en": "Running with Scissors",
+    "context": [
+      "cards/02ae11ee-14a6-4735-b8df-4d668fc16f88"
+    ],
+    "placeholders": []
+  },
+  "e29950ab7addbe0b279b1d2be0186e1d": {
+    "en": "When you use a Toy, your items gain {ability.0} Damage",
+    "context": [
+      "cards/02ae11ee-14a6-4735-b8df-4d668fc16f88"
+    ],
+    "placeholders": [
+      "{ability.0}"
+    ]
+  },
+  "bc46c7f6a332a0faec557db532c9f7de": {
+    "en": "Debut Album",
+    "context": [
+      "cards/034032d0-41db-46d2-b7d2-41e633194b12"
+    ],
+    "placeholders": []
+  },
+  "e023a01510f29644d358da2eb2d935db": {
+    "en": "At the start of each fight, gain {ability.0} Tempo",
+    "context": [
+      "cards/034032d0-41db-46d2-b7d2-41e633194b12"
+    ],
+    "placeholders": [
+      "{ability.0}"
+    ]
+  },
+  "0d0cc1ee662f3b055541389b6238b351": {
+    "en": "The Haste item here has its cooldown reduced by {aura.0}%",
+    "context": [
+      "cards/04eca54a-69bf-4874-8b6d-56d284bb58be"
+    ],
+    "placeholders": [
+      "{aura.0}"
+    ]
+  },
+  "465010b0342258a834c620da6dc299e5": {
+    "en": "[DEBUG] Fate's Fortunes Enchant",
+    "context": [
+      "cards/056bfca5-34c9-4c2a-9357-f1bf8c8a90c2"
+    ],
+    "placeholders": []
+  },
+  "2775037086e8b5ff228bc0abe8521adb": {
+    "en": "Cortek Music Generator",
+    "context": [
+      "cards/0ad744f1-6b36-4f7b-a5b7-a5f5e6b855a0"
+    ],
+    "placeholders": []
+  },
+  "8cdb6acc10635f9995c9671d9035a431": {
+    "en": "Learn a new Tune",
+    "context": [
+      "cards/0b9ab2cc-5b99-4482-8fa4-66000fbc8ceb"
+    ],
+    "placeholders": []
+  },
+  "c870d0e57f319489cdac5985bda33683": {
+    "en": "Get {ability.0} XP and a Tempo item",
+    "context": [
+      "cards/0b9ab2cc-5b99-4482-8fa4-66000fbc8ceb"
+    ],
+    "placeholders": [
+      "{ability.0}"
+    ]
+  },
+  "9193d6ea9e6b0109335ba29bcfabfc4a": {
+    "en": "[DEBUG] Enchant",
+    "context": [
+      "cards/0bcc3517-522b-49d9-b5d4-8f86ce414ae2",
+      "cards/0ec20a57-73c4-430e-b7c4-9d7333737aee",
+      "cards/2907e65b-d448-44e8-aa8d-2ae59b972418",
+      "cards/2e6b947b-7f08-4d1f-9524-ca1220fd68d0",
+      "cards/3468d6d0-a5dd-4a70-8214-2771d62d8218",
+      "cards/4988f50f-ee18-45ce-bff5-2bd79ccddecb",
+      "cards/5846d311-02fd-4ec7-a3ee-01f4ba28956d",
+      "cards/6020c1d6-eeb0-49e2-872c-14395ece0196",
+      "cards/772873c4-80ad-4c64-995b-a299cfa1efa3",
+      "cards/88508390-7766-4552-a557-1418b01bb1dc",
+      "cards/a53cc286-58b3-45bc-a2f8-77367f31a470",
+      "cards/aafae2e8-2838-4ca5-920e-ff24f5e860dd",
+      "cards/af968df8-2843-4d13-add4-a1db015ed398",
+      "cards/cc4b1e4a-1128-4530-b551-b2d301684250",
+      "cards/d380bcf3-1773-4de6-a057-3dc29caf8651"
+    ],
+    "placeholders": []
+  },
+  "bbf6ab73ccf089322090be4b144cc2ca": {
+    "en": "Pick up a New Instrument",
+    "context": [
+      "cards/0d828e1c-a120-4b2b-bc89-a905abf5ad53"
+    ],
+    "placeholders": []
+  },
+  "cf54fb4c1bfd004cf666d7cfd38d55f2": {
+    "en": "Choose an Enchanted Instrument from any Hero",
+    "context": [
+      "cards/0d828e1c-a120-4b2b-bc89-a905abf5ad53"
+    ],
+    "placeholders": []
+  },
+  "18823e8affb253ff561703cff022dda2": {
+    "en": "When your items start Flying, Slow {ability.e1.targets} item {ability.e1} second(s)",
+    "context": [
+      "cards/0eda3b66-76dc-4a45-b3b7-5bb12d26c655"
+    ],
+    "placeholders": [
+      "{ability.e1.targets}",
+      "{ability.e1}"
+    ]
+  },
+  "edf30a0f0f3cfb839aa9994d45e4209e": {
+    "en": "When your items start Flying, Haste {ability.e1.targets} items {ability.e1} second(s)",
+    "context": [
+      "cards/0eda3b66-76dc-4a45-b3b7-5bb12d26c655"
+    ],
+    "placeholders": [
+      "{ability.e1.targets}",
+      "{ability.e1}"
+    ]
+  },
+  "adcfdb20462a62a11843402b186e32ab": {
+    "en": "When your items start Flying, they stop Flying",
+    "context": [
+      "cards/0eda3b66-76dc-4a45-b3b7-5bb12d26c655"
+    ],
+    "placeholders": []
+  },
+  "8032986cffa04380246fc66650f9dd62": {
+    "en": "When you Repair, this gains {ability.2}",
+    "context": [
+      "cards/0f96e2e4-2bd8-4fcf-aaaf-e4e0ee5cb627"
+    ],
+    "placeholders": [
+      "{ability.2}"
+    ]
+  },
+  "78f84a7d2a0a608043a4a46cf7e88371": {
+    "en": "Melted Crayons",
+    "context": [
+      "cards/102413a3-4f40-4571-be54-d91aec686724"
+    ],
+    "placeholders": []
+  },
+  "a21e9c96520ee3ec75e1c68d7ca82351": {
+    "en": "When you use a Toy, your items gain {ability.0} Burn",
+    "context": [
+      "cards/102413a3-4f40-4571-be54-d91aec686724"
+    ],
+    "placeholders": [
+      "{ability.0}"
+    ]
+  },
+  "03d385dc425410606a510a2433bcfa2d": {
+    "en": "Adjacent items are Heated",
+    "context": [
+      "cards/124862bc-eb77-4835-9e3b-68a4c3e4490e"
+    ],
+    "placeholders": []
+  },
+  "8b47bebf99e167e6ce82c87cf31a27c1": {
+    "en": "When you use a Food or Tool, Shield {ability.0}",
+    "context": [
+      "cards/1d71b2a3-e098-4d78-9df2-58e2e2dccb2b"
+    ],
+    "placeholders": [
+      "{ability.0}"
+    ]
+  },
+  "81394b7dfcc539da601de6193a601ff2": {
+    "en": "Adds random Types to your items",
+    "context": [
+      "cards/26164d27-60b8-4935-840c-816bbe535a64"
+    ],
+    "placeholders": []
+  },
+  "c6e84af0899c2ea0bc28f496459e20c3": {
+    "en": "Your leftmost Instrument item gains {ability.0}% Crit Chance",
+    "context": [
+      "cards/26e2bff1-48b2-4777-b682-71d37808885b"
+    ],
+    "placeholders": [
+      "{ability.0}"
+    ]
+  },
+  "fd19a44ca1ec1176a58e85fa1e30ea6f": {
+    "en": "[SMALL ITEM TEMPLATE]",
+    "context": [
+      "cards/273b7c90-a4be-4226-b374-94a7c01f07d9"
+    ],
+    "placeholders": []
+  },
+  "842b99886ef7b751885972415168ebb9": {
+    "en": "Make a Detour",
+    "context": [
+      "cards/29b44148-7efc-45fe-af2f-e375d6dd3acd"
+    ],
+    "placeholders": []
+  },
+  "49b117766a5b80852b96c5e6e2962edb": {
+    "en": "(if you have Tour Schedule)\nVisit 1 of 3 Hero Merchants",
+    "context": [
+      "cards/29b44148-7efc-45fe-af2f-e375d6dd3acd"
+    ],
+    "placeholders": []
+  },
+  "316493a6914eec24fb5624df8b3bab6c": {
+    "en": "Sweeper Drone",
+    "context": [
+      "cards/2bf24a3d-6b2c-424f-9221-442fcc71bf81"
+    ],
+    "placeholders": []
+  },
+  "c455cad21fea6774f852bf724927471f": {
+    "en": "Charge a non-Tech item {ability.2} second",
+    "context": [
+      "cards/2e10cce3-b242-411b-a35f-0882341e71a7"
+    ],
+    "placeholders": [
+      "{ability.2}"
+    ]
+  },
+  "a789c140d4a3d302153494f23e64328e": {
+    "en": "[DEBUG] Burn Merchant",
+    "context": [
+      "cards/2f80f1fe-462b-4a8d-8819-d211d11904d1"
+    ],
+    "placeholders": []
+  },
+  "1577de13cfcd04389af7dc7f1a3dec27": {
+    "en": "[DEBUG]  Fortune Cookie",
+    "context": [
+      "cards/3130ec0b-ee54-4bd1-8bf9-706c41066f11"
+    ],
+    "placeholders": []
+  },
+  "bc9e8a7ca7b309410b6a52f38b443db4": {
+    "en": "For every 5 Tempo you gain, this has +1 Multicast",
+    "context": [
+      "cards/3315000c-3499-485a-85ac-70a17e3fc0bd",
+      "cards/33c070fe-7af5-4157-b81c-a98c5cbbe4c3"
+    ],
+    "placeholders": []
+  },
+  "1715fd4007bbe663794cf41bb57327f8": {
+    "en": "At the end of each fight with this, permanently destroy it and gain {ability.5} Max Health",
+    "context": [
+      "cards/367c2ad9-94b3-4f01-a130-a673922244ef"
+    ],
+    "placeholders": [
+      "{ability.5}"
+    ]
+  },
+  "255f5bcefbaa835dca68abe4e0d99a3f": {
+    "en": "The Shield item here has its cooldown reduced by {aura.0}%",
+    "context": [
+      "cards/38686c0c-ef93-4fb3-81ce-4f5f6d918f11"
+    ],
+    "placeholders": [
+      "{aura.0}"
+    ]
+  },
+  "55c686fccba15d3c5adc651400fcbe49": {
+    "en": "Your items have +Shield equal to {aura.e1.mod} times the number of Weapons you have bought this run [{aura.e1}]",
+    "context": [
+      "cards/3d185981-0b60-47ce-9ed3-58be5d7b2737"
+    ],
+    "placeholders": [
+      "{aura.e1.mod}",
+      "{aura.e1}"
+    ]
+  },
+  "84468b48d53ab87ec69fb6b52304b912": {
+    "en": "Your items have +Heal equal to {aura.e1.mod} times the number of Weapons you have bought this run [{aura.e1}]",
+    "context": [
+      "cards/3d185981-0b60-47ce-9ed3-58be5d7b2737"
+    ],
+    "placeholders": [
+      "{aura.e1.mod}",
+      "{aura.e1}"
+    ]
+  },
+  "9a9775c191bee3ad5e85a1604fc383e4": {
+    "en": "Your items have +Poison equal to {aura.e1.mod} times the number of Weapons you have bought this run [{aura.e1}]",
+    "context": [
+      "cards/3d185981-0b60-47ce-9ed3-58be5d7b2737"
+    ],
+    "placeholders": [
+      "{aura.e1.mod}",
+      "{aura.e1}"
+    ]
+  },
+  "768d45db34a99bbb4cb5cb5618e92481": {
+    "en": "Your items have +Burn equal to {aura.e1.mod} times the number of Weapons you have bought this run [{aura.e1}]",
+    "context": [
+      "cards/3d185981-0b60-47ce-9ed3-58be5d7b2737"
+    ],
+    "placeholders": [
+      "{aura.e1.mod}",
+      "{aura.e1}"
+    ]
+  },
+  "c39e0acfdb1014be305b6dd9321b4577": {
+    "en": "Your items have +Regen equal to {aura.e1.mod} times the number of Weapons you have bought this run [{aura.e1}]",
+    "context": [
+      "cards/3d185981-0b60-47ce-9ed3-58be5d7b2737"
+    ],
+    "placeholders": [
+      "{aura.e1.mod}",
+      "{aura.e1}"
+    ]
+  },
+  "263d69c315a25e32ac9016e357ff08f4": {
+    "en": "Your items have +Damage equal to {aura.9} times the number of Weapons you have bought this run [{aura.0}]",
+    "context": [
+      "cards/3d185981-0b60-47ce-9ed3-58be5d7b2737"
+    ],
+    "placeholders": [
+      "{aura.9}",
+      "{aura.0}"
+    ]
+  },
+  "ed910826fcfe84875452f785745608ec": {
+    "en": "[DEBUG] Crit Merchant",
+    "context": [
+      "cards/3f99df7b-5c30-4da5-98e4-89ff5409a777"
+    ],
+    "placeholders": []
+  },
+  "86548deb892f0311b40f8c52edd8cfc7": {
+    "en": "This has +{aura.9} for each Aquatic item you have bought this run [{aura.1}]",
+    "context": [
+      "cards/40814ac2-ee63-4482-8f3b-d2242750fbd8"
+    ],
+    "placeholders": [
+      "{aura.9}",
+      "{aura.1}"
+    ]
+  },
+  "76761472f6bea523989a0a14f6f4d89d": {
+    "en": "When you use another Instrument or Tempo item, Charge this {ability.2} second(s)",
+    "context": [
+      "cards/410dbcde-16e1-4b92-9e12-cc7b9fa90600"
+    ],
+    "placeholders": [
+      "{ability.2}"
+    ]
+  },
+  "13f011d48a0eea8d5604bc7291972e69": {
+    "en": "Share with Followers",
+    "context": [
+      "cards/4503488d-5c22-4853-988e-a9045146fb40"
+    ],
+    "placeholders": []
+  },
+  "b42e0874701563e330bca67b19a25cc0": {
+    "en": "Add a random Type to your leftmost item, then gain Gold equal to the Types it has",
+    "context": [
+      "cards/4503488d-5c22-4853-988e-a9045146fb40"
+    ],
+    "placeholders": []
+  },
+  "df82ff8f850157d8bb96b4d5884952e6": {
+    "en": "Charge adjacent items {ability.0} seconds",
+    "context": [
+      "cards/458e19fa-9c19-420a-90cd-d7fb3943271c"
+    ],
+    "placeholders": [
+      "{ability.0}"
+    ]
+  },
+  "f1bb1c9f09a0e13439216b33885cd892": {
+    "en": "[DEBUG] Freeze Merchant",
+    "context": [
+      "cards/4657a8ab-6f39-4ec9-97d3-cfc7d193dabb"
+    ],
+    "placeholders": []
+  },
+  "43aeea56fb2fd19d8a3ea452cf89de04": {
+    "en": "[DEBUG] Day Hour Replacement EncounterStep",
+    "context": [
+      "cards/47c78559-8ff0-483a-824e-857c37505029"
+    ],
+    "placeholders": []
+  },
+  "6e93811f2a76c2026ed9556f1517961e": {
+    "en": "[DEBUG] Time Contraction",
+    "context": [
+      "cards/47f0d440-9fad-4c09-abf6-844c23038b18"
+    ],
+    "placeholders": []
+  },
+  "e653450d9d3e36685cea163930878523": {
+    "en": "Secret Meeting",
+    "context": [
+      "cards/494941cc-e837-4bf2-9fec-70ebd67c83e8"
+    ],
+    "placeholders": []
+  },
+  "4def0f321800500b21af4ca62363e892": {
+    "en": "(if you have Orange Julian)\nGain {ability.0} XP and reduce Orange Julian's cooldown by {ability.1} second",
+    "context": [
+      "cards/494941cc-e837-4bf2-9fec-70ebd67c83e8"
+    ],
+    "placeholders": [
+      "{ability.0}",
+      "{ability.1}"
+    ]
+  },
+  "9f56fa87b5cca90caa227e1a0057150e": {
+    "en": "[DEBUG] Disenchant",
+    "context": [
+      "cards/49763754-9fc7-49dc-b033-977ce8e90fdc"
+    ],
+    "placeholders": []
+  },
+  "472f74c2b5018f44e4682566dfaef2df": {
+    "en": "When you use another Tool or Destroy an item, Charge this {ability.2} second(s)",
+    "context": [
+      "cards/4b1eb7a7-3e65-43ed-905f-72fc7be4233f"
+    ],
+    "placeholders": [
+      "{ability.2}"
+    ]
+  },
+  "f8711d638752dc64eb096c0f1554d48b": {
+    "en": "[ENCOUNTER STEP TEMPLATE]",
+    "context": [
+      "cards/4c160680-5884-49a1-95e3-1357a4377220"
+    ],
+    "placeholders": []
+  },
+  "86628fbf570cea72dfca9b083489c496": {
+    "en": "[DEBUG] Transform",
+    "context": [
+      "cards/4cdcc6d3-a2b1-4358-817a-6ec0fe12051d"
+    ],
+    "placeholders": []
+  },
+  "db3cb4eacd5add6049ca3a846e581b08": {
+    "en": "When you Enrage, your items gain Shield equal to 1% of your Max Health",
+    "context": [
+      "cards/4d1bdb16-40f8-4932-a56c-c2e89895e433",
+      "cards/904ffad8-86e3-4e3b-8a26-723604cc4f0e"
+    ],
+    "placeholders": []
+  },
+  "e87bd89a0992456df6809da0e7a2a1f4": {
+    "en": "When you Enrage, your items gain Heal equal to 1% of your Max Health",
+    "context": [
+      "cards/4d1bdb16-40f8-4932-a56c-c2e89895e433",
+      "cards/904ffad8-86e3-4e3b-8a26-723604cc4f0e"
+    ],
+    "placeholders": []
+  },
+  "760338edbe0c17404bad2c1a0033f443": {
+    "en": "When you Enrage, your items gain Burn equal to 1% of your Max Health",
+    "context": [
+      "cards/4d1bdb16-40f8-4932-a56c-c2e89895e433"
+    ],
+    "placeholders": []
+  },
+  "bb152e1095ad31fb17f1f0030c9a298a": {
+    "en": "When you Enrage, your items gain Damage equal to 1% of your Max Health",
+    "context": [
+      "cards/4d1bdb16-40f8-4932-a56c-c2e89895e433",
+      "cards/904ffad8-86e3-4e3b-8a26-723604cc4f0e"
+    ],
+    "placeholders": []
+  },
+  "00a381f2d72d3223b3a95154ea517287": {
+    "en": "When you Enrage, your items gain Regen equal to 1% of your Max Health",
+    "context": [
+      "cards/4d1bdb16-40f8-4932-a56c-c2e89895e433",
+      "cards/904ffad8-86e3-4e3b-8a26-723604cc4f0e"
+    ],
+    "placeholders": []
+  },
+  "62bd55799a42c0d2b3aafca07b7c81c9": {
+    "en": "Toxic Sigil",
+    "context": [
+      "cards/4d1bdb16-40f8-4932-a56c-c2e89895e433"
+    ],
+    "placeholders": []
+  },
+  "722c2ecbd2ba3ad0459d118cdcb8a367": {
+    "en": "When you Poison, gain {ability.0} Rage",
+    "context": [
+      "cards/4d1bdb16-40f8-4932-a56c-c2e89895e433"
+    ],
+    "placeholders": [
+      "{ability.0}"
+    ]
+  },
+  "86f1068d105dce2810e0592fc6691ec1": {
+    "en": "When you Enrage, your items gain Poison equal to 1% of your Max Health [{aura.9}]",
+    "context": [
+      "cards/4d1bdb16-40f8-4932-a56c-c2e89895e433"
+    ],
+    "placeholders": [
+      "{aura.9}"
+    ]
+  },
+  "8907a99c557712ab0934b6d6eb854092": {
+    "en": "Charge your other items equal to {aura.9}% of that item's cooldown",
+    "context": [
+      "cards/4f2b2cd3-88db-43e6-ae79-53eb2554b887"
+    ],
+    "placeholders": [
+      "{aura.9}"
+    ]
+  },
+  "ceda2dac9db33338c755c25fca6cc420": {
+    "en": "[DEBUG] Arbitrage",
+    "context": [
+      "cards/4f496bdd-a8b5-409e-af06-fca8fed4c46e"
+    ],
+    "placeholders": []
+  },
+  "34eed4137fc9a05d4ab271aeabb492b1": {
+    "en": "You take no damage for 1 second longer, and the first time you fall below half Health, use this",
+    "context": [
+      "cards/4fdc947b-3646-429e-ba4e-bb693fe44bc2"
+    ],
+    "placeholders": []
+  },
+  "f85a1ea0c0b94743660cfa09c1f76dd3": {
+    "en": "Huge Healer",
+    "context": [
+      "cards/52492df1-d2da-4784-ad59-2afb05802684"
+    ],
+    "placeholders": []
+  },
+  "a227b9989861d6455e85ef49ea356722": {
+    "en": "Your items have +Heal equal to {aura.9}% of your Max Health [{aura.0}]",
+    "context": [
+      "cards/52492df1-d2da-4784-ad59-2afb05802684"
+    ],
+    "placeholders": [
+      "{aura.9}",
+      "{aura.0}"
+    ]
+  },
+  "6cc1685df8e67eabc363f56eb2d71282": {
+    "en": "Deep Study",
+    "context": [
+      "cards/54188628-46cd-4baa-bebd-944bf541abc9"
+    ],
+    "placeholders": []
+  },
+  "7302570a2d43800f71bf6fdb309d2298": {
+    "en": "(if you have Staff of the Wise)\nGet {ability.0} XP and learn a Skill from any Hero",
+    "context": [
+      "cards/54188628-46cd-4baa-bebd-944bf541abc9"
+    ],
+    "placeholders": [
+      "{ability.0}"
+    ]
+  },
+  "cb9df473948d2fbc1d75305e0615be49": {
+    "en": "Burn equal to half of this item's Damage",
+    "context": [
+      "cards/568ca1fe-7d31-44a9-8e11-bdcc28086948"
+    ],
+    "placeholders": []
+  },
+  "961bce3ecda284fbdad36077fd95ca1d": {
+    "en": "Regen equal to half of this item's Damage",
+    "context": [
+      "cards/568ca1fe-7d31-44a9-8e11-bdcc28086948"
+    ],
+    "placeholders": []
+  },
+  "ac36b586268a1f9ddf866e3f74610775": {
+    "en": "Dilly",
+    "context": [
+      "cards/568ca1fe-7d31-44a9-8e11-bdcc28086948"
+    ],
+    "placeholders": []
+  },
+  "cd0297f33f002d7b080962d3fb303ece": {
+    "en": "Poison equal to half of this item's Damage",
+    "context": [
+      "cards/568ca1fe-7d31-44a9-8e11-bdcc28086948"
+    ],
+    "placeholders": []
+  },
+  "595a953556f8cb158fb08d4f6c5e2d4d": {
+    "en": "The first time your enemy reaches 60 Poison, destroy a small item",
+    "context": [
+      "cards/568ca1fe-7d31-44a9-8e11-bdcc28086948"
+    ],
+    "placeholders": []
+  },
+  "41c74352037fb656edaa51c2a57fc050": {
+    "en": "[DEBUG] Perm Destroy",
+    "context": [
+      "cards/57e744e0-d797-44a7-9d27-53749b87d8a7"
+    ],
+    "placeholders": []
+  },
+  "4618c727e4c9e14f8720ae7b196d2f16": {
+    "en": "[DEBUG] Self Flying",
+    "context": [
+      "cards/587b9f7a-b8e3-481d-b572-c2a8b4d56330"
+    ],
+    "placeholders": []
+  },
+  "1db7e476ecc50ff5cb558bd91dca5c0e": {
+    "en": "[LARGE ITEM TEMPLATE]",
+    "context": [
+      "cards/599c27bd-2e78-45a6-9390-aeb349a20e29"
+    ],
+    "placeholders": []
+  },
+  "cf804fa782296a03a13007725f25c2c9": {
+    "en": "This has double Heal, Shield and Damage gain",
+    "context": [
+      "cards/59f5169f-5717-4ff7-bef7-22ca274d538d"
+    ],
+    "placeholders": []
+  },
+  "543f10c376bf71620bcaec167837a33b": {
+    "en": "[DEBUG] Hacked Quest Debug",
+    "context": [
+      "cards/5afac9f3-9eb5-44c4-8470-fd7aeff36fb7"
+    ],
+    "placeholders": []
+  },
+  "b4f5df2cc35fe58d2eb4d5bfa462a772": {
+    "en": "When you Enrage, Heal equal to this item's Crit Chance",
+    "context": [
+      "cards/5b4b3685-aa1d-477e-aed5-805813faa2b2"
+    ],
+    "placeholders": []
+  },
+  "101eaf604529651e041cd0796bbb12af": {
+    "en": "When you Enrage, your items gain Damage and Shield equal to their Crit Chance",
+    "context": [
+      "cards/5b4b3685-aa1d-477e-aed5-805813faa2b2"
+    ],
+    "placeholders": []
+  },
+  "0f917292546d9ace6429bb9796f2bdbd": {
+    "en": "Cirrus Feather",
+    "context": [
+      "cards/5c32e9bb-bf6e-43e7-ae62-494bc250c553"
+    ],
+    "placeholders": []
+  },
+  "5f1e7d61a40348021f9715e91f153058": {
+    "en": "When this stops Flying, reduce your other items' cooldowns by {ability.2}%",
+    "context": [
+      "cards/5c32e9bb-bf6e-43e7-ae62-494bc250c553"
+    ],
+    "placeholders": [
+      "{ability.2}"
+    ]
+  },
+  "dde6926babb99a917873bc3cac6fbf6c": {
+    "en": "[DEBUG] Decharge Test",
+    "context": [
+      "cards/5c570e21-cb8a-444c-9155-cd202631091b"
+    ],
+    "placeholders": []
+  },
+  "562fdd90577d425765250f0b1f0591c5": {
+    "en": "Enchant your leftmost Instrument item",
+    "context": [
+      "cards/5cf769d2-7595-4701-a91a-b02b1a10671f"
+    ],
+    "placeholders": []
+  },
+  "474bb1e7ee439b3e44ae0e3842539dac": {
+    "en": "Candid Group Photo",
+    "context": [
+      "cards/5ef47056-007d-4e43-be2e-30783171eaaf"
+    ],
+    "placeholders": []
+  },
+  "2815dea07b066ab071cd6ed8c3d9d3e7": {
+    "en": "Add a random Type to all your items",
+    "context": [
+      "cards/5ef47056-007d-4e43-be2e-30783171eaaf"
+    ],
+    "placeholders": []
+  },
+  "6e9c5a6bbf99f047609b4475d1346d1a": {
+    "en": "Upgrade your leftmost Instrument item",
+    "context": [
+      "cards/622c5189-50f1-4967-9e03-fb6446579d46"
+    ],
+    "placeholders": []
+  },
+  "82bac23ecef4679d66dfa19ccba7bfa0": {
+    "en": "[DEBUG] Weapon and Damage Merchant",
+    "context": [
+      "cards/634ad92f-a1b4-43c6-8e15-3031ffe7dd16"
+    ],
+    "placeholders": []
+  },
+  "3f2026e8df32fb1e92bf8bde74be6df0": {
+    "en": "Industry Plant",
+    "context": [
+      "cards/64d6f9df-9003-44f8-bad6-ae9f81f1f7bf"
+    ],
+    "placeholders": []
+  },
+  "43a323a76e7d3ec39fcb77dce2599d30": {
+    "en": "[DEBUG] Streaming Setup",
+    "context": [
+      "cards/6649e756-f7b2-41ee-bbb2-70a4a7247a73"
+    ],
+    "placeholders": []
+  },
+  "026ea543b1d8d2ff1296d1f6730bf46d": {
+    "en": "[DEBUG] Merchant All Item Cost increase",
+    "context": [
+      "cards/673b01a4-da04-47ea-8ee5-ef18c9d8dedf"
+    ],
+    "placeholders": []
+  },
+  "63d6e6a8055e8cc56723892ee95f8ccf": {
+    "en": "Power Chord",
+    "context": [
+      "cards/67a57206-bf3c-4e18-a878-82d5dbf87c3e"
+    ],
+    "placeholders": []
+  },
+  "be6296a348bfeaf2db65c7768a4ad9f9": {
+    "en": "When you use an Instrument or Tech item, Charge a Weapon {ability.0} second(s)",
+    "context": [
+      "cards/67a57206-bf3c-4e18-a878-82d5dbf87c3e"
+    ],
+    "placeholders": [
+      "{ability.0}"
+    ]
+  },
+  "29c1d4cc5cb861bb19bb839d92dc4f41": {
+    "en": "The Tempo item here has its cooldown reduced by {aura.0}%",
+    "context": [
+      "cards/681de13d-5388-4638-b2e7-20bc566fdda1"
+    ],
+    "placeholders": [
+      "{aura.0}"
+    ]
+  },
+  "9dd0800604444c7af8d429dcabd9bb71": {
+    "en": "Your items gain +{ability.1}% Crit Chance",
+    "context": [
+      "cards/68e7c206-6e85-42b6-a2d0-0f02a5822dcb"
+    ],
+    "placeholders": [
+      "{ability.1}"
+    ]
+  },
+  "9610740847988effb371907820a91741": {
+    "en": "[DEBUG] Gland",
+    "context": [
+      "cards/692e3e47-5bbf-438c-a9c6-af1e2e7d0a05"
+    ],
+    "placeholders": []
+  },
+  "cb94a4f56216896643207757d0ba17d0": {
+    "en": "This has double Crit bonus",
+    "context": [
+      "cards/6d77bee5-7e9c-46f4-974f-38c26e4615be"
+    ],
+    "placeholders": []
+  },
+  "c54ef92447b140777924d3f24ad7bad3": {
+    "en": "Adjacent items have +Damage, Heal, and Shield equal to half their Crit Chance",
+    "context": [
+      "cards/6d77bee5-7e9c-46f4-974f-38c26e4615be"
+    ],
+    "placeholders": []
+  },
+  "aca10ca2dd3eb78ca123454debc6f11e": {
+    "en": "Box of Fireworks",
+    "context": [
+      "cards/6f65b541-ec4e-4475-8ca1-fa8546aa2477"
+    ],
+    "placeholders": []
+  },
+  "b7f505970b841626b85af25f5197d7dc": {
+    "en": "When this is Destroyed, Burn {ability.1} and transform this into 2 Firecrackers",
+    "context": [
+      "cards/6f65b541-ec4e-4475-8ca1-fa8546aa2477"
+    ],
+    "placeholders": [
+      "{ability.1}"
+    ]
+  },
+  "52239b3e243e8bf7ca31ca3f46ea92e4": {
+    "en": "Spiked Censer",
+    "context": [
+      "cards/70f3fd94-d441-4ac3-824a-42d9738dbe47"
+    ],
+    "placeholders": []
+  },
+  "46fee270193b1890b042fe7bd6ea1bb5": {
+    "en": "Deal damage equal to your Regen",
+    "context": [
+      "cards/70f3fd94-d441-4ac3-824a-42d9738dbe47"
+    ],
+    "placeholders": []
+  },
+  "de471ae9e8ec8e2fd5cafdd0366737a2": {
+    "en": "Heal equal to 5 times this item's Poison",
+    "context": [
+      "cards/743652ce-51f9-408f-af43-5546a216ac3a"
+    ],
+    "placeholders": []
+  },
+  "087e87b9342c93de1881465bcf8e28e4": {
+    "en": "Deal Damage equal to 5 times this item's Poison",
+    "context": [
+      "cards/743652ce-51f9-408f-af43-5546a216ac3a"
+    ],
+    "placeholders": []
+  },
+  "46f1f80ce859f3d119d0cd304a375481": {
+    "en": "Lionfish",
+    "context": [
+      "cards/743652ce-51f9-408f-af43-5546a216ac3a"
+    ],
+    "placeholders": []
+  },
+  "39bee7fc527a220e15956a6c06374df9": {
+    "en": "Deal {aura.2.mod} Damage for each unique Type on your other items",
+    "context": [
+      "cards/74d0780a-4d98-478e-b136-f1810bc88346"
+    ],
+    "placeholders": [
+      "{aura.2.mod}"
+    ]
+  },
+  "7fff2a523a9e05da61b2a2ca69fb0c70": {
+    "en": "Delete Bin",
+    "context": [
+      "cards/75c44aaa-dd75-4db3-a47e-8f72a64ffcb7"
+    ],
+    "placeholders": []
+  },
+  "396c159f9380ffc1938d5e1b6b2a18af": {
+    "en": "Resonant Frequency",
+    "context": [
+      "cards/765d7fa2-52a5-432d-b6fe-80763c4b5a8a"
+    ],
+    "placeholders": []
+  },
+  "ae2c8489e1ac5b692e77523cce62a8b1": {
+    "en": "When you use an Instrument or Tech item, Charge a Shield item {ability.0} second(s)",
+    "context": [
+      "cards/765d7fa2-52a5-432d-b6fe-80763c4b5a8a"
+    ],
+    "placeholders": [
+      "{ability.0}"
+    ]
+  },
+  "d7f76efdb4301174cd0fbb0871b70ac2": {
+    "en": "[DEBUG] Shield and Heakth Merchant",
+    "context": [
+      "cards/81ad4a6f-a953-4a10-bdb9-f9a857579aa4"
+    ],
+    "placeholders": []
+  },
+  "d24fefde473ff862b943cc57e7a55405": {
+    "en": "The Baron Boys",
+    "context": [
+      "cards/82a64f45-ca55-4a24-b1ef-18d41cc77fa5"
+    ],
+    "placeholders": []
+  },
+  "0aeb4fc4f856e875b3ef85d7c8d0cdc2": {
+    "en": "Haste {ability.0.targets} item(s) {ability.0} seconds",
+    "context": [
+      "cards/844f0836-fa5f-485d-83ba-e0795dd3c937"
+    ],
+    "placeholders": [
+      "{ability.0.targets}",
+      "{ability.0}"
+    ]
+  },
+  "f5b9c04052f2fc12d7607bb559c2d14e": {
+    "en": "[DEBUG] Other Flying",
+    "context": [
+      "cards/852be134-3d39-4ed1-aa80-7d7e7c10a415"
+    ],
+    "placeholders": []
+  },
+  "c6962c1c7516dc824c27ac1098e06bab": {
+    "en": "Shield equal to {aura.9} times the Rage you have gained this fight",
+    "context": [
+      "cards/8666a1de-066f-47c4-9d9b-87eea7d9f25a"
+    ],
+    "placeholders": [
+      "{aura.9}"
+    ]
+  },
+  "24a04aa708aa2131f5ddf756ad6138d6": {
+    "en": "Huge Warrior",
+    "context": [
+      "cards/87d058f2-828f-4737-a61e-3c9320bfd4a5"
+    ],
+    "placeholders": []
+  },
+  "84df77c3b4411b21bd7df903303c28e1": {
+    "en": "Your items have +Damage equal to {aura.9}% of your Max Health [{aura.0}]",
+    "context": [
+      "cards/87d058f2-828f-4737-a61e-3c9320bfd4a5"
+    ],
+    "placeholders": [
+      "{aura.9}",
+      "{aura.0}"
+    ]
+  },
+  "e4dc49aee2408eb85d6d7e9c824ac204": {
+    "en": "Deal damage equal to 7 times this item's Crit Chance",
+    "context": [
+      "cards/8938035e-be96-4827-bd34-7258253bd942"
+    ],
+    "placeholders": []
+  },
+  "a42c989551f643715524b929ba9b3b9f": {
+    "en": "When you take damage, this gains 7% Crit Chance",
+    "context": [
+      "cards/8938035e-be96-4827-bd34-7258253bd942"
+    ],
+    "placeholders": []
+  },
+  "6b8a071d3bbcb8dbc788e488f7ece25c": {
+    "en": "Disco",
+    "context": [
+      "cards/89f6bc92-a2f9-477d-8acc-43903a58afc3"
+    ],
+    "placeholders": []
+  },
+  "648c7bf58af3dbe840804cc52f500efd": {
+    "en": "When you Enchant an item in combat, gain {ability.0} Tempo",
+    "context": [
+      "cards/89f6bc92-a2f9-477d-8acc-43903a58afc3"
+    ],
+    "placeholders": [
+      "{ability.0}"
+    ]
+  },
+  "a2d8430adaf99bdf9b98309f4ce5f12e": {
+    "en": "You are Enraged for 1 second shorter\nChoose a Gold-tier Sigil",
+    "context": [
+      "cards/8a452702-604e-4e26-941e-619ba6396c36"
+    ],
+    "placeholders": []
+  },
+  "d3fd0384de89580a85502fe499b4fa3a": {
+    "en": "Your Instrument items are affected by Freeze and Slow for half as long",
+    "context": [
+      "cards/8bf6a0b7-52f0-498c-bc45-21e47c8ea76f"
+    ],
+    "placeholders": []
+  },
+  "bc4c5be0c22be63db622bf746b31d474": {
+    "en": "Your Instrument items have +{aura.e1}% Crit Chance",
+    "context": [
+      "cards/8bf6a0b7-52f0-498c-bc45-21e47c8ea76f"
+    ],
+    "placeholders": [
+      "{aura.e1}"
+    ]
+  },
+  "54aa741daad95dcd460e994234e070f2": {
+    "en": "Your Instruments have +{aura.0} Multicast",
+    "context": [
+      "cards/8bf6a0b7-52f0-498c-bc45-21e47c8ea76f"
+    ],
+    "placeholders": [
+      "{aura.0}"
+    ]
+  },
+  "970cc7e682f221a20307362e14639470": {
+    "en": "When you use an Instrument on a matching Note, gain 1 Tempo",
+    "context": [
+      "cards/8bf6a0b7-52f0-498c-bc45-21e47c8ea76f"
+    ],
+    "placeholders": []
+  },
+  "fc30477664efde07e9e4562b2463fff4": {
+    "en": "[DEBUG] End of Fight Transform",
+    "context": [
+      "cards/8c0cd7f5-d7ab-414b-825e-cc850b273aff"
+    ],
+    "placeholders": []
+  },
+  "bdc8629a102da202557184184eaf269b": {
+    "en": "When you use a small Potion, transform it into another Potion from any Hero",
+    "context": [
+      "cards/8f6eebd6-db14-48f8-9407-5962772e7dec"
+    ],
+    "placeholders": []
+  },
+  "56d5944e6b7d248660e47496c12337bc": {
+    "en": "When you Enrage, your items gain Poison equal to 1% of your Max Health",
+    "context": [
+      "cards/904ffad8-86e3-4e3b-8a26-723604cc4f0e"
+    ],
+    "placeholders": []
+  },
+  "9cae995355b1441ee200d43ea819aea3": {
+    "en": "When you Enrage, your items gain Burn equal to 1% of your Max Health [{aura.9}]",
+    "context": [
+      "cards/904ffad8-86e3-4e3b-8a26-723604cc4f0e"
+    ],
+    "placeholders": [
+      "{aura.9}"
+    ]
+  },
+  "1d79a6c191aad30b56c7f6129226fc00": {
+    "en": "When you Enrage, your items gain Shield equal to this item's Heal",
+    "context": [
+      "cards/90b3cc1a-2251-4af7-a7c7-496aac457784"
+    ],
+    "placeholders": []
+  },
+  "20d8cf1639b3b06d3504f76742eddfa7": {
+    "en": "When you Enrage, your items gain Poison equal to 20% of this item's Heal",
+    "context": [
+      "cards/90b3cc1a-2251-4af7-a7c7-496aac457784"
+    ],
+    "placeholders": []
+  },
+  "ace5e5a16666501ed2f6dddee01edb31": {
+    "en": "When you Enrage, your items gain Burn equal to 20% of this item's Heal",
+    "context": [
+      "cards/90b3cc1a-2251-4af7-a7c7-496aac457784"
+    ],
+    "placeholders": []
+  },
+  "34247257ce703cf8057fe40f56cb5322": {
+    "en": "When you Enrage, your items gain Damage equal to this item's Heal",
+    "context": [
+      "cards/90b3cc1a-2251-4af7-a7c7-496aac457784"
+    ],
+    "placeholders": []
+  },
+  "d0b028146e21bfd80cce383ae3ab6bb2": {
+    "en": "When you Enrage, your items gain Regen equal to 20% of this item's Heal",
+    "context": [
+      "cards/90b3cc1a-2251-4af7-a7c7-496aac457784"
+    ],
+    "placeholders": []
+  },
+  "3864935dc32009b128ddd14334f0f1d0": {
+    "en": "Selfie",
+    "context": [
+      "cards/9786cf78-cca1-4c67-8088-f9f64411eb0d"
+    ],
+    "placeholders": []
+  },
+  "29514745db440f49c407937d43f72777": {
+    "en": "Add 3 random Types to your leftmost item",
+    "context": [
+      "cards/9786cf78-cca1-4c67-8088-f9f64411eb0d"
+    ],
+    "placeholders": []
+  },
+  "4ec7bb5a5e0ecb75cbb17716dcc80f6f": {
+    "en": "When you spend Tempo, Slow {ability.e1.targets} item {ability.e1} second(s)",
+    "context": [
+      "cards/98aa3e24-d793-408b-b20b-8ce98cd4708b"
+    ],
+    "placeholders": [
+      "{ability.e1.targets}",
+      "{ability.e1}"
+    ]
+  },
+  "083eef450536a5f3dc04d8785dabf7e7": {
+    "en": "When you spend Tempo, Freeze an item {ability.e1} second(s)",
+    "context": [
+      "cards/98aa3e24-d793-408b-b20b-8ce98cd4708b"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "dd0e52912b1d05863e052f8fd97ba97c": {
+    "en": "When you spend Tempo, Shield {ability.e1}",
+    "context": [
+      "cards/98aa3e24-d793-408b-b20b-8ce98cd4708b"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "3583ce0af99c3ea1c823f065e457381a": {
+    "en": "When you spend Tempo, Heal {ability.e1}",
+    "context": [
+      "cards/98aa3e24-d793-408b-b20b-8ce98cd4708b"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "d81308459f81709eb4d26b6587142edd": {
+    "en": "When you spend Tempo, Poison {ability.e1}",
+    "context": [
+      "cards/98aa3e24-d793-408b-b20b-8ce98cd4708b"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "97b5c10292d3a6baf532e3a9e7731f1e": {
+    "en": "When you spend Tempo, Burn {ability.e1}",
+    "context": [
+      "cards/98aa3e24-d793-408b-b20b-8ce98cd4708b"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "60cfaab635e21dd3e04d90e568cedcc5": {
+    "en": "When you spend Tempo, Haste an item {ability.e1} second(s)",
+    "context": [
+      "cards/98aa3e24-d793-408b-b20b-8ce98cd4708b"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "5ccdc41ba1ecb08de89320eb82deedfa": {
+    "en": "When you spend Tempo, deal {ability.e1} Damage",
+    "context": [
+      "cards/98aa3e24-d793-408b-b20b-8ce98cd4708b"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "b5e66b55c28b82f07878d7095c51f613": {
+    "en": "When you spend Tempo, Regen {ability.e1}",
+    "context": [
+      "cards/98aa3e24-d793-408b-b20b-8ce98cd4708b"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "4262178f615fd92c4f8d7e849ba03c18": {
+    "en": "When you spend Tempo, Haste an item {ability.0} second(s)",
+    "context": [
+      "cards/98aa3e24-d793-408b-b20b-8ce98cd4708b"
+    ],
+    "placeholders": [
+      "{ability.0}"
+    ]
+  },
+  "c13ec3527a7738f775cea775f1b3b410": {
+    "en": "This Slows for half as long and has double Heal bonus",
+    "context": [
+      "cards/991efa4e-b4d6-4a20-9de5-81ce00c3e2ae"
+    ],
+    "placeholders": []
+  },
+  "1b57bf53f8196b297dfde1275e886588": {
+    "en": "Deal Damage {ability.e1}",
+    "context": [
+      "cards/991efa4e-b4d6-4a20-9de5-81ce00c3e2ae"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "ef71255aabf6e99b9cf22e9f690f2e33": {
+    "en": "River Otter",
+    "context": [
+      "cards/991efa4e-b4d6-4a20-9de5-81ce00c3e2ae"
+    ],
+    "placeholders": []
+  },
+  "750c0cbb0aa97c294a51d18c9e803b30": {
+    "en": "Slow one of your Heal items {ability.0} second(s)",
+    "context": [
+      "cards/991efa4e-b4d6-4a20-9de5-81ce00c3e2ae"
+    ],
+    "placeholders": [
+      "{ability.0}"
+    ]
+  },
+  "1216f3e5575cc06e99e0b99eafe2f919": {
+    "en": "When you Slow one of your Heal items, it gains {ability.1}",
+    "context": [
+      "cards/991efa4e-b4d6-4a20-9de5-81ce00c3e2ae"
+    ],
+    "placeholders": [
+      "{ability.1}"
+    ]
+  },
+  "c62e91441a41f2483055471a292855c7": {
+    "en": "Your leftmost Weapon has +Damage equal to {aura.9} times its value",
+    "context": [
+      "cards/994de267-673b-4838-9302-1b3b47ab0934"
+    ],
+    "placeholders": [
+      "{aura.9}"
+    ]
+  },
+  "be1e97f4251efbd28c127084d83aff0b": {
+    "en": "Breakdown Interlude",
+    "context": [
+      "cards/9a02c491-873c-455e-b984-756c428a8fc9"
+    ],
+    "placeholders": []
+  },
+  "6ab1d1ee7c2062b6bfe9a8c31557e125": {
+    "en": "The first time you fall below half Health, Charge your items {ability.0} second(s)",
+    "context": [
+      "cards/9a02c491-873c-455e-b984-756c428a8fc9"
+    ],
+    "placeholders": [
+      "{ability.0}"
+    ]
+  },
+  "d4b92e166e2b659fa6d05e1ad229df86": {
+    "en": "Your Friends have 40% Crit Chance",
+    "context": [
+      "cards/9b44aac3-173a-4d22-92f7-e2678b33c230"
+    ],
+    "placeholders": []
+  },
+  "9462a68b74e868646d0966ac6e0b5770": {
+    "en": "When you Haste, Slow or Freeze, Charge this {ability.3} second(s)",
+    "context": [
+      "cards/9bf2d4d3-d753-4419-8f6f-d56686e967b8"
+    ],
+    "placeholders": [
+      "{ability.3}"
+    ]
+  },
+  "78d2072fe9b865a388d18eb59fb6d363": {
+    "en": "The Burn item here has its cooldown reduced by {aura.0}%",
+    "context": [
+      "cards/9d043620-fcd5-40d7-94c0-208d31480562"
+    ],
+    "placeholders": [
+      "{aura.0}"
+    ]
+  },
+  "b6ef60afe622aa2c5b1534b9c72ebfd9": {
+    "en": "When you Enrage, reduce this item's Cooldown by half",
+    "context": [
+      "cards/9e1173c2-c44d-4aa5-9aa3-10271be80943"
+    ],
+    "placeholders": []
+  },
+  "6adb8fda65f0e7fb5b727b8e1f94ad31": {
+    "en": "[MEDIUM ITEM TEMPLATE]",
+    "context": [
+      "cards/a031a51e-7b07-4055-adff-a421d2ee8943"
+    ],
+    "placeholders": []
+  },
+  "e7dabc2122739176393aec6e1ad8c30a": {
+    "en": "When you Crit, Slow {ability.e1.targets} item {ability.e1} second(s)",
+    "context": [
+      "cards/a046d7a0-effe-41c0-850f-de1f4bfa08f2"
+    ],
+    "placeholders": [
+      "{ability.e1.targets}",
+      "{ability.e1}"
+    ]
+  },
+  "2ab0b2d54ad1b1df5a2778f3494f06e7": {
+    "en": "When you Crit, Haste {ability.e1.targets} item {ability.e1} second(s)",
+    "context": [
+      "cards/a046d7a0-effe-41c0-850f-de1f4bfa08f2"
+    ],
+    "placeholders": [
+      "{ability.e1.targets}",
+      "{ability.e1}"
+    ]
+  },
+  "5b2f18fa354ddb62346da3edd6a5e2ea": {
+    "en": "When you Crit, Charge another Food {ability.0} second(s)",
+    "context": [
+      "cards/a046d7a0-effe-41c0-850f-de1f4bfa08f2"
+    ],
+    "placeholders": [
+      "{ability.0}"
+    ]
+  },
+  "dc8ac8df42ee5de06b3f6f50b6df45ba": {
+    "en": "Reduce your Instrument items' Cooldowns by {ability.0}%",
+    "context": [
+      "cards/a09835cb-b648-49da-ab1a-c8d5276bfc11"
+    ],
+    "placeholders": [
+      "{ability.0}"
+    ]
+  },
+  "86ce574dcd02e15f5eea2d540115042b": {
+    "en": "Improve your Instrument items",
+    "context": [
+      "cards/a5bbdcf8-c1a3-41e3-898f-71a1819039d3"
+    ],
+    "placeholders": []
+  },
+  "6dc50eb21c47a86960673b20b75ec3ba": {
+    "en": "When you use a Medium or Large item, this gains +{aura.9}% Damage",
+    "context": [
+      "cards/a7ceeecc-d802-4bbf-9521-afe89db4af45"
+    ],
+    "placeholders": [
+      "{aura.9}"
+    ]
+  },
+  "c8f0bc81ed8cdc0f5fca8e2ef757b6c0": {
+    "en": "Your items have +40% Crit Chance",
+    "context": [
+      "cards/a89a0b5d-bbbb-4818-b002-1ad0156156f7"
+    ],
+    "placeholders": []
+  },
+  "c245c8d9b0d80f8abbc0b5d5af263037": {
+    "en": "The Weapon here has its cooldown reduced by {aura.0}%",
+    "context": [
+      "cards/a9adbfdc-567e-4fe6-a9e3-7eded0bc1279"
+    ],
+    "placeholders": [
+      "{aura.0}"
+    ]
+  },
+  "f5ffa95c0299668a97539dcef92b43fa": {
+    "en": "[DEBUG] Start of Fight Transform",
+    "context": [
+      "cards/a9bdf352-1c50-4cdb-a380-d94a0062df40"
+    ],
+    "placeholders": []
+  },
+  "ba6faf091a90e30f81e20e52e8007cd4": {
+    "en": "Deal damage equal to {aura.9} times the Rage you have gained this fight",
+    "context": [
+      "cards/aa258418-04c1-4fc2-b597-6897fb7544f0"
+    ],
+    "placeholders": [
+      "{aura.9}"
+    ]
+  },
+  "47b2b7bcf3204f02db5d8e5a36145efa": {
+    "en": "Thrifted Threads",
+    "context": [
+      "cards/ac15029f-b733-4284-a122-5b40d866e6a8"
+    ],
+    "placeholders": []
+  },
+  "4c0f46b3a62baa4230ca2b9158bab69d": {
+    "en": "Your leftmost item is an Apparel and has its cooldown reduced by {aura.1}%",
+    "context": [
+      "cards/ac15029f-b733-4284-a122-5b40d866e6a8"
+    ],
+    "placeholders": [
+      "{aura.1}"
+    ]
+  },
+  "c5e2cad8279f14f3241eaf34eb6886a0": {
+    "en": "When you Crit with an adjacent item, Charge {ability.0.targets} other Tech or Instrument {ability.0} second(s)",
+    "context": [
+      "cards/ae2a2609-a2cf-4657-8abb-a73ce3c56d30"
+    ],
+    "placeholders": [
+      "{ability.0.targets}",
+      "{ability.0}"
+    ]
+  },
+  "d4be46c20b9ac4d3ebbcebe1de620ccf": {
+    "en": "Order an Upgrade",
+    "context": [
+      "cards/af3772c6-78a7-4ce6-849d-5f374d12f779"
+    ],
+    "placeholders": []
+  },
+  "ec72bed3254b1dc40c760606f7ee94da": {
+    "en": "Staged Photo",
+    "context": [
+      "cards/af5c9789-2782-443b-bac3-e5724f5e125d"
+    ],
+    "placeholders": []
+  },
+  "f67300f42c140bbd042297c7334dc593": {
+    "en": "Add 2 random Types to all your items",
+    "context": [
+      "cards/af5c9789-2782-443b-bac3-e5724f5e125d"
+    ],
+    "placeholders": []
+  },
+  "ef0f755cc291e25f89bc6d52c17a6677": {
+    "en": "[DEBUG] Poison Merchant",
+    "context": [
+      "cards/b072d8ae-ee3e-44cb-b047-4608e77e3174"
+    ],
+    "placeholders": []
+  },
+  "fe1a0568758201920f08509a4579dcd7": {
+    "en": "This is destroyed after 6 seconds instead",
+    "context": [
+      "cards/b18ca39c-8aa4-40c1-a687-524380b64370"
+    ],
+    "placeholders": []
+  },
+  "20642fc256028372cdb89422ff70a9aa": {
+    "en": "Sitting Duck",
+    "context": [
+      "cards/b18ca39c-8aa4-40c1-a687-524380b64370"
+    ],
+    "placeholders": []
+  },
+  "0feae48f352b039f6c2df086c0f2c89f": {
+    "en": "Your other items cannot be Frozen, Slowed or Destroyed",
+    "context": [
+      "cards/b18ca39c-8aa4-40c1-a687-524380b64370"
+    ],
+    "placeholders": []
+  },
+  "45baaacfa846f854382e235734961c02": {
+    "en": "After {aura.9} seconds in combat, Destroy this",
+    "context": [
+      "cards/b18ca39c-8aa4-40c1-a687-524380b64370"
+    ],
+    "placeholders": [
+      "{aura.9}"
+    ]
+  },
+  "f6515c27bbdf7d55aa810d20fc7ccc13": {
+    "en": "This item's Cooldown is reduced by 1% for each Damage it has",
+    "context": [
+      "cards/b2681448-9dec-47c7-bb4f-58c51830735d"
+    ],
+    "placeholders": []
+  },
+  "00786c6a32228060e2451e22e7694d45": {
+    "en": "[DEBUG] Haste, Slow and Cooldown Merchant",
+    "context": [
+      "cards/b2de7a98-b63a-4c53-81aa-b5e09efc245a"
+    ],
+    "placeholders": []
+  },
+  "fe67c5ddabff34e0af2f80d8949f4701": {
+    "en": "You are Enraged for 1 second longer\nChoose a Gold-tier Sigil",
+    "context": [
+      "cards/b4a51feb-dbea-4300-a409-3e41001b2061"
+    ],
+    "placeholders": []
+  },
+  "7e7504da83608342fe744f7a20711365": {
+    "en": "Gain a second skill",
+    "context": [
+      "cards/b4e92058-ea77-43a6-af6b-858fd73e5750"
+    ],
+    "placeholders": []
+  },
+  "253ac8210857f7dad98cc21a07a6a085": {
+    "en": "When you sell this, get an Enchanted item from another Hero",
+    "context": [
+      "cards/b4e92058-ea77-43a6-af6b-858fd73e5750"
+    ],
+    "placeholders": []
+  },
+  "d6332f190c12a43d1ea514670343ca3d": {
+    "en": "When you sell this, get 2 XP",
+    "context": [
+      "cards/b4e92058-ea77-43a6-af6b-858fd73e5750"
+    ],
+    "placeholders": []
+  },
+  "09698d40063a7aa199e9c8991c43d21d": {
+    "en": "When you complete a quest on any item, gain a Skill from another Hero",
+    "context": [
+      "cards/b4e92058-ea77-43a6-af6b-858fd73e5750"
+    ],
+    "placeholders": []
+  },
+  "3cc72afc76e0d054b05c35717b305eeb": {
+    "en": "When you use an adjacent Toy, Slow an item {ability.e1} second(s)",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "975df4eee6bb81768979813eb256a547": {
+    "en": "When you use an adjacent Toy, Freeze an item {ability.e1} second(s)",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "71019b2f40dc781a5009981b0f087cbe": {
+    "en": "When you use an adjacent Toy, Haste an item {ability.e1} second(s)",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "9ff7776de158728bbe72ff182158328a": {
+    "en": "When you use an adjacent Toy, Shield {ability.e1}",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "1cd36ef2584571e07234d37672da34be": {
+    "en": "When you use an adjacent Toy, Heal {ability.e1}",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "ab471410db25715fb6f30cd756c39cf8": {
+    "en": "When you use an adjacent Toy, Poison {ability.e1}",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "1e3744d7321858f491bd8fac477e2804": {
+    "en": "When you use an adjacent Toy, Burn {ability.e1}",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "82c1287cb547638b1996c0c1868270ff": {
+    "en": "At the start of each day, get a second Toy or Tool Skill",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "placeholders": []
+  },
+  "9428151f9400478a4849faf5891f525c": {
+    "en": "When you use an adjacent Toy, deal {ability.e1} Damage",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "b0f7a4e761505767d38609e4b35e795f": {
+    "en": "When you use an adjacent Toy, Regen {ability.e1}",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "5830daa278ffad5b54016677f3d7ccaa": {
+    "en": "Fridge Art",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "placeholders": []
+  },
+  "ac2955ec155846069ce400f793836ab0": {
+    "en": "Your Small Tools are Toys",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "placeholders": []
+  },
+  "684f08b71601978c7125f8c4841666c7": {
+    "en": "At the start of each day, get a Toy or Tool Skill",
+    "context": [
+      "cards/b67f5d70-cb4f-4446-8947-121b90b8a6bd"
+    ],
+    "placeholders": []
+  },
+  "cb80050253a59f1ea18fa7e3b1ca17d3": {
+    "en": "[DEBUG] Give Tag Test item",
+    "context": [
+      "cards/b7178a2e-f7ea-41d7-92c2-96b3b3e1fb66"
+    ],
+    "placeholders": []
+  },
+  "e5d52d5aa92a2a43fc77bbe947effd4a": {
+    "en": "[DEBUG] Flying Merchant",
+    "context": [
+      "cards/ba7960c6-9352-4795-9844-bdecc25fdb9f"
+    ],
+    "placeholders": []
+  },
+  "fe4da964f0fbad9f77a6b89b20bd9673": {
+    "en": "[DEBUG] Firecrackers",
+    "context": [
+      "cards/bcef1ee3-e3b5-41c9-95bc-402afec5a572"
+    ],
+    "placeholders": []
+  },
+  "d2ba4a364a4d9d3c39ffcff54c39250b": {
+    "en": "This has +{aura.9} for each Aquatic item bought this run [{aura.1}]",
+    "context": [
+      "cards/bdb95fa6-1607-4fd6-a78b-063f826df717"
+    ],
+    "placeholders": [
+      "{aura.9}",
+      "{aura.1}"
+    ]
+  },
+  "1f5643fe5588b698c87d09d2fa246d75": {
+    "en": "Transform into 2 Enchanted Potions from any Hero",
+    "context": [
+      "cards/bef0a78b-b3b4-4e7b-85d3-7c42aca6379f"
+    ],
+    "placeholders": []
+  },
+  "92acde8f77bcfb81aaa832d0639dcd56": {
+    "en": "[DEBUG] Merchant Discount",
+    "context": [
+      "cards/c00377f2-0683-42b4-94a5-db9b9a1eef86"
+    ],
+    "placeholders": []
+  },
+  "3ba0e000723e8f8dd6c31060414308b3": {
+    "en": "When you use a Dragon, Slow an item {ability.e1} second(s)",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "87f77e9295cd154cd98854f65a1716c6": {
+    "en": "When you use a Dragon, Freeze an item {ability.e1} second(s)",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "1782122f478c76212dd1ebade5dd5412": {
+    "en": "When you use a Dragon, Haste it {ability.e1} second(s)",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "2b1be5a5947e262502e692cf7d71e83a": {
+    "en": "When you use a Dragon, Shield {ability.e1}",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "1cc9c44cafa1f35591eccd4fa560a887": {
+    "en": "When you use a Dragon, Heal {ability.e1}",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "a46cea738a1a2e2526ff288179ae4957": {
+    "en": "When you use a Dragon, Poison {ability.e1}",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "d269f64d7ccd3c27cf66cc97e8bccf92": {
+    "en": "When you use a Dragon, Burn {ability.e1}",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "6ed5f96414f1aaba895bdc29966e8a46": {
+    "en": "Your Dragons have 40% Crit Chance",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "placeholders": []
+  },
+  "8e0e12a0b0e1adca0b86669bf4a233e0": {
+    "en": "When you use a Dragon, deal {ability.e1} Damage",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "75ea2dc60fc6f0349bfdbb8cca6886b1": {
+    "en": "When you use a Dragon, Regen {ability.e1}",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "7ec30fa6ecc98068df44966408e33a34": {
+    "en": "A Dragon gains +{ability.1} Multicast",
+    "context": [
+      "cards/c17658e7-3144-4eb3-9fd5-41f73fb7b917"
+    ],
+    "placeholders": [
+      "{ability.1}"
+    ]
+  },
+  "7b18862af0b87391f1fdfc1b6a690142": {
+    "en": "Ice Tongs",
+    "context": [
+      "cards/c49dac47-a0e1-45db-bfe7-e84fe740d9ef"
+    ],
+    "placeholders": []
+  },
+  "721c1b845edd3397e7ccb376b1ce4c14": {
+    "en": "When you use a Chilled item, this gains {ability.1} Damage",
+    "context": [
+      "cards/c49dac47-a0e1-45db-bfe7-e84fe740d9ef"
+    ],
+    "placeholders": [
+      "{ability.1}"
+    ]
+  },
+  "ad85473f088e9af4777bd5e5dd62e369": {
+    "en": "Huge Tank",
+    "context": [
+      "cards/c4c70f57-c51e-4bc4-848c-0f0e7fbddd28"
+    ],
+    "placeholders": []
+  },
+  "1b350d3d21857f6bfd67516ca24d18ea": {
+    "en": "Your items have +Shield equal to {aura.9}% of your Max Health [{aura.0}]",
+    "context": [
+      "cards/c4c70f57-c51e-4bc4-848c-0f0e7fbddd28"
+    ],
+    "placeholders": [
+      "{aura.9}",
+      "{aura.0}"
+    ]
+  },
+  "265445170da695059245625ccdbceae8": {
+    "en": "The Slow item here has its cooldown reduced by {aura.0}%",
+    "context": [
+      "cards/c82b1942-e666-495e-8ed2-54ad13e15c97"
+    ],
+    "placeholders": [
+      "{aura.0}"
+    ]
+  },
+  "206fc6787a5b47762c0b566ded6f4196": {
+    "en": "This and a Tool or Drone start Flying",
+    "context": [
+      "cards/c8daaaa2-e652-465a-8d5b-718c33674f0c"
+    ],
+    "placeholders": []
+  },
+  "f045c03bf5646f0e105781b02f3aed22": {
+    "en": "(if you have a Bushel) Get 2 Silver-tier Truffles",
+    "context": [
+      "cards/cde1b158-1d74-4758-8542-151330fcb1c1"
+    ],
+    "placeholders": []
+  },
+  "aca54f04ea829c3c44f30e1e17c49508": {
+    "en": "When you use an item, gain {ability.2} Regen",
+    "context": [
+      "cards/cdf39547-ab9b-4c90-bfec-db12c0c9a514"
+    ],
+    "placeholders": [
+      "{ability.2}"
+    ]
+  },
+  "6c10d7ec835d833147982748ade997be": {
+    "en": "Aquatic Bought Effect",
+    "context": [
+      "cards/cef03dfe-b415-4c58-a3a9-1a7d3d8fc4ec"
+    ],
+    "placeholders": []
+  },
+  "49052812b0a69a382d42a4f5237f177c": {
+    "en": "[DEBUG] Temporary Enchantment",
+    "context": [
+      "cards/cf9808de-3d2a-4d42-b513-a347edc72431"
+    ],
+    "placeholders": []
+  },
+  "f90aef1a5660079b715de60af31ff8fe": {
+    "en": "[DEBUG] Heal or Regen Merchant",
+    "context": [
+      "cards/cffe0e90-ea71-4ab8-94af-c7c8edb4c4fa"
+    ],
+    "placeholders": []
+  },
+  "60e3e400afcc1f67cceda37a43df91da": {
+    "en": "The Dragons' Hideout",
+    "context": [
+      "cards/d33129a9-5df2-47e5-9b6a-7469743fe5a8"
+    ],
+    "placeholders": []
+  },
+  "f5048af04b3596b76043d40063abd550": {
+    "en": "What happens between gigs?",
+    "context": [
+      "cards/d33129a9-5df2-47e5-9b6a-7469743fe5a8"
+    ],
+    "placeholders": []
+  },
+  "7545ef7ec83200c081add207b06a3f70": {
+    "en": "Haste adjacent items {ability.1} second(s), they gain {ability.2} and {ability.3}",
+    "context": [
+      "cards/d8199e77-6687-4fe7-b6a7-2d3e34145bf3"
+    ],
+    "placeholders": [
+      "{ability.1}",
+      "{ability.2}",
+      "{ability.3}"
+    ]
+  },
+  "2b81ba5f7e3487444b7defa6d902e0ee": {
+    "en": "Poison equal to 20% of this item's Damage",
+    "context": [
+      "cards/d89ab2c6-bd85-4e7e-b32e-95c242fa5358"
+    ],
+    "placeholders": []
+  },
+  "4dc02da2c8b51da5b126cb3cf8ea6304": {
+    "en": "Regen equal to 20% of this item's Damage",
+    "context": [
+      "cards/d89ab2c6-bd85-4e7e-b32e-95c242fa5358"
+    ],
+    "placeholders": []
+  },
+  "244852f73dc416c71cc90d875d71e85e": {
+    "en": "Burn equal to 20% of this item's Damage",
+    "context": [
+      "cards/d89ab2c6-bd85-4e7e-b32e-95c242fa5358"
+    ],
+    "placeholders": []
+  },
+  "a0f088187ff580ee7cc8e3cd4c1ebff0": {
+    "en": "When you Heal or Slow, this gains {ability.2} Value",
+    "context": [
+      "cards/dc43ae7a-a60a-42e7-a019-eb3c89b59a01"
+    ],
+    "placeholders": [
+      "{ability.2}"
+    ]
+  },
+  "9de733b06f2716b1455ae95dae573367": {
+    "en": "When you Shield, an item gains {ability.1}",
+    "context": [
+      "cards/dd913d79-7509-4c8a-b68a-5bf364dc521e"
+    ],
+    "placeholders": [
+      "{ability.1}"
+    ]
+  },
+  "9c9580603688a7bdaa5173cfcc3002c2": {
+    "en": "[DEBUG] Repeatable Quest",
+    "context": [
+      "cards/e19e88e3-9296-4bac-b087-346f1b6d906e"
+    ],
+    "placeholders": []
+  },
+  "2dc285fcd902427618132cbe3d094c5a": {
+    "en": "[DEBUG] Nested Reference Modifier",
+    "context": [
+      "cards/e4b32ed8-b70c-48de-818f-e8201fc64a6e"
+    ],
+    "placeholders": []
+  },
+  "f9d2e7cfcb590dfd78ac7d92ccfda068": {
+    "en": "[DEBUG] Quest item",
+    "context": [
+      "cards/e830607b-0047-437e-9643-6f553e01f89e"
+    ],
+    "placeholders": []
+  },
+  "999090b7d34d9353a38ca370131e75dd": {
+    "en": "Adjacent Shield items have +{aura.1.mod} Multicast",
+    "context": [
+      "cards/e923019b-fd40-487c-85af-edaa930095b8"
+    ],
+    "placeholders": [
+      "{aura.1.mod}"
+    ]
+  },
+  "4d9c74ec6df64c6adcd7c2972e203936": {
+    "en": "[DEBUG] Disable / Destroy",
+    "context": [
+      "cards/eb10d50f-8bfc-4a37-91ab-82f5ae0d3338"
+    ],
+    "placeholders": []
+  },
+  "6c16492bde27f19a82335d455809119f": {
+    "en": "[DEBUG] ActionAnd",
+    "context": [
+      "cards/ebaff06d-8321-45e5-aece-d9b0f0096fde"
+    ],
+    "placeholders": []
+  },
+  "9ad53d5980bcaabaf9dcc05963c06090": {
+    "en": "[DEBUG] Master Mechanic",
+    "context": [
+      "cards/ebeff973-15a3-4eb8-9500-58ac5f45923c"
+    ],
+    "placeholders": []
+  },
+  "dea76ab0ea132da60f44e82f4fc981a3": {
+    "en": "Slumcee",
+    "context": [
+      "cards/eccecbd7-1695-49a8-b82b-6e9e974c634a"
+    ],
+    "placeholders": []
+  },
+  "434032b50f302f7f69c9ad8f9130efb0": {
+    "en": "[SKILL TEMPLATE]",
+    "context": [
+      "cards/edc0d83d-323e-4f3f-af66-ff5fe958387c"
+    ],
+    "placeholders": []
+  },
+  "19135ad9d8f0ff4d726e7092d89b9bda": {
+    "en": "When your Enemy uses their fastest item, Slow an item {ability.e1} second(s)",
+    "context": [
+      "cards/ee318a20-e1a0-4651-a904-a1e6c3939c97"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "d0d876452eafa68c9d9207aefab008d3": {
+    "en": "When your Enemy uses their fastest item, Freeze an item {ability.e1} second(s)",
+    "context": [
+      "cards/ee318a20-e1a0-4651-a904-a1e6c3939c97"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "9be363cded46579523b36862d655e626": {
+    "en": "When your Enemy uses their fastest item, Haste an item {ability.e1} second(s)",
+    "context": [
+      "cards/ee318a20-e1a0-4651-a904-a1e6c3939c97"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "ce738393e20db4f706ea2ca92e3aa335": {
+    "en": "When your Enemy uses their fastest item, Shield equal to this item's Damage",
+    "context": [
+      "cards/ee318a20-e1a0-4651-a904-a1e6c3939c97"
+    ],
+    "placeholders": []
+  },
+  "e24c40a843316ad761e31ebf8bb63145": {
+    "en": "When your Enemy uses their fastest item, Heal equal to this item's Damage",
+    "context": [
+      "cards/ee318a20-e1a0-4651-a904-a1e6c3939c97"
+    ],
+    "placeholders": []
+  },
+  "997f8a6f2dffe4b33b860dc5a48f8493": {
+    "en": "When your Enemy uses their fastest item, Poison equal to 10% of this item's Damage",
+    "context": [
+      "cards/ee318a20-e1a0-4651-a904-a1e6c3939c97"
+    ],
+    "placeholders": []
+  },
+  "054be813b1efd2d9f32f384b8f7488c4": {
+    "en": "When your Enemy uses their fastest item, Burn equal to 10% of this item's Damage",
+    "context": [
+      "cards/ee318a20-e1a0-4651-a904-a1e6c3939c97"
+    ],
+    "placeholders": []
+  },
+  "9805dcb24f86f4da154c05dccd430fdf": {
+    "en": "When your enemy uses their fastest item, your items gain {ability.e1}% Crit Chance",
+    "context": [
+      "cards/ee318a20-e1a0-4651-a904-a1e6c3939c97"
+    ],
+    "placeholders": [
+      "{ability.e1}"
+    ]
+  },
+  "dde61f88b81d2c8e7cb7a7bb5beaae29": {
+    "en": "When your Enemy uses their fastest item, Regen equal to 10% of this item's Damage",
+    "context": [
+      "cards/ee318a20-e1a0-4651-a904-a1e6c3939c97"
+    ],
+    "placeholders": []
+  },
+  "42fd93533408829d29684b8b9eb89794": {
+    "en": "When your enemy uses their fastest item, deal {ability.0} Damage",
+    "context": [
+      "cards/ee318a20-e1a0-4651-a904-a1e6c3939c97"
+    ],
+    "placeholders": [
+      "{ability.0}"
+    ]
+  },
+  "66ad3c61b41d14db3d449bfd2a87cea9": {
+    "en": "This has has double value",
+    "context": [
+      "cards/ee729aab-0107-4f42-91b2-636e252a17fd"
+    ],
+    "placeholders": []
+  },
+  "be3c65bc79b305f872c8dd86820cf8d6": {
+    "en": "Heal equal to this item's damage",
+    "context": [
+      "cards/ee729aab-0107-4f42-91b2-636e252a17fd"
+    ],
+    "placeholders": []
+  },
+  "5f6ca9f83cdbae5108d8018fcc2d9c23": {
+    "en": "Shield equal to this item's damage",
+    "context": [
+      "cards/ee729aab-0107-4f42-91b2-636e252a17fd"
+    ],
+    "placeholders": []
+  },
+  "3ce210be8f2834c06e1ffbd3ff2512c7": {
+    "en": "This gains 3 random Types",
+    "context": [
+      "cards/ee729aab-0107-4f42-91b2-636e252a17fd"
+    ],
+    "placeholders": []
+  },
+  "23293611a7feaf41d30af9014f7ffdca": {
+    "en": "Visit Mr. Tuskari",
+    "context": [
+      "cards/ee729aab-0107-4f42-91b2-636e252a17fd"
+    ],
+    "placeholders": []
+  },
+  "1d8dd7aa0691e3a6ca3b3eca054904d6": {
+    "en": "Jabalian Totem",
+    "context": [
+      "cards/ee729aab-0107-4f42-91b2-636e252a17fd"
+    ],
+    "placeholders": []
+  },
+  "d96e6f6998fc86f5503f96b8f9cea94b": {
+    "en": "Deal {aura.1.mod} Damage for each Type this has",
+    "context": [
+      "cards/ee729aab-0107-4f42-91b2-636e252a17fd"
+    ],
+    "placeholders": [
+      "{aura.1.mod}"
+    ]
+  },
+  "bfe897a6bdac1eb183616a89239ff3f9": {
+    "en": "Your items gain {ability.0}, {ability.1}, {ability.2} and {ability.4}",
+    "context": [
+      "cards/f104a9ab-c8bd-44b9-b08a-5587b77a2215"
+    ],
+    "placeholders": [
+      "{ability.0}",
+      "{ability.1}",
+      "{ability.2}",
+      "{ability.4}"
+    ]
+  },
+  "37db496e83a3c55fc14ab58b18e77a93": {
+    "en": "[EVENT TEMPLATE]",
+    "context": [
+      "cards/f2f973b6-133a-4aed-b020-4c7c52e09871"
+    ],
+    "placeholders": []
+  },
+  "e6c1df00c7f1ef1bcc7e1819a987486b": {
+    "en": "[DEBUG] Replacement Effect",
+    "context": [
+      "cards/f3d410a9-0c04-41f4-a650-271277d07fa3"
+    ],
+    "placeholders": []
+  },
+  "1f980bd6e591326eacf85bcfa2698a11": {
+    "en": "When you Crit, this gains {ability.1}",
+    "context": [
+      "cards/f43844fe-cefa-40c7-ba86-e601c3596064"
+    ],
+    "placeholders": [
+      "{ability.1}"
+    ]
+  },
+  "973c14840a13b46b418a2b42ad1a76b0": {
+    "en": "[DEBUG] Peacewrought",
+    "context": [
+      "cards/f4a7f5d3-73d6-4f08-ab70-6b5ee3309005"
+    ],
+    "placeholders": []
+  },
+  "3e490217df1f755d08682330d516db74": {
+    "en": "Shield {aura.9} for each Chilled item you have",
+    "context": [
+      "cards/f79155e6-d476-4257-a5fc-7e081e7d2f3c"
+    ],
+    "placeholders": [
+      "{aura.9}"
+    ]
+  },
+  "f7348a5f5a7c4a4e1c35b8b0e2076dda": {
+    "en": "Chilled: Chill another item",
+    "context": [
+      "cards/f79155e6-d476-4257-a5fc-7e081e7d2f3c"
+    ],
+    "placeholders": []
+  },
+  "2199384089e6622dc65a2482f2fcc1e0": {
+    "en": "Critical Fashion",
+    "context": [
+      "cards/f9ab4e52-9035-4280-8a01-98c6ed2ce9fe"
+    ],
+    "placeholders": []
+  },
+  "e24940f1f8409f5d9493feed98104dd2": {
+    "en": "Your Apparel have +{aura.0}% Crit Chance",
+    "context": [
+      "cards/f9ab4e52-9035-4280-8a01-98c6ed2ce9fe"
+    ],
+    "placeholders": [
+      "{aura.0}"
+    ]
+  },
+  "997b7f2e41cdfb5e2c8334a929f31fa3": {
+    "en": "[DEBUG] Super Fast Rage Gainer",
+    "context": [
+      "cards/fb331548-c91f-47a8-a39f-e817ed8c1802"
+    ],
+    "placeholders": []
+  },
+  "c5c62b654d7a1bc8e25fd0cf5bbb8ca7": {
+    "en": "All item Cooldowns are increased by {aura.1} seconds",
+    "context": [
+      "cards/fb9bc349-bc38-40f4-a67e-a9c580e1e681"
+    ],
+    "placeholders": [
+      "{aura.1}"
+    ]
+  },
+  "14ecd8fffd35ae737ece6c5294287b79": {
+    "en": "Critical Sound",
+    "context": [
+      "cards/fd2acb3e-c7bb-4485-bdac-76845abddcd2"
+    ],
+    "placeholders": []
+  },
+  "8a5bab779d3798b6d7fc373e001e180b": {
+    "en": "Your Instruments have +{aura.0}% Crit Chance",
+    "context": [
+      "cards/fd2acb3e-c7bb-4485-bdac-76845abddcd2"
+    ],
+    "placeholders": [
+      "{aura.0}"
+    ]
+  },
+  "9ba743f9d1bb8611cf411c51940b50c7": {
+    "en": "[DEBUG] Economic Merchant",
+    "context": [
+      "cards/fe0aff36-c0d4-46ba-81dd-51881891b958"
+    ],
+    "placeholders": []
+  },
+  "3be6115e0df350dff65249e1b3bdd9c7": {
+    "en": "Permanently gain Regen equal to triple your level [{ability.0}]",
+    "context": [
+      "cards/fe756e73-bedb-4700-901f-07ef13b3c512"
+    ],
+    "placeholders": [
+      "{ability.0}"
+    ]
+  }
+}

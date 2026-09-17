@@ -1,0 +1,17 @@
+{
+  "retrieved_utc": "2026-09-17T13:04:23.668536+00:00",
+  "files": {
+    "maintenance.json": {
+      "url": "https://data.playthebazaar.com/static/maintenance.json",
+      "etag": "\"72ad724a0dc445704d3c5245b0472879\"",
+      "last_modified": "Wed, 09 Sep 2026 17:34:30 GMT",
+      "sha256": "07b2bf801c21ff13a24d64e7162ef96e6158fcfc0659cf8cb6363d14e5eaf6de"
+    },
+    "GameData.db.zip": {
+      "url": "https://data.playthebazaar.com/static/GameData.db.zip",
+      "etag": "\"1ed6792573ca24a60c1e8aebb9fcf629\"",
+      "last_modified": "Wed, 16 Sep 2026 15:42:23 GMT",
+      "sha256": "461901dcfd3dc14332bc39333f71a0f93c2fed1dc57bef67a4b45af43cb544ab"
+    }
+  }
+}

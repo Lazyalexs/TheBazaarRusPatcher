@@ -1,0 +1,345 @@
+{
+  "465010b0342258a834c620da6dc299e5": {
+    "en": "[DEBUG] Fate's Fortunes Enchant",
+    "context": [
+      "cards/056bfca5-34c9-4c2a-9357-f1bf8c8a90c2"
+    ],
+    "placeholders": []
+  },
+  "9193d6ea9e6b0109335ba29bcfabfc4a": {
+    "en": "[DEBUG] Enchant",
+    "context": [
+      "cards/0bcc3517-522b-49d9-b5d4-8f86ce414ae2",
+      "cards/0ec20a57-73c4-430e-b7c4-9d7333737aee",
+      "cards/2907e65b-d448-44e8-aa8d-2ae59b972418",
+      "cards/2e6b947b-7f08-4d1f-9524-ca1220fd68d0",
+      "cards/3468d6d0-a5dd-4a70-8214-2771d62d8218",
+      "cards/4988f50f-ee18-45ce-bff5-2bd79ccddecb",
+      "cards/5846d311-02fd-4ec7-a3ee-01f4ba28956d",
+      "cards/6020c1d6-eeb0-49e2-872c-14395ece0196",
+      "cards/772873c4-80ad-4c64-995b-a299cfa1efa3",
+      "cards/88508390-7766-4552-a557-1418b01bb1dc",
+      "cards/a53cc286-58b3-45bc-a2f8-77367f31a470",
+      "cards/aafae2e8-2838-4ca5-920e-ff24f5e860dd",
+      "cards/af968df8-2843-4d13-add4-a1db015ed398",
+      "cards/cc4b1e4a-1128-4530-b551-b2d301684250",
+      "cards/d380bcf3-1773-4de6-a057-3dc29caf8651"
+    ],
+    "placeholders": []
+  },
+  "fd19a44ca1ec1176a58e85fa1e30ea6f": {
+    "en": "[SMALL ITEM TEMPLATE]",
+    "context": [
+      "cards/273b7c90-a4be-4226-b374-94a7c01f07d9"
+    ],
+    "placeholders": []
+  },
+  "a789c140d4a3d302153494f23e64328e": {
+    "en": "[DEBUG] Burn Merchant",
+    "context": [
+      "cards/2f80f1fe-462b-4a8d-8819-d211d11904d1"
+    ],
+    "placeholders": []
+  },
+  "1577de13cfcd04389af7dc7f1a3dec27": {
+    "en": "[DEBUG]  Fortune Cookie",
+    "context": [
+      "cards/3130ec0b-ee54-4bd1-8bf9-706c41066f11"
+    ],
+    "placeholders": []
+  },
+  "ed910826fcfe84875452f785745608ec": {
+    "en": "[DEBUG] Crit Merchant",
+    "context": [
+      "cards/3f99df7b-5c30-4da5-98e4-89ff5409a777"
+    ],
+    "placeholders": []
+  },
+  "f1bb1c9f09a0e13439216b33885cd892": {
+    "en": "[DEBUG] Freeze Merchant",
+    "context": [
+      "cards/4657a8ab-6f39-4ec9-97d3-cfc7d193dabb"
+    ],
+    "placeholders": []
+  },
+  "43aeea56fb2fd19d8a3ea452cf89de04": {
+    "en": "[DEBUG] Day Hour Replacement EncounterStep",
+    "context": [
+      "cards/47c78559-8ff0-483a-824e-857c37505029"
+    ],
+    "placeholders": []
+  },
+  "6e93811f2a76c2026ed9556f1517961e": {
+    "en": "[DEBUG] Time Contraction",
+    "context": [
+      "cards/47f0d440-9fad-4c09-abf6-844c23038b18"
+    ],
+    "placeholders": []
+  },
+  "9f56fa87b5cca90caa227e1a0057150e": {
+    "en": "[DEBUG] Disenchant",
+    "context": [
+      "cards/49763754-9fc7-49dc-b033-977ce8e90fdc"
+    ],
+    "placeholders": []
+  },
+  "f8711d638752dc64eb096c0f1554d48b": {
+    "en": "[ENCOUNTER STEP TEMPLATE]",
+    "context": [
+      "cards/4c160680-5884-49a1-95e3-1357a4377220"
+    ],
+    "placeholders": []
+  },
+  "86628fbf570cea72dfca9b083489c496": {
+    "en": "[DEBUG] Transform",
+    "context": [
+      "cards/4cdcc6d3-a2b1-4358-817a-6ec0fe12051d"
+    ],
+    "placeholders": []
+  },
+  "ceda2dac9db33338c755c25fca6cc420": {
+    "en": "[DEBUG] Arbitrage",
+    "context": [
+      "cards/4f496bdd-a8b5-409e-af06-fca8fed4c46e"
+    ],
+    "placeholders": []
+  },
+  "41c74352037fb656edaa51c2a57fc050": {
+    "en": "[DEBUG] Perm Destroy",
+    "context": [
+      "cards/57e744e0-d797-44a7-9d27-53749b87d8a7"
+    ],
+    "placeholders": []
+  },
+  "4618c727e4c9e14f8720ae7b196d2f16": {
+    "en": "[DEBUG] Self Flying",
+    "context": [
+      "cards/587b9f7a-b8e3-481d-b572-c2a8b4d56330"
+    ],
+    "placeholders": []
+  },
+  "1db7e476ecc50ff5cb558bd91dca5c0e": {
+    "en": "[LARGE ITEM TEMPLATE]",
+    "context": [
+      "cards/599c27bd-2e78-45a6-9390-aeb349a20e29"
+    ],
+    "placeholders": []
+  },
+  "543f10c376bf71620bcaec167837a33b": {
+    "en": "[DEBUG] Hacked Quest Debug",
+    "context": [
+      "cards/5afac9f3-9eb5-44c4-8470-fd7aeff36fb7"
+    ],
+    "placeholders": []
+  },
+  "dde6926babb99a917873bc3cac6fbf6c": {
+    "en": "[DEBUG] Decharge Test",
+    "context": [
+      "cards/5c570e21-cb8a-444c-9155-cd202631091b"
+    ],
+    "placeholders": []
+  },
+  "82bac23ecef4679d66dfa19ccba7bfa0": {
+    "en": "[DEBUG] Weapon and Damage Merchant",
+    "context": [
+      "cards/634ad92f-a1b4-43c6-8e15-3031ffe7dd16"
+    ],
+    "placeholders": []
+  },
+  "43a323a76e7d3ec39fcb77dce2599d30": {
+    "en": "[DEBUG] Streaming Setup",
+    "context": [
+      "cards/6649e756-f7b2-41ee-bbb2-70a4a7247a73"
+    ],
+    "placeholders": []
+  },
+  "026ea543b1d8d2ff1296d1f6730bf46d": {
+    "en": "[DEBUG] Merchant All Item Cost increase",
+    "context": [
+      "cards/673b01a4-da04-47ea-8ee5-ef18c9d8dedf"
+    ],
+    "placeholders": []
+  },
+  "9610740847988effb371907820a91741": {
+    "en": "[DEBUG] Gland",
+    "context": [
+      "cards/692e3e47-5bbf-438c-a9c6-af1e2e7d0a05"
+    ],
+    "placeholders": []
+  },
+  "d7f76efdb4301174cd0fbb0871b70ac2": {
+    "en": "[DEBUG] Shield and Heakth Merchant",
+    "context": [
+      "cards/81ad4a6f-a953-4a10-bdb9-f9a857579aa4"
+    ],
+    "placeholders": []
+  },
+  "f5b9c04052f2fc12d7607bb559c2d14e": {
+    "en": "[DEBUG] Other Flying",
+    "context": [
+      "cards/852be134-3d39-4ed1-aa80-7d7e7c10a415"
+    ],
+    "placeholders": []
+  },
+  "fc30477664efde07e9e4562b2463fff4": {
+    "en": "[DEBUG] End of Fight Transform",
+    "context": [
+      "cards/8c0cd7f5-d7ab-414b-825e-cc850b273aff"
+    ],
+    "placeholders": []
+  },
+  "6adb8fda65f0e7fb5b727b8e1f94ad31": {
+    "en": "[MEDIUM ITEM TEMPLATE]",
+    "context": [
+      "cards/a031a51e-7b07-4055-adff-a421d2ee8943"
+    ],
+    "placeholders": []
+  },
+  "f5ffa95c0299668a97539dcef92b43fa": {
+    "en": "[DEBUG] Start of Fight Transform",
+    "context": [
+      "cards/a9bdf352-1c50-4cdb-a380-d94a0062df40"
+    ],
+    "placeholders": []
+  },
+  "ef0f755cc291e25f89bc6d52c17a6677": {
+    "en": "[DEBUG] Poison Merchant",
+    "context": [
+      "cards/b072d8ae-ee3e-44cb-b047-4608e77e3174"
+    ],
+    "placeholders": []
+  },
+  "00786c6a32228060e2451e22e7694d45": {
+    "en": "[DEBUG] Haste, Slow and Cooldown Merchant",
+    "context": [
+      "cards/b2de7a98-b63a-4c53-81aa-b5e09efc245a"
+    ],
+    "placeholders": []
+  },
+  "cb80050253a59f1ea18fa7e3b1ca17d3": {
+    "en": "[DEBUG] Give Tag Test item",
+    "context": [
+      "cards/b7178a2e-f7ea-41d7-92c2-96b3b3e1fb66"
+    ],
+    "placeholders": []
+  },
+  "e5d52d5aa92a2a43fc77bbe947effd4a": {
+    "en": "[DEBUG] Flying Merchant",
+    "context": [
+      "cards/ba7960c6-9352-4795-9844-bdecc25fdb9f"
+    ],
+    "placeholders": []
+  },
+  "fe4da964f0fbad9f77a6b89b20bd9673": {
+    "en": "[DEBUG] Firecrackers",
+    "context": [
+      "cards/bcef1ee3-e3b5-41c9-95bc-402afec5a572"
+    ],
+    "placeholders": []
+  },
+  "92acde8f77bcfb81aaa832d0639dcd56": {
+    "en": "[DEBUG] Merchant Discount",
+    "context": [
+      "cards/c00377f2-0683-42b4-94a5-db9b9a1eef86"
+    ],
+    "placeholders": []
+  },
+  "49052812b0a69a382d42a4f5237f177c": {
+    "en": "[DEBUG] Temporary Enchantment",
+    "context": [
+      "cards/cf9808de-3d2a-4d42-b513-a347edc72431"
+    ],
+    "placeholders": []
+  },
+  "f90aef1a5660079b715de60af31ff8fe": {
+    "en": "[DEBUG] Heal or Regen Merchant",
+    "context": [
+      "cards/cffe0e90-ea71-4ab8-94af-c7c8edb4c4fa"
+    ],
+    "placeholders": []
+  },
+  "9c9580603688a7bdaa5173cfcc3002c2": {
+    "en": "[DEBUG] Repeatable Quest",
+    "context": [
+      "cards/e19e88e3-9296-4bac-b087-346f1b6d906e"
+    ],
+    "placeholders": []
+  },
+  "2dc285fcd902427618132cbe3d094c5a": {
+    "en": "[DEBUG] Nested Reference Modifier",
+    "context": [
+      "cards/e4b32ed8-b70c-48de-818f-e8201fc64a6e"
+    ],
+    "placeholders": []
+  },
+  "f9d2e7cfcb590dfd78ac7d92ccfda068": {
+    "en": "[DEBUG] Quest item",
+    "context": [
+      "cards/e830607b-0047-437e-9643-6f553e01f89e"
+    ],
+    "placeholders": []
+  },
+  "4d9c74ec6df64c6adcd7c2972e203936": {
+    "en": "[DEBUG] Disable / Destroy",
+    "context": [
+      "cards/eb10d50f-8bfc-4a37-91ab-82f5ae0d3338"
+    ],
+    "placeholders": []
+  },
+  "6c16492bde27f19a82335d455809119f": {
+    "en": "[DEBUG] ActionAnd",
+    "context": [
+      "cards/ebaff06d-8321-45e5-aece-d9b0f0096fde"
+    ],
+    "placeholders": []
+  },
+  "9ad53d5980bcaabaf9dcc05963c06090": {
+    "en": "[DEBUG] Master Mechanic",
+    "context": [
+      "cards/ebeff973-15a3-4eb8-9500-58ac5f45923c"
+    ],
+    "placeholders": []
+  },
+  "434032b50f302f7f69c9ad8f9130efb0": {
+    "en": "[SKILL TEMPLATE]",
+    "context": [
+      "cards/edc0d83d-323e-4f3f-af66-ff5fe958387c"
+    ],
+    "placeholders": []
+  },
+  "37db496e83a3c55fc14ab58b18e77a93": {
+    "en": "[EVENT TEMPLATE]",
+    "context": [
+      "cards/f2f973b6-133a-4aed-b020-4c7c52e09871"
+    ],
+    "placeholders": []
+  },
+  "e6c1df00c7f1ef1bcc7e1819a987486b": {
+    "en": "[DEBUG] Replacement Effect",
+    "context": [
+      "cards/f3d410a9-0c04-41f4-a650-271277d07fa3"
+    ],
+    "placeholders": []
+  },
+  "973c14840a13b46b418a2b42ad1a76b0": {
+    "en": "[DEBUG] Peacewrought",
+    "context": [
+      "cards/f4a7f5d3-73d6-4f08-ab70-6b5ee3309005"
+    ],
+    "placeholders": []
+  },
+  "997b7f2e41cdfb5e2c8334a929f31fa3": {
+    "en": "[DEBUG] Super Fast Rage Gainer",
+    "context": [
+      "cards/fb331548-c91f-47a8-a39f-e817ed8c1802"
+    ],
+    "placeholders": []
+  },
+  "9ba743f9d1bb8611cf411c51940b50c7": {
+    "en": "[DEBUG] Economic Merchant",
+    "context": [
+      "cards/fe0aff36-c0d4-46ba-81dd-51881891b958"
+    ],
+    "placeholders": []
+  }
+}

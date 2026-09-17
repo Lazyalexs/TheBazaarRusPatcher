@@ -1,0 +1,13 @@
+{
+  "source_keys": 8083,
+  "patch_entries": 16936,
+  "additions": 231,
+  "repairs": 119,
+  "missing_keys": 47,
+  "missing_non_debug": 0,
+  "placeholder_mismatches": 0,
+  "glossary_missing": [],
+  "glossary_placeholder_mismatches": [],
+  "delta_errors": [],
+  "limitation": "Key presence and syntax only; not a full semantic or in-game UI audit."
+}
