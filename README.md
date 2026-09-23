@@ -1,88 +1,64 @@
 # Русификатор The Bazaar
 
-Неофициальный фанатский перевод **The Bazaar** на русский язык.
+Неофициальный фанатский перевод The Bazaar на русский язык для Steam и Tempo Launcher.
 
-💬 **[Discord-сообщество](https://discord.gg/FH8z7D3xe7)** — вопросы по установке, баг-репорты, предложения по переводу.
+## Скачать свежую версию
 
-Поддерживаются обе версии игры — Steam и Tempo Launcher. Скачайте нужный патчер в [Releases](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/latest):
+**[v0.7.0-preview.1 — для патча игры 18.3](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/tag/v0.7.0-preview.1)** · опубликована 17 сентября 2026 года.
 
-| Файл | Для какой версии |
+| Ваша версия игры | Скачать патчер |
 |---|---|
-| `TheBazaarRusPatcher-Steam.exe` | Steam-копия The Bazaar |
-| `TheBazaarRusPatcher-Tempo.exe` | Tempo Launcher (beta) |
+| Steam | [TheBazaarRusPatcher-Steam.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.0-preview.1/TheBazaarRusPatcher-Steam.exe) |
+| Tempo Launcher | [TheBazaarRusPatcher-Tempo.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.0-preview.1/TheBazaarRusPatcher-Tempo.exe) |
 
-Имя файла сам определяет какую копию игры патчить — флаги указывать не нужно. Бинарник самодостаточный (.NET 8 включён), просто скачайте и запустите.
+Это **предварительная версия**: смысловая вычитка и проверка в игре ещё не завершены. В блоке GitHub Latest отображается более старая стабильная v0.6.2. Для свежей версии используйте ссылки выше.
+
+[Все релизы](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases) · [Изменения этой версии](docs/releases/v0.7.0-preview.1.md) · [Discord: помощь и обратная связь](https://discord.gg/FH8z7D3xe7)
+
+## Состояние перевода
+
+В опубликованной v0.7.0-preview.1 — 16 936 записей перевода: добавлена 231 строка, исправлены 119 несовпадений параметров и добавлены 14 записей глоссария.
+
+**Известные ограничения:**
+
+- В переводе ещё встречаются неверные названия, ошибки согласования и непереведённые элементы интерфейса. Полное качество перевода не подтверждено.
+- Пункт «Русский» может отсутствовать: игра обновляет список доступных языков с сервера, перезаписывая локальное изменение. Повторная установка не гарантирует устранение этой проблемы.
+- Обновления игры могут перезаписать изменённые файлы. 47 служебных DEBUG/шаблонных строк снимка 18.3 оставлены на английском.
+- Локальная работа над следующей версией не входит в опубликованные EXE. Ориентируйтесь на описание конкретного релиза.
 
 ## Установка
 
-1. Закройте The Bazaar и лаунчер (Steam или Tempo).
-2. Скачайте нужный `.exe` из последнего релиза.
-3. Двойной клик — откроется консольное меню, выберите пункт 1 (установить).
+1. Закройте The Bazaar и лаунчер.
+2. Скачайте EXE для своего лаунчера из таблицы выше. Устанавливать .NET отдельно не нужно.
+3. Запустите патчер и выберите пункт 1 — установку.
+4. Запустите игру через лаунчер. Если «Русский» доступен в Settings → Language, выберите его.
 
-Без меню, одной командой:
+Если языка нет или перевод работает частично, сообщите об этом в Discord, приложив скриншот и результат `--check`.
 
-```powershell
-.\TheBazaarRusPatcher-Steam.exe --install --yes
-# или
-.\TheBazaarRusPatcher-Tempo.exe --install --yes
-```
-
-После установки перезапустите игру **через лаунчер** (не через ярлык на рабочем столе). В меню **Settings → Language** выберите «Русский».
-
-## Что переведено
-
-- **16 705 строк** в локализационной базе `ru-RU.bytes` (актуально для патча игры 17.2);
-- описания всех карт, тултипов и испытаний (в `cards.json`, `tooltips.json`, `challenges.json`);
-- BLOB-данные в `GameData.db` (cards, challenges, tooltips, monsters);
-- внутриигровой глоссарий терминов (`Burn → Поджог`, `Income → Доход`, `Charge → Зарядить`, и т.д.);
-- основные UI-элементы, главное меню, настройки, экраны побед/поражений;
-- **«Русский» добавлен в список языков** в настройках игры.
-
-Покрытие переводов **100%** (7 956 из 7 956 уникальных hash в `GameData.db` патча 17.2).
+Перед изменением файлов патчер создаёт резервные копии в `.rus_patch_backups/`. Для отката используйте `--restore`.
 
 ## Команды
 
 ```powershell
 .\TheBazaarRusPatcher-Steam.exe                  # интерактивное меню
-.\TheBazaarRusPatcher-Steam.exe --install --yes  # установить без подтверждения
-.\TheBazaarRusPatcher-Steam.exe --check          # проверить состояние, не менять файлы
-.\TheBazaarRusPatcher-Steam.exe --paths          # показать какие пути найдены
-.\TheBazaarRusPatcher-Steam.exe --restore        # откатить последний бэкап
-.\TheBazaarRusPatcher-Steam.exe --game-path "C:\Games\The Bazaar\..." # явный путь
+.\TheBazaarRusPatcher-Steam.exe --install --yes  # установка без подтверждения
+.\TheBazaarRusPatcher-Steam.exe --check          # проверка без изменения файлов
+.\TheBazaarRusPatcher-Steam.exe --paths          # найденные пути
+.\TheBazaarRusPatcher-Steam.exe --restore        # восстановление резервной копии
 ```
 
-Все опции одинаково работают и для Tempo-версии. Флаги `--steam-only` / `--tempo-only` можно указать явно если нужно патчить вручную (но обычно имя бинарника уже это решает).
+Для Tempo замените имя файла на `TheBazaarRusPatcher-Tempo.exe`. Имя EXE определяет целевой лаунчер. Патчер также работает с общим кэшем игры: `--game-path` не является режимом изолированного тестирования.
 
-## Архитектура
+## Структура репозитория
 
-- `Patch/translation-patch.json` (16 705 entries) — основная таблица переводов, встроена в exe как ресурс.
-- `Patch/gamedata-tooltips.json` (123 термина) — переводы tag/keyword для таблицы `tooltips` в `GameData.db`.
-- Патчер обрабатывает:
-  - JSON-файлы в `StreamingAssets/` и LocalLow кэше (`cards.json`, `tooltips.json`, `challenges.json`);
-  - SQLite `translations/ru-RU.bytes` — основной источник локализации игры;
-  - SQLite `GameData.db` — BLOB-таблицы с описаниями карт/испытаний/монстров и глоссарием tooltips;
-  - `maintenance.json` — добавляет `ru-RU` в список локалей чтобы появился пункт «Русский» в настройках.
-- Файл `manifest.json` **не трогается** — игра при запуске сравнивает локальный ETag с CDN. Сохранение CDN-ETag заставляет сервер ответить `304 Not Modified` и наш патч переживает запуск.
-- Перед изменением каждого файла создаётся бэкап в `.rus_patch_backups/` рядом с файлом — `--restore` откатывает последний.
-
-## Обратная связь
-
-- **Discord:** [discord.gg/FH8z7D3xe7](https://discord.gg/FH8z7D3xe7) — обсуждение, помощь с установкой, баг-репорты.
-- **Email:** `adeptas3@gmail.com` — для длинных багов с приложениями.
-
-При репорте бага полезно приложить:
-
-- скриншот карты/тултипа/меню с английским текстом;
-- какая версия игры (Steam / Tempo);
-- что выводит `.\TheBazaarRusPatcher-XXX.exe --check`.
-
-## Важно
-
-Русификатор не связан с Tempo, Tempo Storm, AVY Entertainment или разработчиками The Bazaar.
-
-Перед заменой файлов патчер создаёт бэкап (`.rus_patch_backups/<timestamp>/`). Откат — `--restore`.
-
-См. также: [DISCLAIMER.md](DISCLAIMER.md), [CONTACT_RIGHTS_HOLDER.md](CONTACT_RIGHTS_HOLDER.md).
+| Путь | Назначение |
+|---|---|
+| `Program.cs` | Установка, проверка и восстановление файлов |
+| `Patch/` | Ресурсы переводов, встраиваемые в EXE |
+| `tools-extract/` | Извлечение оригиналов, подготовка и проверка переводов |
+| `docs/releases/` | Архив описаний релизов |
+| `docs/audits/` | Технические отчёты об обновлениях |
+| `build.ps1` | Сборка EXE для Steam и Tempo |
 
 ## Для разработчиков
 
@@ -92,13 +68,16 @@
 .\build.ps1
 ```
 
-Производит `dist\TheBazaarRusPatcher-Tempo.exe` и `dist\TheBazaarRusPatcher-Steam.exe`. Тот же бинарник, переименован — каждый автоматически выбирает целевой лаунчер по своему имени файла.
+Результат: `dist/TheBazaarRusPatcher-Steam.exe` и `dist/TheBazaarRusPatcher-Tempo.exe`. Скрипт пересоздаёт выходные каталоги сборки; не храните в них единственные копии файлов.
 
-Pipeline переводов (в `tools-extract/`):
+Перевод встроен в исполняемый файл. Изменение JSON в репозитории само по себе не обновляет уже скачанный патчер. Автоматическая проверка параметров строк не заменяет смысловую вычитку и проверку интерфейса в игре.
 
-1. `extract.cs` — извлекает все `{Key, Text}` пары из game data;
-2. `diff.cs` — сравнивает с текущим `ru-RU.bytes`, выдаёт список непереведённых hash;
-3. `translate.py` — пакетный pattern-translator с глоссарием и postprocess-правилами (падежи);
-4. `manual-additions.py` — ручные переводы для строк которые pattern не покрыл;
-5. `merge.py` — встраивает новые `(hash, text)` rows в `ru-RU.bytes` и в `Patch/translation-patch.json`;
-6. `postprocess-all.py` — применяет падежные правила ко всем существующим entries.
+## Обратная связь и права
+
+[Discord](https://discord.gg/FH8z7D3xe7) · Email: `adeptas3@gmail.com`.
+
+Для сообщения об ошибке приложите скриншот, версию игры и патчера, используемый лаунчер и вывод `--check`. Не публикуйте полные игровые логи без удаления данных авторизации.
+
+Проект не связан с Tempo, Tempo Storm, AVY Entertainment или разработчиками The Bazaar.
+
+[Отказ от ответственности](DISCLAIMER.md) · [Правообладателям](CONTACT_RIGHTS_HOLDER.md) · [Лицензия](LICENSE)
