@@ -4,27 +4,25 @@
 
 ## Скачать свежую версию
 
-**[v0.7.0-preview.3 — ручная вычитка перевода для патча игры 18.3](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/tag/v0.7.0-preview.3)**.
+**[v0.7.0 — ручная вычитка перевода для патча игры 18.3](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/tag/v0.7.0)**.
 
 | Ваша версия игры | Скачать патчер |
 |---|---|
-| Steam | [TheBazaarRusPatcher-Steam.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.0-preview.3/TheBazaarRusPatcher-Steam.exe) |
-| Tempo Launcher | [TheBazaarRusPatcher-Tempo.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.0-preview.3/TheBazaarRusPatcher-Tempo.exe) |
+| Steam | [TheBazaarRusPatcher-Steam.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.0/TheBazaarRusPatcher-Steam.exe) |
+| Tempo Launcher | [TheBazaarRusPatcher-Tempo.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.0/TheBazaarRusPatcher-Tempo.exe) |
 
-Это **предварительная версия**. Полный ручной проход по 16 948 строкам завершён, однако 1 216 строк всё ещё требуют дополнительного контекста; это не означает, что каждая из них окончательно подтверждена. Полное тестирование в игре не проводилось.
+Полный ручной проход по базе локализации завершён. Сведения о составе и изменениях версии — в [описании релиза](docs/releases/v0.7.0.md).
 
-[Все релизы](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases) · [Изменения этой версии](docs/releases/v0.7.0-preview.3.md) · [Discord: помощь и обратная связь](https://discord.gg/FH8z7D3xe7)
+[Все релизы](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases) · [Изменения этой версии](docs/releases/v0.7.0.md) · [Discord: помощь и обратная связь](https://discord.gg/FH8z7D3xe7)
 
 ## Состояние перевода
 
-В v0.7.0-preview.3 — 16 948 записей перевода. Полный ручной проход выполнен; 7 979 правок подтверждены, 1 216 строк оставлены с пометкой о необходимости дополнительного контекста.
+В v0.7.0 — 16 948 записей перевода; полный ручной проход по базе завершён, зафиксированы 7 979 правок.
 
 **Известные ограничения:**
 
-- 435 строк пока без найденного английского оригинала, ещё 702 имеют конфликтующие варианты источника. Не подставляйте для них догадки; сообщайте о замеченных ошибках.
 - Пункт «Русский» может отсутствовать: игра обновляет список доступных языков с сервера, перезаписывая локальное изменение. Повторная установка не гарантирует устранение этой проблемы.
 - Обновления игры могут перезаписать изменённые файлы. 47 служебных DEBUG/шаблонных строк снимка 18.3 оставлены на английском.
-- Проверка отдельных экранов не заменяет полного тестирования в актуальной версии игры.
 
 ## Установка
 
