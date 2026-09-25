@@ -353,8 +353,8 @@ void PatchCache(string root, string stamp, bool dryRun)
 // maintenance.json has a "status.locales" array of {id, displayName} entries.
 // The in-game Settings → Language picker is populated from this list. Without
 // ru-RU here the user can't select Russian, so we inject it. The game's CDN
-// ETag for maintenance.json is preserved in manifest.json (see PatchCache
-// above), so the conditional GET on launch returns 304 and our edit survives.
+// ETag is preserved, but a fresh server response replaces this file. This is
+// a cache-only change, NOT a persistent registration in the runtime picker.
 void EnsureRussianLocaleInMaintenance(string root, string stamp, bool dryRun)
 {
     var path = Path.Combine(root, "maintenance.json");
@@ -382,7 +382,7 @@ void EnsureRussianLocaleInMaintenance(string root, string stamp, bool dryRun)
             && entry["id"]?.GetValueKind() == JsonValueKind.String
             && entry["id"]!.GetValue<string>().Equals("ru-RU", StringComparison.OrdinalIgnoreCase))
         {
-            Console.WriteLine("  maintenance.json: ru-RU уже в списке локалей.");
+            Console.WriteLine("  maintenance.json: ru-RU есть в локальном кэше; сервер может заменить список при запуске.");
             return;
         }
     }
@@ -400,7 +400,7 @@ void EnsureRussianLocaleInMaintenance(string root, string stamp, bool dryRun)
         WriteIndented = true,
         Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
     }));
-    Console.WriteLine("  maintenance.json: добавлена локаль ru-RU (\"Русский\").");
+    Console.WriteLine("  maintenance.json: ru-RU добавлена только в кэш; появление в меню после загрузки с сервера не гарантировано.");
 }
 
 void PatchStreamingAssets(string root, string stamp, bool dryRun)

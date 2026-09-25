@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <AssemblyName>TheBazaarRusPatcher</AssemblyName>
     <RootNamespace>TheBazaarRusPatcher</RootNamespace>
-    <Version>0.7.0-preview.1</Version>
+    <Version>0.7.0-preview.3</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,6 +19,7 @@
          can slip Debug AssemblyInfo into a Release publish. Belt-and-braces: -->
     <Compile Remove="obj\**\*.cs" />
     <Compile Remove="bin\**\*.cs" />
+    <Compile Remove="dist\**\*.cs" />
     <!-- Sibling helper projects (probe/extract/etc.) live in tools-*/ folders
          with their own csproj — their .cs files must NOT be compiled into the
          main patcher. Without this, every additional Main() leaks into the

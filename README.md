@@ -4,27 +4,27 @@
 
 ## Скачать свежую версию
 
-**[v0.7.0-preview.1 — для патча игры 18.3](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/tag/v0.7.0-preview.1)** · опубликована 17 сентября 2026 года.
+**[v0.7.0-preview.3 — ручная вычитка перевода для патча игры 18.3](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/tag/v0.7.0-preview.3)**.
 
 | Ваша версия игры | Скачать патчер |
 |---|---|
-| Steam | [TheBazaarRusPatcher-Steam.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.0-preview.1/TheBazaarRusPatcher-Steam.exe) |
-| Tempo Launcher | [TheBazaarRusPatcher-Tempo.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.0-preview.1/TheBazaarRusPatcher-Tempo.exe) |
+| Steam | [TheBazaarRusPatcher-Steam.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.0-preview.3/TheBazaarRusPatcher-Steam.exe) |
+| Tempo Launcher | [TheBazaarRusPatcher-Tempo.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.0-preview.3/TheBazaarRusPatcher-Tempo.exe) |
 
-Это **предварительная версия**: смысловая вычитка и проверка в игре ещё не завершены. В блоке GitHub Latest отображается более старая стабильная v0.6.2. Для свежей версии используйте ссылки выше.
+Это **предварительная версия**. Полный ручной проход по 16 948 строкам завершён, однако 1 216 строк всё ещё требуют дополнительного контекста; это не означает, что каждая из них окончательно подтверждена. Полное тестирование в игре не проводилось.
 
-[Все релизы](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases) · [Изменения этой версии](docs/releases/v0.7.0-preview.1.md) · [Discord: помощь и обратная связь](https://discord.gg/FH8z7D3xe7)
+[Все релизы](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases) · [Изменения этой версии](docs/releases/v0.7.0-preview.3.md) · [Discord: помощь и обратная связь](https://discord.gg/FH8z7D3xe7)
 
 ## Состояние перевода
 
-В опубликованной v0.7.0-preview.1 — 16 936 записей перевода: добавлена 231 строка, исправлены 119 несовпадений параметров и добавлены 14 записей глоссария.
+В v0.7.0-preview.3 — 16 948 записей перевода. Полный ручной проход выполнен; 7 979 правок подтверждены, 1 216 строк оставлены с пометкой о необходимости дополнительного контекста.
 
 **Известные ограничения:**
 
-- В переводе ещё встречаются неверные названия, ошибки согласования и непереведённые элементы интерфейса. Полное качество перевода не подтверждено.
+- 435 строк пока без найденного английского оригинала, ещё 702 имеют конфликтующие варианты источника. Не подставляйте для них догадки; сообщайте о замеченных ошибках.
 - Пункт «Русский» может отсутствовать: игра обновляет список доступных языков с сервера, перезаписывая локальное изменение. Повторная установка не гарантирует устранение этой проблемы.
 - Обновления игры могут перезаписать изменённые файлы. 47 служебных DEBUG/шаблонных строк снимка 18.3 оставлены на английском.
-- Локальная работа над следующей версией не входит в опубликованные EXE. Ориентируйтесь на описание конкретного релиза.
+- Проверка отдельных экранов не заменяет полного тестирования в актуальной версии игры.
 
 ## Установка
 
