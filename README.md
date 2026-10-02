@@ -4,20 +4,20 @@
 
 ## Скачать свежую версию
 
-**[v0.7.1 — уточнение терминологии тегов карточек](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/tag/v0.7.1)**.
+**[v0.7.2 — исправления по результатам проверки карточек](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/tag/v0.7.2)**.
 
 | Ваша версия игры | Скачать патчер |
 |---|---|
-| Steam | [TheBazaarRusPatcher-Steam.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.1/TheBazaarRusPatcher-Steam.exe) |
-| Tempo Launcher | [TheBazaarRusPatcher-Tempo.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.1/TheBazaarRusPatcher-Tempo.exe) |
+| Steam | [TheBazaarRusPatcher-Steam.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.2/TheBazaarRusPatcher-Steam.exe) |
+| Tempo Launcher | [TheBazaarRusPatcher-Tempo.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.2/TheBazaarRusPatcher-Tempo.exe) |
 
-Полный ручной проход по базе локализации завершён. Сведения о составе и изменениях версии — в [описании релиза](docs/releases/v0.7.1.md).
+Сведения о составе и изменениях версии — в [описании релиза](docs/releases/v0.7.2.md).
 
-[Все релизы](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases) · [Изменения этой версии](docs/releases/v0.7.1.md) · [Discord: помощь и обратная связь](https://discord.gg/FH8z7D3xe7)
+[Все релизы](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases) · [Изменения этой версии](docs/releases/v0.7.2.md) · [Discord: помощь и обратная связь](https://discord.gg/FH8z7D3xe7)
 
 ## Состояние перевода
 
-В v0.7.0 — 16 948 записей перевода; полный ручной проход по базе завершён, зафиксированы 7 979 правок.
+В патч включено 16 948 записей перевода.
 
 **Известные ограничения:**
 
