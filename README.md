@@ -4,20 +4,20 @@
 
 ## Скачать свежую версию
 
-**[v0.7.3 — Season 19, интерфейс и уточнение тегов](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/tag/v0.7.3)**.
+**[v0.7.4 — исправление кнопки в меню паузы](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/tag/v0.7.4)**.
 
 | Ваша версия игры | Скачать патчер |
 |---|---|
-| Steam | [TheBazaarRusPatcher-Steam.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.3/TheBazaarRusPatcher-Steam.exe) |
-| Tempo Launcher | [TheBazaarRusPatcher-Tempo.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.3/TheBazaarRusPatcher-Tempo.exe) |
+| Steam | [TheBazaarRusPatcher-Steam.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.4/TheBazaarRusPatcher-Steam.exe) |
+| Tempo Launcher | [TheBazaarRusPatcher-Tempo.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.4/TheBazaarRusPatcher-Tempo.exe) |
 
-Сведения о составе и изменениях версии — в [описании релиза](docs/releases/v0.7.3.md).
+Сведения о составе и изменениях версии — в [описании релиза](docs/releases/v0.7.4.md).
 
-[Все релизы](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases) · [Изменения этой версии](docs/releases/v0.7.3.md) · [Discord: помощь и обратная связь](https://discord.gg/FH8z7D3xe7)
+[Все релизы](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases) · [Изменения этой версии](docs/releases/v0.7.4.md) · [Discord: помощь и обратная связь](https://discord.gg/FH8z7D3xe7)
 
 ## Состояние перевода
 
-В патч включено 17 299 записей перевода. Версия 0.7.3 адаптирована к данным Season 19: добавлены 306 переводов игровых данных и 45 интерфейсных строк, уточнены подписи меню и теги.
+В патч включено 17 299 записей перевода. Версия 0.7.4 сохраняет адаптацию к данным Season 19 из v0.7.3 и исправляет подпись кнопки сдачи в меню паузы на «Сдаться».
 
 **Известные ограничения:**
 
