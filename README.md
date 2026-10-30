@@ -4,20 +4,20 @@
 
 ## Скачать свежую версию
 
-**[v0.7.5 — октябрьское обновление и исправления карточек](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/tag/v0.7.5)**.
+**[v0.7.6 — обновление перевода и вычитка](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/tag/v0.7.6)**.
 
 | Ваша версия игры | Скачать патчер |
 |---|---|
-| Steam | [TheBazaarRusPatcher-Steam.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.5/TheBazaarRusPatcher-Steam.exe) |
-| Tempo Launcher | [TheBazaarRusPatcher-Tempo.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.5/TheBazaarRusPatcher-Tempo.exe) |
+| Steam | [TheBazaarRusPatcher-Steam.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.6/TheBazaarRusPatcher-Steam.exe) |
+| Tempo Launcher | [TheBazaarRusPatcher-Tempo.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.6/TheBazaarRusPatcher-Tempo.exe) |
 
-Сведения о составе и изменениях версии — в [описании релиза](docs/releases/v0.7.5.md).
+Сведения о составе и изменениях версии — в [описании релиза](docs/releases/v0.7.6.md).
 
-[Все релизы](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases) · [Изменения этой версии](docs/releases/v0.7.5.md) · [Discord: помощь и обратная связь](https://discord.gg/FH8z7D3xe7)
+[Все релизы](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases) · [Изменения этой версии](docs/releases/v0.7.6.md) · [Discord: помощь и обратная связь](https://discord.gg/FH8z7D3xe7)
 
 ## Состояние перевода
 
-В патч включено 17 326 записей перевода. Версия 0.7.5 добавляет 26 вручную вычитанных описаний из октябрьского обновления, переводит титул «С самого начала» и исправляет общий шаблон характеристик предметов: значок яда больше не сопровождается ошибочной подписью об уроне. Исправления предыдущих версий сохранены.
+В патч включено 17 392 записи перевода. Версия 0.7.6 добавляет 66 строк и уточняет переводы предметов, эффектов и игровых условий. Вычитка продолжается; отдельные случаи требуют дополнительной проверки в игре.
 
 **Известные ограничения:**
 
