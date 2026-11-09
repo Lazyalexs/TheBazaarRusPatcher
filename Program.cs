@@ -1,4 +1,5 @@
 using System.Reflection;
+using System.IO.Compression;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
@@ -251,7 +252,7 @@ void InstallOrCheck(bool dryRun)
                 PatchStreamingAssets(target.Root, stamp, dryRun);
             }
         }
-        catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or SqliteException)
+        catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or SqliteException or InvalidDataException)
         {
             // The most common cause is a file held by the running game / launcher.
             // Don't abort the whole install — log this target and try the next.
@@ -332,13 +333,14 @@ void PatchCache(string root, string stamp, bool dryRun)
     PatchTranslationDatabases(root, stamp, dryRun);
     PatchDataJsonFiles(root, stamp, dryRun);
     PatchGameDataDatabaseIfPresent(root, stamp, dryRun);
+    PatchCachedGameDataArchiveIfPresent(root, stamp, dryRun);
     EnsureRussianLocaleInMaintenance(root, stamp, dryRun);
 
     // manifest.json's ETags are sent by the game in If-None-Match to the
     // Tempo Storm CDN on every launch. As long as those ETags match what
     // the CDN currently has, the server returns 304 and the game keeps the
-    // local file untouched — even if the file's actual MD5 no longer
-    // matches the ETag because we patched it. So we MUST leave the CDN
+    // cached archive even if its MD5 no longer matches the ETag. The client
+    // still extracts that archive on each launch, so we MUST leave the CDN
     // ETags in manifest.json alone; rewriting them to our patched-file
     // MD5s makes the conditional GET miss and the CDN sends a fresh
     // English copy with 200, wiping the patch. Only update on explicit
@@ -440,6 +442,70 @@ void PatchGameDataDatabaseIfPresent(string root, string stamp, bool dryRun)
     }
 }
 
+// The current client unpacks this cached archive on every startup, even when
+// the server responds 304. Patch a staged copy so the next extraction retains
+// the translations; keep the server's manifest ETag unchanged.
+void PatchCachedGameDataArchiveIfPresent(string root, string stamp, bool dryRun)
+{
+    var archivePath = Path.Combine(root, "GameData.db.zip");
+    if (!File.Exists(archivePath)) return;
+
+    var workDb = Path.Combine(Path.GetTempPath(), $"bazaar-rus-{Guid.NewGuid():N}.db");
+    var stagedArchive = Path.Combine(root, $".gamedata-{Guid.NewGuid():N}.tmp");
+    try
+    {
+        using (var zip = ZipFile.OpenRead(archivePath))
+        {
+            var entries = zip.Entries.Where(e => e.FullName == "GameData.db").ToList();
+            if (entries.Count != 1)
+                throw new InvalidDataException("GameData.db.zip должен содержать ровно один GameData.db");
+            using var source = entries[0].Open();
+            using var destination = new FileStream(workDb, FileMode.CreateNew, FileAccess.Write, FileShare.None);
+            source.CopyTo(destination);
+        }
+
+        var (changed, _, skipped) = PatchGameDataDatabase(workDb, dryRun);
+        if (skipped > 0)
+            Console.WriteLine($"  GameData.db.zip: пропущено неоднозначных текстов {skipped:N0}");
+        if (changed == 0)
+        {
+            Console.WriteLine("  GameData.db.zip: переводимых строк не найдено");
+            return;
+        }
+
+        if (dryRun)
+        {
+            Console.WriteLine($"  GameData.db.zip: будет обновлено текстов {changed:N0}");
+            return;
+        }
+
+        File.Copy(archivePath, stagedArchive, overwrite: false);
+        using (var zip = ZipFile.Open(stagedArchive, ZipArchiveMode.Update))
+        {
+            var oldEntry = zip.GetEntry("GameData.db")
+                ?? throw new InvalidDataException("GameData.db отсутствует в архиве");
+            var modified = oldEntry.LastWriteTime;
+            var attributes = oldEntry.ExternalAttributes;
+            oldEntry.Delete();
+            var newEntry = zip.CreateEntry("GameData.db", CompressionLevel.Optimal);
+            newEntry.LastWriteTime = modified;
+            newEntry.ExternalAttributes = attributes;
+            using var source = File.OpenRead(workDb);
+            using var destination = newEntry.Open();
+            source.CopyTo(destination);
+        }
+
+        BackupExistingFile(root, archivePath, stamp);
+        File.Replace(stagedArchive, archivePath, destinationBackupFileName: null);
+        Console.WriteLine($"  GameData.db.zip: обновлено текстов {changed:N0}");
+    }
+    finally
+    {
+        if (File.Exists(workDb)) File.Delete(workDb);
+        if (File.Exists(stagedArchive)) File.Delete(stagedArchive);
+    }
+}
+
 // Glossary of {tooltip-Id -> {Tag, Keyword}} Russian translations used to
 // rewrite the `tooltips` table BLOB inside GameData.db. The table is a single
 // row whose Data is a JSON object keyed by the tooltip's textual Id (e.g.
@@ -474,7 +540,9 @@ Dictionary<string, (string Tag, string Keyword)> GameDataTooltips()
     var connectionString = new SqliteConnectionStringBuilder
     {
         DataSource = dbPath,
-        Mode = dryRun ? SqliteOpenMode.ReadOnly : SqliteOpenMode.ReadWrite
+        Mode = dryRun ? SqliteOpenMode.ReadOnly : SqliteOpenMode.ReadWrite,
+        // The game may replace this file while the patcher menu stays open.
+        Pooling = false
     }.ToString();
 
     using var connection = new SqliteConnection(connectionString);
@@ -804,7 +872,8 @@ void CreateTranslationDatabase(string dbPath)
     var connectionString = new SqliteConnectionStringBuilder
     {
         DataSource = dbPath,
-        Mode = SqliteOpenMode.ReadWriteCreate
+        Mode = SqliteOpenMode.ReadWriteCreate,
+        Pooling = false
     }.ToString();
 
     using var connection = new SqliteConnection(connectionString);
@@ -865,7 +934,8 @@ int PatchTranslationDatabase(string dbPath, bool dryRun)
     var connectionString = new SqliteConnectionStringBuilder
     {
         DataSource = dbPath,
-        Mode = SqliteOpenMode.ReadWrite
+        Mode = SqliteOpenMode.ReadWrite,
+        Pooling = false
     }.ToString();
 
     using var connection = new SqliteConnection(connectionString);
@@ -1158,7 +1228,8 @@ bool ValidateTranslationDatabase(string dbPath, out string reason)
         var connectionString = new SqliteConnectionStringBuilder
         {
             DataSource = dbPath,
-            Mode = SqliteOpenMode.ReadOnly
+            Mode = SqliteOpenMode.ReadOnly,
+            Pooling = false
         }.ToString();
 
         using var connection = new SqliteConnection(connectionString);

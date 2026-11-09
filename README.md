@@ -4,25 +4,26 @@
 
 ## Скачать свежую версию
 
-**[v0.7.6 — обновление перевода и вычитка](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/tag/v0.7.6)**.
+**[v0.7.7 — обновление перевода и исправление запуска](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/tag/v0.7.7)**.
 
 | Ваша версия игры | Скачать патчер |
 |---|---|
-| Steam | [TheBazaarRusPatcher-Steam.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.6/TheBazaarRusPatcher-Steam.exe) |
-| Tempo Launcher | [TheBazaarRusPatcher-Tempo.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.6/TheBazaarRusPatcher-Tempo.exe) |
+| Steam | [TheBazaarRusPatcher-Steam.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.7/TheBazaarRusPatcher-Steam.exe) |
+| Tempo Launcher | [TheBazaarRusPatcher-Tempo.exe](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases/download/v0.7.7/TheBazaarRusPatcher-Tempo.exe) |
 
-Сведения о составе и изменениях версии — в [описании релиза](docs/releases/v0.7.6.md).
+Сведения о составе и изменениях версии — в [описании релиза](docs/releases/v0.7.7.md).
 
-[Все релизы](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases) · [Изменения этой версии](docs/releases/v0.7.6.md) · [Discord: помощь и обратная связь](https://discord.gg/FH8z7D3xe7)
+[Все релизы](https://github.com/Lazyalexs/TheBazaarRusPatcher/releases) · [Изменения этой версии](docs/releases/v0.7.7.md) · [Discord: помощь и обратная связь](https://discord.gg/FH8z7D3xe7)
 
 ## Состояние перевода
 
-В патч включено 17 392 записи перевода. Версия 0.7.6 добавляет 66 строк и уточняет переводы предметов, эффектов и игровых условий. Вычитка продолжается; отдельные случаи требуют дополнительной проверки в игре.
+В патч включено 17 643 записи перевода. Версия 0.7.7 добавляет 251 запись для обновлённых игровых данных и уточняет описания предметов. Вычитка продолжается; отдельные игровые механики и интерфейс требуют дополнительной проверки.
 
 **Известные ограничения:**
 
 - Пункт «Русский» может отсутствовать: игра обновляет список доступных языков с сервера, перезаписывая локальное изменение. Повторная установка не гарантирует устранение этой проблемы.
 - Обновления игры могут перезаписать изменённые файлы. Служебные DEBUG/шаблонные строки не переводятся как обычный игровой контент.
+- Некоторые новые подписи интерфейса и подписи мода BazaarPlusPlus ещё остаются на английском языке.
 
 ## Установка
 
